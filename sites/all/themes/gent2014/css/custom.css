@@ -250,7 +250,7 @@ h1 span:after {
   bottom: -21px;
 }
 h2 {
-  font-size: 20px;
+  font-size: 24px;
   font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 300;
   text-align: center;
@@ -261,7 +261,7 @@ h2.bold {
   font-weight: 700;
 }
 h3 {
-  font-size: 16px;
+  font-size: 24px;
   font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 300;
   text-align: center;
@@ -272,7 +272,7 @@ h3.bold {
   font-weight: 700;
 }
 .field-name-body {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
@@ -721,6 +721,7 @@ body .maincontainer #intro #intro-inner .region-intro #block-block-3 h2 {
   font-weight: 300;
   text-transform: uppercase;
   opacity: 0.6;
+  font-style: 18px;
 }
 body .maincontainer #intro #intro-inner .region-intro #block-block-3 h2.bold {
   font-weight: 700;
