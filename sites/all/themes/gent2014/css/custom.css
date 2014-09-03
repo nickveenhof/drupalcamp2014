@@ -1046,15 +1046,15 @@ body.not-front #content {
 .page-user #content-content .user-profile .group-right .group-user-info .field-label {
   color: #888;
 }
-.page-community-attendees #content-content .view-attendees,
-.node-type-page #content-content .view-attendees,
-.page-community-attendees #content-content .view-volunteers,
+.page-node-community #content-content .view-cod-community-attendees,
+.node-type-page #content-content .view-cod-community-attendees,
+.page-node-community #content-content .view-volunteers,
 .node-type-page #content-content .view-volunteers {
   text-align: center;
 }
-.page-community-attendees #content-content .view-attendees .views-row,
-.node-type-page #content-content .view-attendees .views-row,
-.page-community-attendees #content-content .view-volunteers .views-row,
+.page-node-community #content-content .view-cod-community-attendees .views-row,
+.node-type-page #content-content .view-cod-community-attendees .views-row,
+.page-node-community #content-content .view-volunteers .views-row,
 .node-type-page #content-content .view-volunteers .views-row {
   width: 22%;
   padding: 0;
@@ -1062,18 +1062,18 @@ body.not-front #content {
   display: inline-block;
   vertical-align: top;
 }
-.page-community-attendees #content-content .view-attendees .views-row .views-field-picture a,
-.node-type-page #content-content .view-attendees .views-row .views-field-picture a,
-.page-community-attendees #content-content .view-volunteers .views-row .views-field-picture a,
+.page-node-community #content-content .view-cod-community-attendees .views-row .views-field-picture a,
+.node-type-page #content-content .view-cod-community-attendees .views-row .views-field-picture a,
+.page-node-community #content-content .view-volunteers .views-row .views-field-picture a,
 .node-type-page #content-content .view-volunteers .views-row .views-field-picture a {
   display: block;
   position: relative;
   border-radius: 50%;
   overflow: hidden;
 }
-.page-community-attendees #content-content .view-attendees .views-row .views-field-picture a:after,
-.node-type-page #content-content .view-attendees .views-row .views-field-picture a:after,
-.page-community-attendees #content-content .view-volunteers .views-row .views-field-picture a:after,
+.page-node-community #content-content .view-cod-community-attendees .views-row .views-field-picture a:after,
+.node-type-page #content-content .view-cod-community-attendees .views-row .views-field-picture a:after,
+.page-node-community #content-content .view-volunteers .views-row .views-field-picture a:after,
 .node-type-page #content-content .view-volunteers .views-row .views-field-picture a:after {
   content: "";
   position: absolute;
@@ -1084,28 +1084,28 @@ body.not-front #content {
   top: 0;
   left: 0;
 }
-.page-community-attendees #content-content .view-attendees .views-row .views-field-picture a > img,
-.node-type-page #content-content .view-attendees .views-row .views-field-picture a > img,
-.page-community-attendees #content-content .view-volunteers .views-row .views-field-picture a > img,
+.page-node-community #content-content .view-cod-community-attendees .views-row .views-field-picture a > img,
+.node-type-page #content-content .view-cod-community-attendees .views-row .views-field-picture a > img,
+.page-node-community #content-content .view-volunteers .views-row .views-field-picture a > img,
 .node-type-page #content-content .view-volunteers .views-row .views-field-picture a > img {
   display: block;
 }
-.page-community-attendees #content-content .view-attendees .views-row .views-field-field-profile-last,
-.node-type-page #content-content .view-attendees .views-row .views-field-field-profile-last,
-.page-community-attendees #content-content .view-volunteers .views-row .views-field-field-profile-last,
+.page-node-community #content-content .view-cod-community-attendees .views-row .views-field-field-profile-last,
+.node-type-page #content-content .view-cod-community-attendees .views-row .views-field-field-profile-last,
+.page-node-community #content-content .view-volunteers .views-row .views-field-field-profile-last,
 .node-type-page #content-content .view-volunteers .views-row .views-field-field-profile-last {
   font-size: 24px;
   line-height: 1.2;
 }
-.page-community-attendees #content-content .view-attendees .views-row .views-field-field-profile-last > div,
-.node-type-page #content-content .view-attendees .views-row .views-field-field-profile-last > div,
-.page-community-attendees #content-content .view-volunteers .views-row .views-field-field-profile-last > div,
+.page-node-community #content-content .view-cod-community-attendees .views-row .views-field-field-profile-last > div,
+.node-type-page #content-content .view-cod-community-attendees .views-row .views-field-field-profile-last > div,
+.page-node-community #content-content .view-volunteers .views-row .views-field-field-profile-last > div,
 .node-type-page #content-content .view-volunteers .views-row .views-field-field-profile-last > div {
   padding: 10px 0 0;
 }
-.page-community-attendees #content-content .view-attendees .views-row .views-field-field-profile-org,
-.node-type-page #content-content .view-attendees .views-row .views-field-field-profile-org,
-.page-community-attendees #content-content .view-volunteers .views-row .views-field-field-profile-org,
+.page-node-community #content-content .view-cod-community-attendees .views-row .views-field-field-profile-org,
+.node-type-page #content-content .view-cod-community-attendees .views-row .views-field-field-profile-org,
+.page-node-community #content-content .view-volunteers .views-row .views-field-field-profile-org,
 .node-type-page #content-content .view-volunteers .views-row .views-field-field-profile-org {
   font-size: 14px;
   font-style: italic;
