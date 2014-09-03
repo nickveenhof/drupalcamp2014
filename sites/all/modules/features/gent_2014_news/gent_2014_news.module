@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Gent 2014 news feature.
+ */
+
+include_once 'gent_2014_news.features.inc';

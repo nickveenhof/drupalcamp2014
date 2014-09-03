@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * Enable the views_json module.
+ */
+function cod_schedule_update_7001() {
+  module_enable(array('views_json'));
+  return array();
+}
+
+/**
+ * Revert the feature to include hide the view when no schedule items appear,
+ * and change the entityreference views widget handler to cod_timeslots.
+ */
+function cod_schedule_update_7002() {
+
+  $revert = array(
+    'cod_schedule' => array('field_base', 'field_instance', 'views_view'),
+  );
+  features_revert($revert);
+}

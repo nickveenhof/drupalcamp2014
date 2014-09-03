@@ -1,0 +1,28 @@
+; -----------------------------------------------------------
+; Description
+; -----------------------------------------------------------
+name = Drupalcamp Gent2014 theme.
+description = G-raph theme.
+core = 7.x
+engine = phptemplate
+
+; -----------------------------------------------------------
+; Stylesheets
+; -----------------------------------------------------------
+stylesheets[all][] = css/custom.css
+
+; -----------------------------------------------------------
+; JS
+; -----------------------------------------------------------
+scripts[] = js/flexslider.js
+scripts[] = js/custom.js
+
+; -----------------------------------------------------------
+; Regions
+; -----------------------------------------------------------
+regions[intro] = Intro
+regions[menubar] = Menubar
+regions[preface] = Preface
+regions[content] = Content
+regions[postscript] = Postscript
+regions[footer] = Footer
