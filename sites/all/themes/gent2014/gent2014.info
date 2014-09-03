@@ -20,6 +20,7 @@ scripts[] = js/custom.js
 ; -----------------------------------------------------------
 ; Regions
 ; -----------------------------------------------------------
+regions[navbar] = Navbar
 regions[intro] = Intro
 regions[menubar] = Menubar
 regions[preface] = Preface

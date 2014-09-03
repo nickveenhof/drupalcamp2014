@@ -22,14 +22,12 @@
       // init
       var windowHeight = $(window).height();
       var introInnerHeight = $('#intro-inner').height();
-      $('.front #intro').height(windowHeight-70);
-      // $('.front #intro-inner').css('padding-top',(((windowHeight-70)-introInnerHeight)/2));
+      $('.front #intro').height(windowHeight);
       // on resize
       $(window).resize(function(){
         var windowHeight = $(window).height();
         var introInnerHeight = $('#intro-inner').height();
-        $('.front #intro').height(windowHeight-70);
-        // $('.front #intro-inner').css('padding-top',(((windowHeight-70)-introInnerHeight)/2));
+        $('.front #intro').height(windowHeight);
       });
 
       // menubar sticky
@@ -69,41 +67,43 @@
         $('<div class="sliderbutton '+this.attr('id')+'"></div>').insertBefore(this);
         this.hide();
         this.prev().click(function(){
-          $(this).next().slideToggle(100);
+          $(this).next().fadeToggle(100);
           $(this).toggleClass('open');
         });
       };
 
       $('#block-user-login').sliderElement();
-      // $('#block-system-main-menu').sliderElement();
       $('#block-system-user-menu').sliderElement();
       $('#block-search-form').sliderElement();
 
-      // menu horizontal slider
-      $.fn.menuSliderElement = function() {
-        $('<div class="sliderbutton '+this.attr('id')+'"></div>').insertBefore(this);
-        this.prev().click(function(event){
-          $(this).next().toggleClass('open');
-          event.stopPropagation();
-        });
-        $('#content,#intro,#footer').click(function(){
-          $('#block-system-main-menu').removeClass('open');
-        });
-      };
-
-      $('#block-system-main-menu').menuSliderElement();
+      $('#navbar').hover(function(){
+        $(this).toggleClass('open');
+        $('.maincontainer').toggleClass('open');
+      });
 
       // intro sponsors delay + fading
-      $('#intro #block-block-3').hide().delay( 2000 ).fadeIn( 1000 );
+      $('#intro #block-block-10').hide().delay(3000).fadeIn(1000);
 
       // main menu sliders submenu
-      var sideMenuTopLinks = $('#menubar #block-system-main-menu > .content > ul > li');
+      var sideMenuTopLinks = $('#navbar #block-system-main-menu > .content > ul > li');
       sideMenuTopLinks.each(function(){
         $(this).click(function(){
           $(this).toggleClass('open');
           $(this).find('> ul').slideToggle(100);
         });
       });
+      $('<li class=""><a>Menu</a></li>').prependTo('#navbar #block-system-main-menu > .content > ul');
+
+
+    }
+  };
+})(jQuery);
+
+(function ($) {
+  Drupal.behaviors.angular = {
+    attach: function (context, settings) {
+
+      
 
 
     }
