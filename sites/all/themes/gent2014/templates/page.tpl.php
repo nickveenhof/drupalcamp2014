@@ -91,67 +91,77 @@
     <li class="slide slide21"></li>
   </ul>
 </div>
-<!-- intro -->
-<div id="intro" class="outerbox">
-  <div id="intro-inner" class="inner clearfix">
-    <?php if ($page['intro']): ?><?php print render($page['intro']); ?><?php endif; ?>
-  </div>
-</div>
-<!-- menubar -->
-<div id="menubar" class="outerbox">
-  <div id="menubar-inner" class="clearfix">
-    <?php if ($logo): ?>
-      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-        <img src="/sites/all/themes/gent2014/logo.svg" alt="<?php print t('Home'); ?>" />
-      </a>
-    <?php endif; ?>
-    <?php if ($site_name || $site_slogan): ?>
-      <div id="name-and-slogan">
-        <?php if ($site_name): ?>
-          <?php if ($title): ?>
-            <h2 id="site-name">
-              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><?php print $site_name; ?></a>
-            </h2>
-          <?php else: /* Use h1 when the content title is empty */ ?>
-            <h2 id="site-name">
-              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><?php print $site_name; ?></a>
-            </h2>
-          <?php endif; ?>
-        <?php endif; ?>
-
-        <?php if ($site_slogan): ?>
-          <div id="site-slogan"><?php print $site_slogan; ?></div>
-        <?php endif; ?>
-      </div> <!-- /#name-and-slogan -->
-    <?php endif; ?>
-    <?php if ($page['menubar']): ?><?php print render($page['menubar']); ?><?php endif; ?>
-  </div>
-</div>
-<!-- content -->
-<div id="content" class="outerbox">
-  <div id="content-inner" class="inner clearfix">
-    <div id="content-content">
-      <?php print $messages; ?>
-      <?php print render($title_prefix); ?>
-      <?php if ($title): ?><h1 class="title" id="page-title"><span><?php print $title; ?></span></h1><?php endif; ?>
-      <?php print render($title_suffix); ?>
-      <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
-      <?php print render($page['help']); ?>
-      <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
-      <?php print render($page['content']); ?>
-      <?php print $feed_icons; ?>
+<div class="supercontainer">
+  <!-- navbar -->
+  <div id="navbar" class="outerbox">
+    <div id="navbar-inner" class="inner clearfix">
+      <?php if ($page['navbar']): ?><?php print render($page['navbar']); ?><?php endif; ?>
     </div>
   </div>
-</div>
-<!-- postscript -->
-<div id="postscript" class="outerbox">
-  <div id="postscript-inner" class="inner clearfix">
-    <?php if ($page['postscript']): ?><?php print render($page['postscript']); ?><?php endif; ?>
-  </div>
-</div>
-<!-- footer -->
-<div id="footer" class="outerbox">
-  <div id="footer-inner" class="inner clearfix">
-    <?php if ($page['footer']): ?><?php print render($page['footer']); ?><?php endif; ?>
+  <div class="maincontainer">
+    <!-- intro -->
+    <div id="intro" class="outerbox">
+      <div id="intro-inner" class="inner clearfix">
+        <?php if ($page['intro']): ?><?php print render($page['intro']); ?><?php endif; ?>
+      </div>
+    </div>
+    <!-- menubar -->
+    <div id="menubar" class="outerbox">
+      <div id="menubar-inner" class="clearfix">
+        <?php if ($logo): ?>
+          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
+            <img src="/sites/all/themes/gent2014/logo.svg" alt="<?php print t('Home'); ?>" />
+          </a>
+        <?php endif; ?>
+        <?php if ($site_name || $site_slogan): ?>
+          <div id="name-and-slogan">
+            <?php if ($site_name): ?>
+              <?php if ($title): ?>
+                <h2 id="site-name">
+                  <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><?php print $site_name; ?></a>
+                </h2>
+              <?php else: /* Use h1 when the content title is empty */ ?>
+                <h2 id="site-name">
+                  <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><?php print $site_name; ?></a>
+                </h2>
+              <?php endif; ?>
+            <?php endif; ?>
+
+            <?php if ($site_slogan): ?>
+              <div id="site-slogan"><?php print $site_slogan; ?></div>
+            <?php endif; ?>
+          </div> <!-- /#name-and-slogan -->
+        <?php endif; ?>
+        <?php if ($page['menubar']): ?><?php print render($page['menubar']); ?><?php endif; ?>
+      </div>
+    </div>
+    <!-- content -->
+    <div id="content" class="outerbox">
+      <div id="content-inner" class="inner clearfix">
+        <div id="content-content">
+          <?php print $messages; ?>
+          <?php print render($title_prefix); ?>
+          <?php if ($title): ?><h1 class="title" id="page-title"><span><?php print $title; ?></span></h1><?php endif; ?>
+          <?php print render($title_suffix); ?>
+          <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
+          <?php print render($page['help']); ?>
+          <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
+          <?php print render($page['content']); ?>
+          <?php print $feed_icons; ?>
+        </div>
+      </div>
+    </div>
+    <!-- postscript -->
+    <div id="postscript" class="outerbox">
+      <div id="postscript-inner" class="inner clearfix">
+        <?php if ($page['postscript']): ?><?php print render($page['postscript']); ?><?php endif; ?>
+      </div>
+    </div>
+    <!-- footer -->
+    <div id="footer" class="outerbox">
+      <div id="footer-inner" class="inner clearfix">
+        <?php if ($page['footer']): ?><?php print render($page['footer']); ?><?php endif; ?>
+      </div>
+    </div>
   </div>
 </div>
