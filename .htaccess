@@ -99,11 +99,6 @@ DirectoryIndex index.php index.html index.htm
   # RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
   # RewriteRule ^ http%{ENV:protossl}://%1%{REQUEST_URI} [L,R=301]
 
-  # Redirect reports.cci.acquia.com traffic to cci-reports.acquia.com so
-  # we have a valid SSL cert.
-  RewriteCond %{HTTP_HOST} ^reports\.cci\.acquia\.com$ [NC]
-  RewriteRule ^(.*)$ https://cci-reports.acquia.com/$1 [L,R=301]
-
   # Modify the RewriteBase if you are using Drupal in a subdirectory or in a
   # VirtualDocumentRoot and the rewrite rules are not working properly.
   # For example if your site is at http://example.com/drupal uncomment and
