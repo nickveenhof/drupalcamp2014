@@ -281,8 +281,8 @@ h3.bold {
   font-weight: 700;
 }
 iframe {
-  max-width: 100%;
   padding: 19px;
+  max-width: 100%;
   margin: 20px auto;
   background-color: #fff;
   border: 1px solid #e3e3e3;
@@ -692,39 +692,39 @@ body .maincontainer #intro #intro-inner .region-intro .block .intro-cta ul > li:
   opacity: 1;
   z-index: 5;
 }
-body .maincontainer #intro #intro-inner .region-intro #block-block-10 {
+body .maincontainer #intro #intro-inner .region-intro #block-block-3 {
   position: absolute;
   top: 25px;
   left: 0;
   width: 100%;
 }
-body .maincontainer #intro #intro-inner .region-intro #block-block-10 h2 {
+body .maincontainer #intro #intro-inner .region-intro #block-block-3 h2 {
   font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 300;
   text-transform: uppercase;
   opacity: 0.6;
 }
-body .maincontainer #intro #intro-inner .region-intro #block-block-10 h2.bold {
+body .maincontainer #intro #intro-inner .region-intro #block-block-3 h2.bold {
   font-weight: 700;
 }
-body .maincontainer #intro #intro-inner .region-intro #block-block-10 .front-sponsors {
+body .maincontainer #intro #intro-inner .region-intro #block-block-3 .front-sponsors {
   text-align: center;
   width: 100%;
   margin-top: -12px;
 }
-body .maincontainer #intro #intro-inner .region-intro #block-block-10 .front-sponsors > a {
+body .maincontainer #intro #intro-inner .region-intro #block-block-3 .front-sponsors > a {
   display: inline-block;
   vertical-align: middle;
   margin: 10px 20px;
 }
-body .maincontainer #intro #intro-inner .region-intro #block-block-10 .front-sponsors > a img {
+body .maincontainer #intro #intro-inner .region-intro #block-block-3 .front-sponsors > a img {
   width: 250px;
   opacity: 0.7;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-body .maincontainer #intro #intro-inner .region-intro #block-block-10 .front-sponsors > a img:hover {
+body .maincontainer #intro #intro-inner .region-intro #block-block-3 .front-sponsors > a img:hover {
   opacity: 1;
 }
 body .maincontainer #menubar {
