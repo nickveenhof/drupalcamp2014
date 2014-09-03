@@ -1052,29 +1052,35 @@ body.not-front #content {
 .node-type-page #content-content .view-volunteers {
   text-align: center;
 }
-.page-node-community #content-content .view-cod-community-attendees .views-row,
-.node-type-page #content-content .view-cod-community-attendees .views-row,
-.page-node-community #content-content .view-volunteers .views-row,
-.node-type-page #content-content .view-volunteers .views-row {
+.page-node-community #content-content .view-cod-community-attendees .view-content,
+.node-type-page #content-content .view-cod-community-attendees .view-content,
+.page-node-community #content-content .view-volunteers .view-content,
+.node-type-page #content-content .view-volunteers .view-content {
+  margin-top: 50px;
+}
+.page-node-community #content-content .view-cod-community-attendees .view-content .views-row,
+.node-type-page #content-content .view-cod-community-attendees .view-content .views-row,
+.page-node-community #content-content .view-volunteers .view-content .views-row,
+.node-type-page #content-content .view-volunteers .view-content .views-row {
   width: 22%;
   padding: 0;
   margin: 0 1% 40px;
   display: inline-block;
   vertical-align: top;
 }
-.page-node-community #content-content .view-cod-community-attendees .views-row .views-field-picture a,
-.node-type-page #content-content .view-cod-community-attendees .views-row .views-field-picture a,
-.page-node-community #content-content .view-volunteers .views-row .views-field-picture a,
-.node-type-page #content-content .view-volunteers .views-row .views-field-picture a {
+.page-node-community #content-content .view-cod-community-attendees .view-content .views-row .field-name-ds-user-picture a,
+.node-type-page #content-content .view-cod-community-attendees .view-content .views-row .field-name-ds-user-picture a,
+.page-node-community #content-content .view-volunteers .view-content .views-row .field-name-ds-user-picture a,
+.node-type-page #content-content .view-volunteers .view-content .views-row .field-name-ds-user-picture a {
   display: block;
   position: relative;
   border-radius: 50%;
   overflow: hidden;
 }
-.page-node-community #content-content .view-cod-community-attendees .views-row .views-field-picture a:after,
-.node-type-page #content-content .view-cod-community-attendees .views-row .views-field-picture a:after,
-.page-node-community #content-content .view-volunteers .views-row .views-field-picture a:after,
-.node-type-page #content-content .view-volunteers .views-row .views-field-picture a:after {
+.page-node-community #content-content .view-cod-community-attendees .view-content .views-row .field-name-ds-user-picture a:after,
+.node-type-page #content-content .view-cod-community-attendees .view-content .views-row .field-name-ds-user-picture a:after,
+.page-node-community #content-content .view-volunteers .view-content .views-row .field-name-ds-user-picture a:after,
+.node-type-page #content-content .view-volunteers .view-content .views-row .field-name-ds-user-picture a:after {
   content: "";
   position: absolute;
   width: 100%;
@@ -1084,29 +1090,29 @@ body.not-front #content {
   top: 0;
   left: 0;
 }
-.page-node-community #content-content .view-cod-community-attendees .views-row .views-field-picture a > img,
-.node-type-page #content-content .view-cod-community-attendees .views-row .views-field-picture a > img,
-.page-node-community #content-content .view-volunteers .views-row .views-field-picture a > img,
-.node-type-page #content-content .view-volunteers .views-row .views-field-picture a > img {
+.page-node-community #content-content .view-cod-community-attendees .view-content .views-row .field-name-ds-user-picture a > img,
+.node-type-page #content-content .view-cod-community-attendees .view-content .views-row .field-name-ds-user-picture a > img,
+.page-node-community #content-content .view-volunteers .view-content .views-row .field-name-ds-user-picture a > img,
+.node-type-page #content-content .view-volunteers .view-content .views-row .field-name-ds-user-picture a > img {
   display: block;
 }
-.page-node-community #content-content .view-cod-community-attendees .views-row .views-field-field-profile-last,
-.node-type-page #content-content .view-cod-community-attendees .views-row .views-field-field-profile-last,
-.page-node-community #content-content .view-volunteers .views-row .views-field-field-profile-last,
-.node-type-page #content-content .view-volunteers .views-row .views-field-field-profile-last {
+.page-node-community #content-content .view-cod-community-attendees .view-content .views-row .views-field-field-profile-last,
+.node-type-page #content-content .view-cod-community-attendees .view-content .views-row .views-field-field-profile-last,
+.page-node-community #content-content .view-volunteers .view-content .views-row .views-field-field-profile-last,
+.node-type-page #content-content .view-volunteers .view-content .views-row .views-field-field-profile-last {
   font-size: 24px;
   line-height: 1.2;
 }
-.page-node-community #content-content .view-cod-community-attendees .views-row .views-field-field-profile-last > div,
-.node-type-page #content-content .view-cod-community-attendees .views-row .views-field-field-profile-last > div,
-.page-node-community #content-content .view-volunteers .views-row .views-field-field-profile-last > div,
-.node-type-page #content-content .view-volunteers .views-row .views-field-field-profile-last > div {
+.page-node-community #content-content .view-cod-community-attendees .view-content .views-row .views-field-field-profile-last > div,
+.node-type-page #content-content .view-cod-community-attendees .view-content .views-row .views-field-field-profile-last > div,
+.page-node-community #content-content .view-volunteers .view-content .views-row .views-field-field-profile-last > div,
+.node-type-page #content-content .view-volunteers .view-content .views-row .views-field-field-profile-last > div {
   padding: 10px 0 0;
 }
-.page-node-community #content-content .view-cod-community-attendees .views-row .views-field-field-profile-org,
-.node-type-page #content-content .view-cod-community-attendees .views-row .views-field-field-profile-org,
-.page-node-community #content-content .view-volunteers .views-row .views-field-field-profile-org,
-.node-type-page #content-content .view-volunteers .views-row .views-field-field-profile-org {
+.page-node-community #content-content .view-cod-community-attendees .view-content .views-row .views-field-field-profile-org,
+.node-type-page #content-content .view-cod-community-attendees .view-content .views-row .views-field-field-profile-org,
+.page-node-community #content-content .view-volunteers .view-content .views-row .views-field-field-profile-org,
+.node-type-page #content-content .view-volunteers .view-content .views-row .views-field-field-profile-org {
   font-size: 14px;
   font-style: italic;
   color: #888;
