@@ -281,8 +281,8 @@ h3.bold {
   font-weight: 700;
 }
 iframe {
-  max-width: 100%;
   padding: 19px;
+  max-width: 100%;
   margin: 20px auto;
   background-color: #fff;
   border: 1px solid #e3e3e3;
