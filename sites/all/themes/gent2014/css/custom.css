@@ -1108,18 +1108,18 @@ body.not-front #content {
 .node-type-page #content-content .view-volunteers .view-content .views-row .field-name-ds-user-picture a > img {
   display: block;
 }
-.page-node-community #content-content .view-cod-community-attendees .view-content .views-row .field-name-field-profile-last,
-.node-type-page #content-content .view-cod-community-attendees .view-content .views-row .field-name-field-profile-last,
-.page-node-community #content-content .view-volunteers .view-content .views-row .field-name-field-profile-last,
-.node-type-page #content-content .view-volunteers .view-content .views-row .field-name-field-profile-last {
+.page-node-community #content-content .view-cod-community-attendees .view-content .views-row .field-name-field-profile-first,
+.node-type-page #content-content .view-cod-community-attendees .view-content .views-row .field-name-field-profile-first,
+.page-node-community #content-content .view-volunteers .view-content .views-row .field-name-field-profile-first,
+.node-type-page #content-content .view-volunteers .view-content .views-row .field-name-field-profile-first {
   width: 48%;
   font-size: 24px;
   line-height: 1.2;
 }
-.page-node-community #content-content .view-cod-community-attendees .view-content .views-row .field-name-field-profile-last > div,
-.node-type-page #content-content .view-cod-community-attendees .view-content .views-row .field-name-field-profile-last > div,
-.page-node-community #content-content .view-volunteers .view-content .views-row .field-name-field-profile-last > div,
-.node-type-page #content-content .view-volunteers .view-content .views-row .field-name-field-profile-last > div {
+.page-node-community #content-content .view-cod-community-attendees .view-content .views-row .field-name-field-profile-first > div,
+.node-type-page #content-content .view-cod-community-attendees .view-content .views-row .field-name-field-profile-first > div,
+.page-node-community #content-content .view-volunteers .view-content .views-row .field-name-field-profile-first > div,
+.node-type-page #content-content .view-volunteers .view-content .views-row .field-name-field-profile-first > div {
   padding: 10px 0 0;
 }
 .page-node-community #content-content .view-cod-community-attendees .view-content .views-row .field-name-field-profile-last,
