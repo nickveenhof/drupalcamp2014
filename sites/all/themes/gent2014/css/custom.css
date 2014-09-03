@@ -484,7 +484,7 @@ body #navbar #block-system-main-menu > .content > ul.menu > li.expanded.open a.a
   color: #fff;
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li:first-child {
-  background: #0491c6;
+  background: #f26825;
   padding: 6px 10px;
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li:first-child > a {
@@ -501,62 +501,81 @@ body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(2) > a:
   content: "\f015";
   font-family: FontAwesome;
   font-size: 15px;
-  margin-right: 14px;
+  margin-right: 12px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   color: rgba(255, 255, 255, 0.7);
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(2) > a:hover:before {
-  color: #ffffff;
+  color: #f26825;
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(3) > a:before {
-  content: "\f073";
+  content: "\f1a9";
   font-family: FontAwesome;
   font-size: 15px;
-  margin-right: 14px;
+  margin-right: 12px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   color: rgba(255, 255, 255, 0.7);
   margin-top: -2px;
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(3) > a:hover:before {
-  color: #ffffff;
+  color: #0491c6;
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(4) > a:before {
-  content: "\f05a";
+  content: "\f005";
   font-family: FontAwesome;
   font-size: 15px;
   margin-right: 14px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   color: rgba(255, 255, 255, 0.7);
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(4) > a:hover:before {
-  color: #ffffff;
+  color: #f26825;
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(5) > a:before {
-  content: "\f1a9";
+  content: "\f041";
   font-family: FontAwesome;
   font-size: 15px;
-  margin-right: 14px;
+  margin-right: 15px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   color: rgba(255, 255, 255, 0.7);
+  margin-left: 2px;
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(5) > a:hover:before {
-  color: #ffffff;
+  color: #f26825;
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(6) > a:before {
   content: "\f007";
   font-family: FontAwesome;
   font-size: 15px;
   margin-right: 14px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   color: rgba(255, 255, 255, 0.7);
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(6) > a:hover:before {
-  color: #ffffff;
+  color: #f26825;
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li:last-child > a:before {
-  content: "\f005";
+  content: "\f007";
   font-family: FontAwesome;
-  font-size: 15px;
+  font-size: 13px;
   margin-right: 14px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   color: rgba(255, 255, 255, 0.7);
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li:last-child > a:hover:before {
-  color: #ffffff;
+  color: #f26825;
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li > ul {
   display: none;

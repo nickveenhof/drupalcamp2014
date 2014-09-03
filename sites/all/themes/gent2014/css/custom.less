@@ -329,7 +329,7 @@ body {
             }
           }
           &:first-child {
-            background: @basecolor;
+            background: @seccolor;
             padding: 6px 10px;
             > a {
               cursor: default;
@@ -347,55 +347,63 @@ body {
               content: "\f015";
               font-family: FontAwesome;
               font-size: 15px;
-              margin-right: 14px;
+              margin-right: 12px;
+              .transit;
               color: rgba(255,255,255,0.7);
             }
             &:hover {
               &:before {
-                color: rgba(255,255,255,1);
+                color: @seccolor;
               }
             }
           }
           &:nth-child(3) > a {
             &:before {
-              content: "\f073";
+              // content: "\f073";
+              content: "\f1a9";
               font-family: FontAwesome;
               font-size: 15px;
-              margin-right: 14px;
+              margin-right: 12px;
+              .transit;
               color: rgba(255,255,255,0.7);
               margin-top: -2px;
             }
             &:hover {
               &:before {
-                color: rgba(255,255,255,1);
+                color: @basecolor;
               }
             }
           }
           &:nth-child(4) > a {
             &:before {
-              content: "\f05a";
+              // content: "\f05a";
+              // content: "\f007";
+              content: "\f005";
               font-family: FontAwesome;
               font-size: 15px;
               margin-right: 14px;
+              .transit;
               color: rgba(255,255,255,0.7);
             }
             &:hover {
               &:before {
-                color: rgba(255,255,255,1);
+                color: @seccolor;
               }
             }
           }
           &:nth-child(5) > a {
             &:before {
-              content: "\f1a9";
+              content: "\f041";
               font-family: FontAwesome;
               font-size: 15px;
-              margin-right: 14px;
+              margin-right: 15px;
+              .transit;
               color: rgba(255,255,255,0.7);
+              margin-left: 2px;
             }
             &:hover {
               &:before {
-                color: rgba(255,255,255,1);
+                color: @seccolor;
               }
             }
           }
@@ -405,25 +413,28 @@ body {
               font-family: FontAwesome;
               font-size: 15px;
               margin-right: 14px;
+              .transit;
               color: rgba(255,255,255,0.7);
             }
             &:hover {
               &:before {
-                color: rgba(255,255,255,1);
+                color: @seccolor;
               }
             }
           }
           &:last-child > a {
             &:before {
-              content: "\f005";
+              // content: "\f005";
+              content: "\f007";
               font-family: FontAwesome;
-              font-size: 15px;
+              font-size: 13px;
               margin-right: 14px;
+              .transit;
               color: rgba(255,255,255,0.7);
             }
             &:hover {
               &:before {
-                color: rgba(255,255,255,1);
+                color: @seccolor;
               }
             }
           }
