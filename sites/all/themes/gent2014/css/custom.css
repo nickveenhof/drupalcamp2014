@@ -484,7 +484,7 @@ body #navbar #block-system-main-menu > .content > ul.menu > li.expanded.open a.a
   color: #fff;
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li:first-child {
-  background: #f26825;
+  background: #0491c6;
   padding: 6px 10px;
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li:first-child > a {
@@ -522,7 +522,7 @@ body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(3) > a:
   margin-top: -2px;
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(3) > a:hover:before {
-  color: #0491c6;
+  color: #f26825;
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(4) > a:before {
   content: "\f005";
