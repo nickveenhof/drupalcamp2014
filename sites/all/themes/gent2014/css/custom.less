@@ -146,7 +146,7 @@ h3 {
   h2 {
     font-style: 24px;
     text-align: left;
-    margin: 20px 0 10px;
+    margin: 30px 0 10px;
     color: @seccolor;
     padding: 0 0 10px;
     border-bottom: 1px dashed #ddd;
@@ -197,14 +197,16 @@ iframe {
 .cta {
   text-transform: uppercase;
   color: #fff;
-  margin: 0 0 5px;
+  margin: 10px 0 5px;
   display: inline-block;
-  font-size: 40px;
+  font-size: 30px;
   font-family: 'Open Sans Condensed', sans-serif;
   .transit;
   border-radius: 4px;
   padding: 0 40px;
   background: @basecolor;
+  display: inline-block;
+  text-align: center;
   &:hover {
     background: @seccolor;
     color: #fff;
@@ -914,6 +916,12 @@ body {
     }
     #footer {
       background: #202020;
+      color: #888;
+      font-size: 14px;
+      text-align: center;
+      a {
+        color: @seccolor;
+      }
     }
   }
 }
@@ -1150,6 +1158,23 @@ body {
         width: 49%;
         input.form-text {
           max-width: 95%;
+        }
+      }
+    }
+  }
+}
+
+// sponsors overview
+.page-node-sponsors {
+  #content-content {
+    .view-cod-sponsors {
+      > .view-content {
+        text-align: center;
+        > * {
+          display: inline-block;
+          &h3 {
+            width: 100%;
+          }
         }
       }
     }
