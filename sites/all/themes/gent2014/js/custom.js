@@ -8,7 +8,7 @@
         animation: 'fade',
         pauseOnHover: false,
         slideshowSpeed: 12000,
-        animationSpeed: 3000,
+        animationSpeed: 1500,
         minItems: 1,
         maxItems: 1,
         move: 1,
@@ -96,6 +96,11 @@
         });
       });
       $('<li class=""><a>Menu</a></li>').prependTo('#navbar #block-system-main-menu > .content > ul');
+
+      // add class to content when sidebar exists
+      if ($('#content-sidebar').length) {
+        $('#content-content').addClass('has-sidebar');
+      }
 
 
     }

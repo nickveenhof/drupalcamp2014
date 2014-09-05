@@ -24,6 +24,7 @@ regions[navbar] = Navbar
 regions[intro] = Intro
 regions[menubar] = Menubar
 regions[preface] = Preface
+regions[sidebar] = Sidebar
 regions[content] = Content
 regions[postscript] = Postscript
 regions[footer] = Footer
