@@ -1212,6 +1212,9 @@ body .maincontainer #footer {
 body .maincontainer #footer a {
   color: #0491c6;
 }
+body.front .tabs {
+  display: none;
+}
 body.not-front #bg {
   left: 0;
   background: #202020;
