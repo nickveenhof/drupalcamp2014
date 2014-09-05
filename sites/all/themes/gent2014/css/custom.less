@@ -250,6 +250,7 @@ iframe {
   display: inline-block;
   font-size: 30px;
   font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 300;
   .transit;
   border-radius: 4px;
   padding: 0 40px;
@@ -1296,6 +1297,94 @@ body {
 #content-content.has-sidebar {
   width: 73%;
   float: right;
+}
+
+// sponsor page
+.page-node-sponsors {
+  #content-content {
+    .view-cod-sponsors {
+      .view-content {
+
+      }
+      .view-footer {
+        text-align: center;
+        margin-top: 50px;
+      }
+    }
+  }
+}
+
+// sponsor detail pages
+.node-type-sponsor {
+  #content-content {
+    .group-left {
+      width: 65%;
+    }
+    .group-right {
+      background: #e5e5e5;
+      width: 28%;
+      padding: 20px 3%;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      .field {
+        padding: 3px 0;
+      }
+      .field-name-field-sponsor-sponsorship-level a {
+        position: relative;
+        color: #444;
+        .transit;
+        &:hover {
+          color: @seccolor;
+        }
+        &:before {
+          content: "\f005";
+          top: 3px;
+          font-family: FontAwesome;
+          font-size: 15px;
+          margin-right: 10px;
+        }
+        &:after {
+          content: "Sponsor";
+          margin-left: 5px;
+        }
+      }
+      .field-name-field-sponsor-url a {
+        position: relative;
+        color: #444;
+        .transit;
+        &:hover {
+          color: @seccolor;
+        }
+        &:before {
+          content: "\f0ac";
+          top: 3px;
+          font-family: FontAwesome;
+          font-size: 15px;
+          margin-right: 10px;
+        }
+      }
+      .field-name-field-sponsor-related-attendees a {
+        position: relative;
+        color: #444;
+        .transit;
+        &:hover {
+          color: @seccolor;
+        }
+        &:before {
+          content: "\f007";
+          top: 3px;
+          font-family: FontAwesome;
+          font-size: 15px;
+          margin-right: 10px;
+        }
+      }
+    }
+    .group-footer {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px dashed #ddd;
+    }
+  }
 }
 
 // TABLET 

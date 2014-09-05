@@ -396,6 +396,7 @@ iframe {
   margin: 10px 0 5px;
   font-size: 30px;
   font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 300;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -1451,6 +1452,83 @@ body.not-front #content {
 #content-content.has-sidebar {
   width: 73%;
   float: right;
+}
+.page-node-sponsors #content-content .view-cod-sponsors .view-footer {
+  text-align: center;
+  margin-top: 50px;
+}
+.node-type-sponsor #content-content .group-left {
+  width: 65%;
+}
+.node-type-sponsor #content-content .group-right {
+  background: #e5e5e5;
+  width: 28%;
+  padding: 20px 3%;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+.node-type-sponsor #content-content .group-right .field {
+  padding: 3px 0;
+}
+.node-type-sponsor #content-content .group-right .field-name-field-sponsor-sponsorship-level a {
+  position: relative;
+  color: #444;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.node-type-sponsor #content-content .group-right .field-name-field-sponsor-sponsorship-level a:hover {
+  color: #f26825;
+}
+.node-type-sponsor #content-content .group-right .field-name-field-sponsor-sponsorship-level a:before {
+  content: "\f005";
+  top: 3px;
+  font-family: FontAwesome;
+  font-size: 15px;
+  margin-right: 10px;
+}
+.node-type-sponsor #content-content .group-right .field-name-field-sponsor-sponsorship-level a:after {
+  content: "Sponsor";
+  margin-left: 5px;
+}
+.node-type-sponsor #content-content .group-right .field-name-field-sponsor-url a {
+  position: relative;
+  color: #444;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.node-type-sponsor #content-content .group-right .field-name-field-sponsor-url a:hover {
+  color: #f26825;
+}
+.node-type-sponsor #content-content .group-right .field-name-field-sponsor-url a:before {
+  content: "\f0ac";
+  top: 3px;
+  font-family: FontAwesome;
+  font-size: 15px;
+  margin-right: 10px;
+}
+.node-type-sponsor #content-content .group-right .field-name-field-sponsor-related-attendees a {
+  position: relative;
+  color: #444;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.node-type-sponsor #content-content .group-right .field-name-field-sponsor-related-attendees a:hover {
+  color: #f26825;
+}
+.node-type-sponsor #content-content .group-right .field-name-field-sponsor-related-attendees a:before {
+  content: "\f007";
+  top: 3px;
+  font-family: FontAwesome;
+  font-size: 15px;
+  margin-right: 10px;
+}
+.node-type-sponsor #content-content .group-footer {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px dashed #ddd;
 }
 @media screen and (max-width: 700px) {
   .slicknav_menu {
