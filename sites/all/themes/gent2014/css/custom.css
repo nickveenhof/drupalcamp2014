@@ -1277,6 +1277,10 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
 .page-search #content-content .search-results li.search-result .search-snippet-info {
   padding-left: 0;
 }
+.page-search #content-content .search-results li.search-result .search-snippet-info strong {
+  font-weight: 300;
+  color: #f26825;
+}
 .page-user #content-content .user-profile .group-left {
   width: 30%;
 }
