@@ -1667,6 +1667,9 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
 #user-register-form > div > .form-wrapper .description {
   color: #aaa;
 }
+#user-register-form > div > .form-wrapper input.form-text {
+  text-align: center;
+}
 #user-register-form > div > .form-wrapper .field-widget-options-select,
 #user-register-form > div > .form-wrapper .form-type-checkbox {
   display: inline-block;
