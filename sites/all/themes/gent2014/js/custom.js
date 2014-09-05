@@ -112,6 +112,11 @@
       $('<li class="sidebartoplink"><a href="/drupalcamp">Drupalcamp</a></li>').prependTo('#content-sidebar #block-menu-block-1 ul');
       $('.page-node-3 .sidebartoplink a').addClass('active');
 
+      // tabs empty fix
+      if ($('.tabs').text() == '') {
+        $('.tabs').hide();
+      }
+
 
 
     }
