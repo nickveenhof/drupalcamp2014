@@ -1660,7 +1660,7 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
 #user-register-form > div > .form-wrapper {
   text-align: center;
 }
-#user-register-form > div > .form-wrapper .form-type-select,
+#user-register-form > div > .form-wrapper .field-widget-options-select,
 #user-register-form > div > .form-wrapper .form-type-checkbox {
   display: inline-block;
   margin-right: 10px;
