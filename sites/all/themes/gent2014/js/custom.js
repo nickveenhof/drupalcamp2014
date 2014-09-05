@@ -108,6 +108,10 @@
       $('<li class="searchform-mainmenu"></li>').appendTo('#navbar #block-system-main-menu > .content > ul');
       $('#navbar #block-search-form #search-block-form').appendTo('.searchform-mainmenu');
 
+      // add toplink in sidebar menu
+      $('<li class="sidebartoplink"><a href="/drupalcamp">Drupalcamp</a></li>').prependTo('#content-sidebar #block-menu-block-1 ul');
+      $('.page-node-3 .sidebartoplink a').addClass('active');
+
 
 
     }
