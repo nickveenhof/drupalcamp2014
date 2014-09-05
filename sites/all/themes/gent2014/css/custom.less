@@ -541,6 +541,24 @@ body {
           }
           &:nth-child(6) > a {
             &:before {
+              content: "\f0c0";
+              font-family: FontAwesome;
+              font-size: 15px;
+              margin-right: 14px;
+              margin-left: -2px;
+              .transit;
+              color: rgba(255,255,255,0.7);
+            }
+            &:hover {
+              &:before {
+                color: @seccolor;
+              }
+            }
+          }
+          &:nth-child(7) > a {
+            display: block;
+            width: 204px;
+            &:before {
               content: "\f007";
               font-family: FontAwesome;
               font-size: 15px;
@@ -554,12 +572,13 @@ body {
               }
             }
           }
-          &:last-child > a {
+          &:nth-child(8) > a {
+            display: block;
+            width: 204px;
             &:before {
-              // content: "\f005";
-              content: "\f007";
+              content: "\f011";
               font-family: FontAwesome;
-              font-size: 13px;
+              font-size: 15px;
               margin-right: 14px;
               .transit;
               color: rgba(255,255,255,0.7);
@@ -568,6 +587,43 @@ body {
               &:before {
                 color: @seccolor;
               }
+            }
+          }
+          &.searchform-mainmenu {
+            padding: 0;
+            #search-block-form {
+              width: 204px;
+              padding: 0;
+              position: relative;
+              &:before {
+                content: "\f002";
+                font-family: FontAwesome;
+                position: absolute;
+                left: 10px;
+                top: 13px;
+                z-index: 2;
+                font-size: 15px;
+                margin-right: 14px;
+                .transit;
+                color: rgba(255,255,255,0.7);
+              }
+              &:hover {
+                &:before {
+                  color: @seccolor;
+                }
+              }
+            }
+            input.form-text {
+              width: 158px;
+              padding: 8px 5px 8px 40px;
+              border-radius: 0;
+              background: #222;
+              color: #fff;
+
+              border: 0;
+            }
+            input.form-submit {
+              display: none;
             }
           }
           > ul {
@@ -1036,6 +1092,15 @@ body {
   }
 }
 
+body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(8) > a:before {
+  content: "\f055";
+  font-family: FontAwesome;
+  font-size: 15px;
+  margin-right: 14px;
+  .transit;
+  color: rgba(255,255,255,0.7);
+}
+
 // user page
 .page-user {
   #content-content {
@@ -1440,6 +1505,16 @@ body {
     .field-name-field-sponsor-logo {
       margin-top: -24px;
     }
+  }
+}
+
+// register page
+#user-register-form > div {
+  > .form-wrapper {
+    // display: inline-block;
+    // vertical-align: top;
+    // width: 46%;
+    // margin: 0 2% 10px;
   }
 }
 

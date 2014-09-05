@@ -685,6 +685,24 @@ body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(5) > a:
   color: #f26825;
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(6) > a:before {
+  content: "\f0c0";
+  font-family: FontAwesome;
+  font-size: 15px;
+  margin-right: 14px;
+  margin-left: -2px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: rgba(255, 255, 255, 0.7);
+}
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(6) > a:hover:before {
+  color: #f26825;
+}
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(7) > a {
+  display: block;
+  width: 204px;
+}
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(7) > a:before {
   content: "\f007";
   font-family: FontAwesome;
   font-size: 15px;
@@ -694,21 +712,61 @@ body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(6) > a:
   transition: all 0.2s ease-in-out;
   color: rgba(255, 255, 255, 0.7);
 }
-body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(6) > a:hover:before {
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(7) > a:hover:before {
   color: #f26825;
 }
-body #navbar #block-system-main-menu > .content > ul.menu > li:last-child > a:before {
-  content: "\f007";
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(8) > a {
+  display: block;
+  width: 204px;
+}
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(8) > a:before {
+  content: "\f011";
   font-family: FontAwesome;
-  font-size: 13px;
+  font-size: 15px;
   margin-right: 14px;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   color: rgba(255, 255, 255, 0.7);
 }
-body #navbar #block-system-main-menu > .content > ul.menu > li:last-child > a:hover:before {
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(8) > a:hover:before {
   color: #f26825;
+}
+body #navbar #block-system-main-menu > .content > ul.menu > li.searchform-mainmenu {
+  padding: 0;
+}
+body #navbar #block-system-main-menu > .content > ul.menu > li.searchform-mainmenu #search-block-form {
+  width: 204px;
+  padding: 0;
+  position: relative;
+}
+body #navbar #block-system-main-menu > .content > ul.menu > li.searchform-mainmenu #search-block-form:before {
+  content: "\f002";
+  font-family: FontAwesome;
+  position: absolute;
+  left: 10px;
+  top: 13px;
+  z-index: 2;
+  font-size: 15px;
+  margin-right: 14px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: rgba(255, 255, 255, 0.7);
+}
+body #navbar #block-system-main-menu > .content > ul.menu > li.searchform-mainmenu #search-block-form:hover:before {
+  color: #f26825;
+}
+body #navbar #block-system-main-menu > .content > ul.menu > li.searchform-mainmenu input.form-text {
+  width: 158px;
+  padding: 8px 5px 8px 40px;
+  border-radius: 0;
+  background: #222;
+  color: #fff;
+  border: 0;
+}
+body #navbar #block-system-main-menu > .content > ul.menu > li.searchform-mainmenu input.form-submit {
+  display: none;
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li > ul {
   display: none;
@@ -1170,6 +1228,16 @@ body.not-front #content {
   padding: 50px 0 100px;
   z-index: 30;
   position: relative;
+}
+body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(8) > a:before {
+  content: "\f055";
+  font-family: FontAwesome;
+  font-size: 15px;
+  margin-right: 14px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: rgba(255, 255, 255, 0.7);
 }
 .page-user #content-content .user-profile .group-left {
   width: 30%;

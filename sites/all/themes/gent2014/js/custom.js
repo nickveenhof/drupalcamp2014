@@ -102,6 +102,13 @@
         $('#content-content').addClass('has-sidebar');
       }
 
+      // move searchform and accountmenu to mainmanu
+      $('<li class="login-mainmenu"><a href="/user">Login</a></li>').appendTo('.not-logged-in #navbar #block-system-main-menu > .content > ul');
+      $('<li class="login-mainmenu"><a href="/user/register">Register</a></li>').appendTo('.not-logged-in #navbar #block-system-main-menu > .content > ul');
+      $('<li class="searchform-mainmenu"></li>').appendTo('#navbar #block-system-main-menu > .content > ul');
+      $('#navbar #block-search-form #search-block-form').appendTo('.searchform-mainmenu');
+
+
 
     }
   };
