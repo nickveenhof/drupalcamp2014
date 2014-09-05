@@ -963,6 +963,21 @@ body {
     }
     #postscript {
       background: #ddd;
+      padding: 50px 0 30px;
+      #block-views-cod-sponsors-block {
+        text-align: center;
+        .views-row {
+          opacity: 0.4;
+          display: inline-block;
+          vertical-align: middle;
+          width: 33%;
+          margin-bottom: 20px;
+          img {
+            max-height: 70px;
+            width: auto;
+          }
+        }
+      }
     }
     #footer {
       background: #202020;
@@ -1304,7 +1319,25 @@ body {
   #content-content {
     .view-cod-sponsors {
       .view-content {
-
+        text-align: center;
+        h3 {
+          color: @seccolor;
+          margin-bottom: 20px;
+          padding-bottom: 10px;
+          border-bottom: 1px dashed #ddd;
+        }
+        .sponsor {
+          display: inline-block;
+          .well;
+          &:nth-child(5), &:nth-child(6) {
+            width: 25%;
+            display: inline-block;
+            vertical-align: middle;
+          }
+          &:nth-child(8) {
+            width: 15%;
+          }
+        }
       }
       .view-footer {
         text-align: center;
@@ -1319,6 +1352,7 @@ body {
   #content-content {
     .group-left {
       width: 65%;
+      margin-bottom: 20px;
     }
     .group-right {
       background: #e5e5e5;
@@ -1383,6 +1417,26 @@ body {
       margin-top: 20px;
       padding-top: 20px;
       border-top: 1px dashed #ddd;
+    }
+  }
+  &.page-node-22 {
+    .field-name-field-sponsor-logo {
+      margin-top: 5px;
+    }
+  }
+  &.page-node-23 {
+    .field-name-field-sponsor-logo {
+      margin-top: -15px;
+    }
+  }
+  &.page-node-24 {
+    .field-name-field-sponsor-logo {
+      margin-top: -5px;
+    }
+  }
+  &.page-node-45 {
+    .field-name-field-sponsor-logo {
+      margin-top: -24px;
     }
   }
 }

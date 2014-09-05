@@ -1105,6 +1105,21 @@ body .maincontainer #content {
 }
 body .maincontainer #postscript {
   background: #ddd;
+  padding: 50px 0 30px;
+}
+body .maincontainer #postscript #block-views-cod-sponsors-block {
+  text-align: center;
+}
+body .maincontainer #postscript #block-views-cod-sponsors-block .views-row {
+  opacity: 0.4;
+  display: inline-block;
+  vertical-align: middle;
+  width: 33%;
+  margin-bottom: 20px;
+}
+body .maincontainer #postscript #block-views-cod-sponsors-block .views-row img {
+  max-height: 70px;
+  width: auto;
 }
 body .maincontainer #footer {
   background: #202020;
@@ -1453,12 +1468,42 @@ body.not-front #content {
   width: 73%;
   float: right;
 }
+.page-node-sponsors #content-content .view-cod-sponsors .view-content {
+  text-align: center;
+}
+.page-node-sponsors #content-content .view-cod-sponsors .view-content h3 {
+  color: #f26825;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #ddd;
+}
+.page-node-sponsors #content-content .view-cod-sponsors .view-content .sponsor {
+  display: inline-block;
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.page-node-sponsors #content-content .view-cod-sponsors .view-content .sponsor:nth-child(5),
+.page-node-sponsors #content-content .view-cod-sponsors .view-content .sponsor:nth-child(6) {
+  width: 25%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.page-node-sponsors #content-content .view-cod-sponsors .view-content .sponsor:nth-child(8) {
+  width: 15%;
+}
 .page-node-sponsors #content-content .view-cod-sponsors .view-footer {
   text-align: center;
   margin-top: 50px;
 }
 .node-type-sponsor #content-content .group-left {
   width: 65%;
+  margin-bottom: 20px;
 }
 .node-type-sponsor #content-content .group-right {
   background: #e5e5e5;
@@ -1529,6 +1574,18 @@ body.not-front #content {
   margin-top: 20px;
   padding-top: 20px;
   border-top: 1px dashed #ddd;
+}
+.node-type-sponsor.page-node-22 .field-name-field-sponsor-logo {
+  margin-top: 5px;
+}
+.node-type-sponsor.page-node-23 .field-name-field-sponsor-logo {
+  margin-top: -15px;
+}
+.node-type-sponsor.page-node-24 .field-name-field-sponsor-logo {
+  margin-top: -5px;
+}
+.node-type-sponsor.page-node-45 .field-name-field-sponsor-logo {
+  margin-top: -24px;
 }
 @media screen and (max-width: 700px) {
   .slicknav_menu {
