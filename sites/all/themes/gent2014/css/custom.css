@@ -1408,10 +1408,45 @@ body.not-front #content {
 }
 #content-sidebar {
   width: 20%;
-  padding: 20px 2%;
+  padding: 0;
   float: left;
   background: #e5e5e5;
   border-radius: 4px;
+}
+#content-sidebar ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+#content-sidebar ul li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border-bottom: 1px solid #eee;
+}
+#content-sidebar ul li a {
+  padding: 10px 10%;
+  display: inline-block;
+  width: 80%;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background: transparent;
+  color: #0491c6;
+}
+#content-sidebar ul li a:hover {
+  background: #0491c6;
+  color: #fff;
+}
+#content-sidebar ul li a.active {
+  background: #f26825;
+  color: #fff;
+}
+#content-sidebar ul li:first-child a {
+  border-radius: 4px 4px 0 0;
+}
+#content-sidebar ul li:last-child a {
+  border-radius: 0 0 4px 4px;
 }
 #content-content.has-sidebar {
   width: 73%;

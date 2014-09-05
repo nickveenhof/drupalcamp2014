@@ -1255,10 +1255,43 @@ body {
 // sidebar menu theming
 #content-sidebar {
   width: 20%;
-  padding: 20px 2%;
+  padding: 0;
   float: left;
   background: #e5e5e5;
   border-radius: 4px;
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      border-bottom: 1px solid #eee;
+      a {
+        padding: 10px 10%;
+        display: inline-block;
+        width: 80%;
+        .transit;
+        background: transparent;
+        color: @basecolor;
+        &:hover {
+          background: @basecolor;
+          color: #fff;
+        }
+        &.active {
+          background: @seccolor;
+          color: #fff;
+        }
+      }
+      &:first-child a {
+        border-radius: 4px 4px 0 0;
+      }
+      &:last-child a {
+        border-radius: 0 0 4px 4px;
+      }
+    }
+  }
 }
 #content-content.has-sidebar {
   width: 73%;
