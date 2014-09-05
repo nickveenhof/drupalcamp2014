@@ -1521,24 +1521,25 @@ body.not-front #content {
 .node-type-sponsor #content-content .group-right .field {
   padding: 3px 0;
 }
-.node-type-sponsor #content-content .group-right .field-name-field-sponsor-sponsorship-level a {
+.node-type-sponsor #content-content .group-right .field-name-field-sponsor-sponsorship-level .field-item {
   position: relative;
+  display: block;
   color: #444;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-.node-type-sponsor #content-content .group-right .field-name-field-sponsor-sponsorship-level a:hover {
+.node-type-sponsor #content-content .group-right .field-name-field-sponsor-sponsorship-level .field-item:hover {
   color: #f26825;
 }
-.node-type-sponsor #content-content .group-right .field-name-field-sponsor-sponsorship-level a:before {
+.node-type-sponsor #content-content .group-right .field-name-field-sponsor-sponsorship-level .field-item:before {
   content: "\f005";
   top: 3px;
   font-family: FontAwesome;
   font-size: 15px;
   margin-right: 10px;
 }
-.node-type-sponsor #content-content .group-right .field-name-field-sponsor-sponsorship-level a:after {
+.node-type-sponsor #content-content .group-right .field-name-field-sponsor-sponsorship-level .field-item:after {
   content: "Sponsor";
   margin-left: 5px;
 }
