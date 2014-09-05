@@ -182,6 +182,9 @@ h3 {
   p {
     margin: 0 0 10px;
   }
+  table tr td p {
+    margin: 7px 0;
+  }
 }
 
 .field-name-body ul, ol {
@@ -291,6 +294,22 @@ input {
     .transit;
     &:hover {
       background: @seccolor;
+    }
+  }
+}
+
+table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 30px;
+  tr {
+    border-bottom: 1px solid #ddd;
+    &:first-child {
+      border-bottom: 3px solid #ddd;
+      font-weight: 400;
+    }
+    td {
+      vertical-align: middle;
     }
   }
 }

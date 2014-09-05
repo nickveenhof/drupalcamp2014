@@ -330,6 +330,9 @@ h3.bold {
 .field-name-body p {
   margin: 0 0 10px;
 }
+.field-name-body table tr td p {
+  margin: 7px 0;
+}
 .field-name-body ul,
 ol {
   padding: 10px 20px 10px 40px;
@@ -440,6 +443,21 @@ input.form-submit {
 }
 input.form-submit:hover {
   background: #f26825;
+}
+table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 30px;
+}
+table tr {
+  border-bottom: 1px solid #ddd;
+}
+table tr:first-child {
+  border-bottom: 3px solid #ddd;
+  font-weight: 400;
+}
+table tr td {
+  vertical-align: middle;
 }
 body {
   font-family: 'Open Sans', sans-serif;
