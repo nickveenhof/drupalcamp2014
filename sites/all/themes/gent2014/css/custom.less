@@ -1125,6 +1125,33 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
   color: rgba(255,255,255,0.7);
 }
 
+// search page
+.page-search {
+  #content-content {
+    .search-form {
+      position: relative;
+      input.form-submit {
+        position: absolute;
+        right: 10px;
+        top: 34px;
+      }
+    }
+    .search-results {
+      li.search-result {
+        &:before {
+          top: 4px;
+        }
+        h3 {
+          text-align: left;
+        }
+        .search-snippet-info {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}
+
 // user page
 .page-user {
   #content-content {

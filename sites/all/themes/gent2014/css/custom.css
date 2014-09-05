@@ -1260,6 +1260,23 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
   transition: all 0.2s ease-in-out;
   color: rgba(255, 255, 255, 0.7);
 }
+.page-search #content-content .search-form {
+  position: relative;
+}
+.page-search #content-content .search-form input.form-submit {
+  position: absolute;
+  right: 10px;
+  top: 34px;
+}
+.page-search #content-content .search-results li.search-result:before {
+  top: 4px;
+}
+.page-search #content-content .search-results li.search-result h3 {
+  text-align: left;
+}
+.page-search #content-content .search-results li.search-result .search-snippet-info {
+  padding-left: 0;
+}
 .page-user #content-content .user-profile .group-left {
   width: 30%;
 }
