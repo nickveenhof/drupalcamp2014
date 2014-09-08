@@ -1360,6 +1360,9 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
 // sponsors overview
 .page-node-sponsors {
   #content-content {
+    .tabs {
+      display: none;
+    }
     .view-cod-sponsors {
       > .view-content {
         text-align: center;
@@ -1610,6 +1613,15 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
 
 @media screen and (max-width: 980px) {
 
+  .page-node-community #content-content .view-cod-community-attendees .view-content .views-row, 
+  .node-type-page #content-content .view-cod-community-attendees .view-content .views-row, 
+  .page-node-community #content-content .view-volunteers .view-content .views-row, 
+  .node-type-page #content-content .view-volunteers .view-content .views-row {
+    width: 38%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
   
 
 }
@@ -1620,9 +1632,42 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
 @media screen and (max-width: 700px) {
 
   body {
+    overflow-x: hidden;
     .maincontainer {
       word-break: break-word;
+      min-width: 300px;
     }
+  }
+
+  body .maincontainer #intro #intro-inner .region-intro #block-block-3 .front-sponsors > a {
+    margin: 10px 2%;
+    width: 45%;
+  }
+
+  h1 {
+    margin-bottom: 40px;
+  }
+
+  .page-user .region-content form#user-login .form-item {
+    width: 100%;
+  }
+
+  .page-user .tabs {
+    margin-bottom: 10px;
+    li {
+      display: block;
+      margin: 0 0 10px;
+      a:after {
+        display: none;
+      }
+    }
+  }
+
+  .page-node-community #content-content .view-cod-community-attendees .view-filters .views-exposed-widgets > div, 
+  .node-type-page #content-content .view-cod-community-attendees .view-filters .views-exposed-widgets > div, 
+  .page-node-community #content-content .view-volunteers .view-filters .views-exposed-widgets > div, 
+  .node-type-page #content-content .view-volunteers .view-filters .views-exposed-widgets > div {
+    width: 47%;
   }
 
 	.slicknav_menu {
