@@ -1748,6 +1748,22 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
   margin-right: 10px;
   margin-left: 10px;
 }
+#user-register-form > div > .form-wrapper .form-type-password-confirm > .form-item {
+  width: 100%;
+}
+#user-register-form > div > .form-wrapper .form-type-password-confirm > .form-item .password-strength,
+#user-register-form > div > .form-wrapper .form-type-password-confirm > .form-item div.password-confirm {
+  float: none;
+  margin-bottom: 1.5em;
+  width: 100%;
+}
+#user-register-form > div > .form-wrapper .form-type-password-confirm .password-suggestions {
+  padding: 0.8em 0;
+  width: 100%;
+}
+#user-register-form > div > .form-wrapper .form-type-password-confirm .password-suggestions ul {
+  list-style-type: none;
+}
 @media screen and (max-width: 700px) {
   .slicknav_menu {
     display: none !important;

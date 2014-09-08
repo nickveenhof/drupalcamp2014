@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Gent2014 - User Register feature.
+ */
+
+include_once 'gent2014_user_register.features.inc';
