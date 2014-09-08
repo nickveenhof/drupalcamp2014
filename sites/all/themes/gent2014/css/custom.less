@@ -1602,9 +1602,64 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
 
 @media screen and (max-width: 700px) {
 
+  body {
+    .maincontainer {
+      word-break: break-word;
+    }
+  }
+
 	.slicknav_menu {
 		display: none !important;
-	}  
+	}
+
+  #navbar-inner {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .group-left, .group-right, #content-sidebar, #content-content.has-sidebar, 
+  .page-node-5 #content-content .field-name-body .dateboxcontainer .datebox {
+    width: 100%;
+    margin: 0 0 30px;
+  }
+
+  .page-node-5 #content-content .field-name-body .dateboxcontainer .datebox {
+    width: 100%;
+    margin: 0 0 30px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .page-node-community #content-content .view-cod-community-attendees .view-content .views-row, 
+  .node-type-page #content-content .view-cod-community-attendees .view-content .views-row, 
+  .page-node-community #content-content .view-volunteers .view-content .views-row, 
+  .node-type-page #content-content .view-volunteers .view-content .views-row,
+  .page-user #content-content .user-profile .group-left,
+  .page-user #content-content .user-profile .group-right {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .node-type-sponsor #content-content .group-left,
+  .node-type-sponsor #content-content .group-right {
+    width: 90%;
+    margin: 0 0 30px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .page-user #content-content .user-profile .group-right {
+    padding-top: 0;
+    .group-user-info {
+      margin-left: 0;
+      padding: 19px;
+    }
+    .field-name-field-profile-last, .field-name-field-profile-first {
+      line-height: 1;
+    }
+  }
 
 
 }
