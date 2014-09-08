@@ -578,7 +578,7 @@ body #navbar {
   z-index: 35;
   left: 0;
   top: 0;
-  width: 34px;
+  width: 40px;
   overflow: hidden;
   height: 100%;
   padding: 0;
@@ -587,7 +587,9 @@ body #navbar {
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-body #navbar:hover {
+body #navbar:hover,
+body #navbar:focus,
+body #navbar:active {
   width: 204px;
 }
 body #navbar #block-system-main-menu > .content > ul.menu {
@@ -606,7 +608,9 @@ body #navbar #block-system-main-menu > .content > ul.menu > li > a {
   color: rgba(255, 255, 255, 0.7);
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li > a:hover,
-body #navbar #block-system-main-menu > .content > ul.menu > li > a:active {
+body #navbar #block-system-main-menu > .content > ul.menu > li > a:focus,
+body #navbar #block-system-main-menu > .content > ul.menu > li > a:active,
+body #navbar #block-system-main-menu > .content > ul.menu > li > a.active {
   color: #ffffff;
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li.expanded {
@@ -619,12 +623,14 @@ body #navbar #block-system-main-menu > .content > ul.menu > li.expanded:after {
   left: 0;
   top: 0;
   margin-left: 174px;
-  margin-top: 12px;
+  margin-top: 18px;
   font-size: 15px;
   color: rgba(255, 255, 255, 0.7);
   cursor: pointer;
 }
-body #navbar #block-system-main-menu > .content > ul.menu > li.expanded:after:hover {
+body #navbar #block-system-main-menu > .content > ul.menu > li.expanded:after:hover,
+body #navbar #block-system-main-menu > .content > ul.menu > li.expanded:after:focus,
+body #navbar #block-system-main-menu > .content > ul.menu > li.expanded:after:active {
   color: #f26825;
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li.expanded.open {
@@ -644,27 +650,29 @@ body #navbar #block-system-main-menu > .content > ul.menu > li:first-child > a {
 body #navbar #block-system-main-menu > .content > ul.menu > li:first-child > a:before {
   content: "\f0c9";
   font-family: FontAwesome;
-  font-size: 15px;
+  font-size: 22px;
   margin-right: 14px;
   color: rgba(255, 255, 255, 0.7);
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(2) > a:before {
   content: "\f015";
   font-family: FontAwesome;
-  font-size: 15px;
+  font-size: 22px;
   margin-right: 12px;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   color: rgba(255, 255, 255, 0.7);
 }
-body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(2) > a:hover:before {
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(2) > a:hover:before,
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(2) > a:focus:before,
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(2) > a:active:before {
   color: #f26825;
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(3) > a:before {
   content: "\f1a9";
   font-family: FontAwesome;
-  font-size: 15px;
+  font-size: 22px;
   margin-right: 12px;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
@@ -672,26 +680,30 @@ body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(3) > a:
   color: rgba(255, 255, 255, 0.7);
   margin-top: -2px;
 }
-body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(3) > a:hover:before {
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(3) > a:hover:before,
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(3) > a:focus:before,
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(3) > a:active:before {
   color: #f26825;
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(4) > a:before {
   content: "\f005";
   font-family: FontAwesome;
-  font-size: 15px;
+  font-size: 22px;
   margin-right: 14px;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   color: rgba(255, 255, 255, 0.7);
 }
-body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(4) > a:hover:before {
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(4) > a:hover:before,
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(4) > a:focus:before,
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(4) > a:active:before {
   color: #f26825;
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(5) > a:before {
   content: "\f041";
   font-family: FontAwesome;
-  font-size: 15px;
+  font-size: 22px;
   margin-right: 15px;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
@@ -699,13 +711,15 @@ body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(5) > a:
   color: rgba(255, 255, 255, 0.7);
   margin-left: 2px;
 }
-body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(5) > a:hover:before {
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(5) > a:hover:before,
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(5) > a:focus:before,
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(5) > a:active:before {
   color: #f26825;
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(6) > a:before {
   content: "\f0c0";
   font-family: FontAwesome;
-  font-size: 15px;
+  font-size: 22px;
   margin-right: 11px;
   margin-left: -2px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -713,7 +727,9 @@ body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(6) > a:
   transition: all 0.2s ease-in-out;
   color: rgba(255, 255, 255, 0.7);
 }
-body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(6) > a:hover:before {
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(6) > a:hover:before,
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(6) > a:focus:before,
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(6) > a:active:before {
   color: #f26825;
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(7) > a {
@@ -723,14 +739,16 @@ body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(7) > a 
 body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(7) > a:before {
   content: "\f007";
   font-family: FontAwesome;
-  font-size: 15px;
+  font-size: 22px;
   margin-right: 14px;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   color: rgba(255, 255, 255, 0.7);
 }
-body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(7) > a:hover:before {
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(7) > a:hover:before,
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(7) > a:focus:before,
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(7) > a:active:before {
   color: #f26825;
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(8) > a {
@@ -740,14 +758,16 @@ body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(8) > a 
 body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(8) > a:before {
   content: "\f011";
   font-family: FontAwesome;
-  font-size: 15px;
+  font-size: 22px;
   margin-right: 14px;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   color: rgba(255, 255, 255, 0.7);
 }
-body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(8) > a:hover:before {
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(8) > a:hover:before,
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(8) > a:focus:before,
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(8) > a:active:before {
   color: #f26825;
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li.searchform-mainmenu {
@@ -763,16 +783,18 @@ body #navbar #block-system-main-menu > .content > ul.menu > li.searchform-mainme
   font-family: FontAwesome;
   position: absolute;
   left: 10px;
-  top: 13px;
+  top: 9px;
   z-index: 2;
-  font-size: 15px;
+  font-size: 22px;
   margin-right: 14px;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   color: rgba(255, 255, 255, 0.7);
 }
-body #navbar #block-system-main-menu > .content > ul.menu > li.searchform-mainmenu #search-block-form:hover:before {
+body #navbar #block-system-main-menu > .content > ul.menu > li.searchform-mainmenu #search-block-form:hover:before,
+body #navbar #block-system-main-menu > .content > ul.menu > li.searchform-mainmenu #search-block-form:focus:before,
+body #navbar #block-system-main-menu > .content > ul.menu > li.searchform-mainmenu #search-block-form:active:before {
   color: #f26825;
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li.searchform-mainmenu input.form-text {
@@ -806,11 +828,13 @@ body #navbar #block-system-main-menu > .content > ul.menu > li > ul > li > a {
   display: block;
   margin: 0;
 }
-body #navbar #block-system-main-menu > .content > ul.menu > li > ul > li > a:hover {
+body #navbar #block-system-main-menu > .content > ul.menu > li > ul > li > a:hover,
+body #navbar #block-system-main-menu > .content > ul.menu > li > ul > li > a:focus,
+body #navbar #block-system-main-menu > .content > ul.menu > li > ul > li > a:active {
   color: #ffffff;
 }
 body .maincontainer {
-  margin-left: 34px;
+  margin-left: 40px;
   position: relative;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
   z-index: 36;
@@ -820,6 +844,11 @@ body .maincontainer {
 }
 body .maincontainer.open {
   margin-left: 204px;
+}
+body .maincontainer:hover,
+body .maincontainer:focus,
+body .maincontainer:active {
+  margin-left: 40px;
 }
 body .maincontainer #intro {
   background: transparent;
@@ -889,7 +918,9 @@ body .maincontainer #intro #intro-inner .region-intro .block .intro-cta ul > li 
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-body .maincontainer #intro #intro-inner .region-intro .block .intro-cta ul > li > a:hover {
+body .maincontainer #intro #intro-inner .region-intro .block .intro-cta ul > li > a:hover,
+body .maincontainer #intro #intro-inner .region-intro .block .intro-cta ul > li > a:focus,
+body .maincontainer #intro #intro-inner .region-intro .block .intro-cta ul > li > a:active {
   background: #fff;
   color: #444;
 }
@@ -971,7 +1002,9 @@ body .maincontainer #intro #intro-inner .region-intro #block-block-3 .front-spon
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-body .maincontainer #intro #intro-inner .region-intro #block-block-3 .front-sponsors > a img:hover {
+body .maincontainer #intro #intro-inner .region-intro #block-block-3 .front-sponsors > a img:hover,
+body .maincontainer #intro #intro-inner .region-intro #block-block-3 .front-sponsors > a img:focus,
+body .maincontainer #intro #intro-inner .region-intro #block-block-3 .front-sponsors > a img:active {
   opacity: 1;
 }
 body .maincontainer #intro #intro-inner .region-intro #block-block-4 {
@@ -1027,7 +1060,9 @@ body .maincontainer #menubar .sliderbutton.block-search-form {
   right: 20px;
   top: 15px;
 }
-body .maincontainer #menubar .sliderbutton:hover {
+body .maincontainer #menubar .sliderbutton:hover,
+body .maincontainer #menubar .sliderbutton:focus,
+body .maincontainer #menubar .sliderbutton:active {
   opacity: 1;
 }
 body .maincontainer #menubar .sliderbutton.open {
@@ -1200,7 +1235,9 @@ body .maincontainer #postscript #block-views-cod-sponsors-block .views-row img {
   max-height: 70px;
   width: auto;
 }
-body .maincontainer #postscript #block-views-cod-sponsors-block .views-row:hover {
+body .maincontainer #postscript #block-views-cod-sponsors-block .views-row:hover,
+body .maincontainer #postscript #block-views-cod-sponsors-block .views-row:focus,
+body .maincontainer #postscript #block-views-cod-sponsors-block .views-row:active {
   opacity: 0.8;
 }
 body .maincontainer #footer {
@@ -1245,7 +1282,7 @@ body.not-front #content {
 body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(8) > a:before {
   content: "\f055";
   font-family: FontAwesome;
-  font-size: 15px;
+  font-size: 22px;
   margin-right: 14px;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
