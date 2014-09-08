@@ -82,7 +82,7 @@
       });
 
       // intro sponsors delay + fading
-      $('#intro #block-block-3').hide().delay(2000).fadeIn(700);
+      $('.front #intro #block-block-3').hide().delay(2000).fadeIn(700);
 
       // intro CTA delay + fading
       $('#intro #block-block-4').hide().delay(3000).fadeIn(700);
