@@ -1776,6 +1776,10 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
     margin-left: 5%;
     margin-right: 5%;
   }
+  body .maincontainer #intro #intro-inner .region-intro #block-block-3 .front-sponsors > a {
+    margin: 10px 2%;
+    width: 45%;
+  }
 }
 @media screen and (max-width: 700px) {
   body {
@@ -1785,15 +1789,17 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
     word-break: break-word;
     min-width: 300px;
   }
-  body .maincontainer #intro #intro-inner .region-intro #block-block-3 .front-sponsors > a {
-    margin: 10px 2%;
-    width: 45%;
-  }
   h1 {
     margin-bottom: 40px;
   }
   .page-user .region-content form#user-login .form-item {
     width: 100%;
+  }
+  .page-node-community #content-content .view-cod-community-attendees .view-content .views-row .field-name-ds-user-picture a,
+  .node-type-page #content-content .view-cod-community-attendees .view-content .views-row .field-name-ds-user-picture a,
+  .page-node-community #content-content .view-volunteers .view-content .views-row .field-name-ds-user-picture a,
+  .node-type-page #content-content .view-volunteers .view-content .views-row .field-name-ds-user-picture a {
+    display: inline-block;
   }
   .page-user .tabs {
     margin-bottom: 10px;
@@ -1860,5 +1866,14 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
   .page-user #content-content .user-profile .group-right .field-name-field-profile-last,
   .page-user #content-content .user-profile .group-right .field-name-field-profile-first {
     line-height: 1;
+  }
+  body .maincontainer #intro #intro-inner {
+    padding-top: 120px;
+  }
+  body .maincontainer #intro #intro-inner .region-intro .block .intro-cta {
+    display: none;
+  }
+  body .maincontainer #intro #intro-inner .region-intro #block-block-4 {
+    margin-top: 40px;
   }
 }
