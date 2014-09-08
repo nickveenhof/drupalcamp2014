@@ -829,7 +829,7 @@ body .maincontainer #intro {
 }
 body .maincontainer #intro #intro-inner {
   position: relative;
-  padding-top: 200px;
+  padding-top: 160px;
 }
 body .maincontainer #intro #intro-inner .region-intro .block .intro-logo {
   max-width: 550px;
@@ -975,7 +975,7 @@ body .maincontainer #intro #intro-inner .region-intro #block-block-3 .front-spon
   opacity: 1;
 }
 body .maincontainer #intro #intro-inner .region-intro #block-block-4 {
-  margin-top: 80px;
+  margin-top: 60px;
   color: #fff;
   font-size: 18px;
 }
@@ -1231,14 +1231,6 @@ body.not-front .maincontent {
   z-index: 36;
 }
 body.not-front #intro {
-  height: 140px;
-}
-body.not-front #intro #intro-inner {
-  position: fixed;
-  width: 600px;
-  left: 50%;
-  margin-left: -300px;
-  top: 0;
   height: 140px;
 }
 body.not-front #menubar {
