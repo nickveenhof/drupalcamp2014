@@ -5,3 +5,24 @@
  */
 
 include_once 'gent2014_user_register.features.inc';
+
+/**
+ * Implements hook_form_alter().
+ *
+ * Sets the og_user_node field access to FALSE. 
+ * This field automatically makes the user who registered, 
+ * a member of the (DrupalCamp) event.
+ *
+ * @param array $form
+ *   Form structure.
+ * @param array $form_state
+ *   Form state array.
+ * @param String $form_id
+ *   String identifier of the form.
+ */
+function gent2014_user_register_form_alter(&$form, &$form_state, $form_id) {
+	if ($form_id !== 'user_register_form' && $form_id !== 'user_profile_form') {
+		return;
+	}
+	$form['og_user_node']['#access'] = FALSE;
+}
