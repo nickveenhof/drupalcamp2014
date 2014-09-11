@@ -1012,6 +1012,11 @@ body .maincontainer #intro #intro-inner .region-intro #block-block-4 {
   color: #fff;
   font-size: 18px;
 }
+body .maincontainer #intro #intro-inner .region-intro #block-block-5 {
+  margin-top: 60px;
+  color: #fff;
+  font-size: 18px;
+}
 body .maincontainer #menubar {
   display: none;
   height: 40px;
