@@ -143,8 +143,8 @@ function gent2014_session_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'session_room',
-        1 => 'field_experience',
-        2 => 'og_vocabulary',
+        1 => 'og_vocabulary',
+        2 => 'field_experience',
         3 => 'title',
         4 => 'field_speakers',
         5 => 'body',
@@ -153,8 +153,8 @@ function gent2014_session_ds_layout_settings_info() {
     ),
     'fields' => array(
       'session_room' => 'ds_content',
-      'field_experience' => 'ds_content',
       'og_vocabulary' => 'ds_content',
+      'field_experience' => 'ds_content',
       'title' => 'ds_content',
       'field_speakers' => 'ds_content',
       'body' => 'ds_content',

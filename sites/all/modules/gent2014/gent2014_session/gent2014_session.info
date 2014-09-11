@@ -5,6 +5,7 @@ package = Gent2014
 dependencies[] = color_field
 dependencies[] = ctools
 dependencies[] = ds
+dependencies[] = ds_format
 dependencies[] = features
 dependencies[] = taxonomy
 features[ctools][] = ds:ds:1
