@@ -36,9 +36,6 @@ function _gent2014_session_schedule_create_page($day, $favorite = FALSE) {
     return FALSE;
   }
 
-  drupal_add_js(drupal_get_path('module', 'gent2014_session') . '/js/jquery.timelinr-0.9.54.js');
-  drupal_add_css(drupal_get_path('module', 'gent2014_session') . '/css/style.css');
-
   // Get nids of all sessions
   $timeslots = _gent2014_session_page_get_timeslots($available_days[$day]);
 
@@ -75,27 +72,18 @@ $return = '';
     $date_items = array();
 
     foreach ($output as $timeslot => $row) {
-      $date_items[] = array(
-        'data' => l(
-          substr($timeslot, 11), 
-          '', 
-          array(
-            'fragment' => preg_replace('/[^\da-z]/i', '', $timeslot),
-            'external' => FALSE,
-            'attributes' => array(
-              'title' => $timeslot
-            ),
-          )
-        ), 
+      $items[] = array(
+        'data' => '<div class="tldate">' . substr($timeslot, 11) . '</div>',
+        // 'class' => array('tldate'),
       );
+
       $items[] = array(
         'data' => $row,
-        'id' => preg_replace('/[^\da-z]/i', '', $timeslot),
+        'class' => array('tl-circ'),
       );
     }
 
-    $return .= theme('item_list', array('items' => $date_items, 'attributes' => array('id' => 'dates')));
-    $return .= theme('item_list', array('items' => $items, 'attributes' => array('id' => 'issues')));
+    $return .= theme('item_list', array('items' => $items, 'attributes' => array('class' => array('timeline'))));
 
     return theme('html_tag', array(
       'element' => array(
