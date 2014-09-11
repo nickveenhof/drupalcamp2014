@@ -51,16 +51,10 @@ function _gent2014_session_schedule_create_page($day, $favorite = FALSE) {
       continue;
     }
 
-    // Load entities
-    $entities = node_load_multiple(array_keys($nids));
-
-    // Get teaser view of entities
-    $nodes = entity_view('node', $entities, 'teaser');
-
     $dateTime = new DateTime($timeslot->starttime, $timezone);
     $offset = $timezone->getOffset($dateTime);
 
-    $output[$timeslot->starttime] = render($nodes);
+    $output[$timeslot->starttime] = $nids;
   }
 
   // dsm($output);
@@ -69,29 +63,47 @@ $return = '';
   if (!empty($output)) {
     $items = array();
 
-    $date_items = array();
-
     foreach ($output as $timeslot => $row) {
       $items[] = array(
-        'data' => '<div class="tldate">' . substr($timeslot, 11) . '</div>',
+        'data' => '<div class="tldate">' . date('D d-m-Y H:i', strtotime($timeslot)) . '</div>',
         // 'class' => array('tldate'),
       );
 
-      $items[] = array(
-        'data' => $row,
-        'class' => array('tl-circ'),
-      );
+      $left = TRUE;
+
+      foreach ($row as $nid) {
+        $class = '';
+        if ($left) {
+          $left = FALSE;
+        }
+        else {
+          $class = 'timeline-inverted';
+        }
+
+    // Load entities
+    $entity = node_load($nid->nid);
+
+    // Get teaser view of entities
+    $node = entity_view('node', array($entity), 'teaser');
+        $items[] = array(
+          'data' => '<div class="tl-circ"></div><div class="timeline-panel">' . render($node) . '</div>',
+          'class' => $class ? $class : '',
+        );
+      }
+
+      
     }
 
     $return .= theme('item_list', array('items' => $items, 'attributes' => array('class' => array('timeline'))));
 
-    return theme('html_tag', array(
-      'element' => array(
-        '#tag' => 'div',
-        '#attributes' => array('id' => drupal_html_id('timeline')),
-        '#value' => $return,
-      ),
-    ));
+return $return;
+    // return theme('html_tag', array(
+    //   'element' => array(
+    //     '#tag' => 'div',
+    //     // '#attributes' => array('id' => drupal_html_id('timeline')),
+    //     '#value' => $return,
+    //   ),
+    // ));
 
   }
   else {
@@ -129,11 +141,13 @@ function _gent2014_session_page_get_nodes($timeslot, $favorite) {
   $query->addField('node', 'nid', 'nid');
 
   $query->innerJoin('field_data_field_session_timeslot', 'session_slot', 'session_slot.entity_id = node.nid');
-
   $query->innerJoin('field_data_field_timeslot_time', 'timeslot_time', 'timeslot_time.revision_id = session_slot.field_session_timeslot_target_id');
+  $query->leftJoin('field_data_field_accepted', 'accepted', 'accepted.entity_id = node.nid');
 
   $query->condition('timeslot_time.field_timeslot_time_target_id', $timeslot->entity_id);
 
+  $query->where('((accepted.field_accepted_value = \'accepted\' AND node.type = \'session\') OR (node.type = \'schedule_item\'))');
+ 
 
   // $query->innerJoin('field_data_field_event_timeslots', 'timeslot', 'timeslot.entity_id = node.nid');
 

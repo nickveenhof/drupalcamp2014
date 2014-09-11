@@ -1777,6 +1777,9 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
   padding: 20px 0 20px;
   position: relative;
 }
+.timeline * {
+  box-sizing: border-box;
+}
 .timeline:before {
   top: 0;
   bottom: 0;
@@ -1804,65 +1807,18 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
   margin: 0 0 25px 0;
   position: relative;
 }
-/** timeline panels **/
-.timeline li .timeline-panel {
-  width: 46%;
-  float: left;
+.timeline h2 {
+  border: none;
+}
+.timeline li .timeline-panel .node-schedule-item {
   background: #fff;
   border: 1px solid #d4d4d4;
-  padding: 20px;
-  position: relative;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
   border-radius: 8px;
-  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  width: 100%;
 }
-/** panel arrows **/
-.timeline li .timeline-panel:before {
-  position: absolute;
-  top: 26px;
-  right: -15px;
-  display: inline-block;
-  border-top: 15px solid transparent;
-  border-left: 15px solid #ccc;
-  border-right: 0 solid #ccc;
-  border-bottom: 15px solid transparent;
-  content: " ";
-}
-.timeline li .timeline-panel:after {
-  position: absolute;
-  top: 27px;
-  right: -14px;
-  display: inline-block;
-  border-top: 14px solid transparent;
-  border-left: 14px solid #fff;
-  border-right: 0 solid #fff;
-  border-bottom: 14px solid transparent;
-  content: " ";
-}
-.timeline li .timeline-panel.noarrow:before,
-.timeline li .timeline-panel.noarrow:after {
-  top: 0;
-  right: 0;
-  display: none;
-  border: 0;
-}
-.timeline li.timeline-inverted .timeline-panel {
-  float: right;
-}
-.timeline li.timeline-inverted .timeline-panel:before {
-  border-left-width: 0;
-  border-right-width: 15px;
-  left: -15px;
-  right: auto;
-}
-.timeline li.timeline-inverted .timeline-panel:after {
-  border-left-width: 0;
-  border-right-width: 14px;
-  left: -14px;
-  right: auto;
+.timeline li .timeline-panel .node-schedule-item h2 {
+  text-align: center;
 }
 @media screen and (max-width: 980px) {
   .page-node-community #content-content .view-cod-community-attendees .view-content .views-row,
