@@ -36,8 +36,8 @@ function _gent2014_session_schedule_create_page($day, $favorite = FALSE) {
     return FALSE;
   }
 
-  // drupal_add_js(drupal_get_path('module', 'gent2014_session') . '/js/jquery.timelinr-0.9.54.js');
-  // drupal_add_css(drupal_get_path('module', 'gent2014_session') . '/css/style.css');
+  drupal_add_js(drupal_get_path('module', 'gent2014_session') . '/js/jquery.timelinr-0.9.54.js');
+  drupal_add_css(drupal_get_path('module', 'gent2014_session') . '/css/style.css');
 
   // Get nids of all sessions
   $timeslots = _gent2014_session_page_get_timeslots($available_days[$day]);
@@ -66,7 +66,7 @@ function _gent2014_session_schedule_create_page($day, $favorite = FALSE) {
     $output[$timeslot->starttime] = render($nodes);
   }
 
-  dsm($output);
+  // dsm($output);
 
 $return = '';
   if (!empty($output)) {
@@ -129,7 +129,7 @@ function _gent2014_session_page_get_timeslots($date) {
  
   $query->orderBy('evt_date.field_evttime_date_value');
 
-  dsm($date);
+  // dsm($date);
 
   return $query->execute()->fetchAll();
 }
