@@ -10,6 +10,7 @@ dependencies[] = taxonomy
 features[ctools][] = ds:ds:1
 features[ds_field_settings][] = node|schedule_item|teaser
 features[ds_field_settings][] = node|session|teaser
+features[ds_fields][] = session_room
 features[ds_layout_settings][] = node|schedule_item|teaser
 features[ds_layout_settings][] = node|session|teaser
 features[features_api][] = api:2

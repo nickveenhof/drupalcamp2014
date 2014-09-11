@@ -96,7 +96,8 @@ $return = '';
 
     $return .= theme('item_list', array('items' => $items, 'attributes' => array('class' => array('timeline'))));
 
-return $return;
+  return $return;
+
     // return theme('html_tag', array(
     //   'element' => array(
     //     '#tag' => 'div',
