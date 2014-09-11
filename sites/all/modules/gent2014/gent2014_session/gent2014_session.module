@@ -1,8 +1,10 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the Gent2014 - Session feature.
  */
+
+include_once 'gent2014_session.features.inc';
 
 /**
  * Implements hook_menu()
