@@ -77,7 +77,7 @@ $return = '';
     foreach ($output as $timeslot => $row) {
       $date_items[] = array(
         'data' => l(
-          $timeslot, 
+          substr($timeslot, 11), 
           '', 
           array(
             'fragment' => preg_replace('/[^\da-z]/i', '', $timeslot),
@@ -96,11 +96,6 @@ $return = '';
 
     $return .= theme('item_list', array('items' => $date_items, 'attributes' => array('id' => 'dates')));
     $return .= theme('item_list', array('items' => $items, 'attributes' => array('id' => 'issues')));
-    $return .= '
-    <div id="grad_left"></div>
-    <div id="grad_right"></div>
-    <a href="#" id="next">+</a>
-    <a href="#" id="prev">-</a>';
 
     return theme('html_tag', array(
       'element' => array(

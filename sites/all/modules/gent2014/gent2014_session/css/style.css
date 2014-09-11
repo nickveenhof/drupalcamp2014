@@ -15,27 +15,14 @@
 	-ms-transition: 0.5s;
 	transition: 0.5s;
 }
-
-#timeline h1,#timeline h2,#timeline h4,#timeline h5,#timeline h6 {
-	text-align: center;
-	color: #ccc;
-	text-shadow: #000 1px 1px 2px;
-	margin-bottom: 5px;
-}
-#timeline 	h1 {
-		font-size: 18px;
-	}
-#timeline 	h2 {
-		font-size: 14px;
-	}
 .sociales {
 	text-align: center;
 	margin-bottom: 20px;
 }
 
 	#timeline {
-	/*	width: 800px;
-		height: 350px;*/
+		width: 800px;
+		/*height: 350px;*/
 		overflow: hidden;
 		margin: 100px auto;
 		position: relative;
