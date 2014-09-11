@@ -1,0 +1,11 @@
+name = Gent2014 - Session
+description = Featured configuration regarding sessions/tracks
+core = 7.x
+package = Gent2014
+dependencies[] = color_field
+dependencies[] = features
+dependencies[] = taxonomy
+features[features_api][] = api:2
+features[field_base][] = field_track_color
+features[field_instance][] = taxonomy_term-session_tracks_1-field_track_color
+features[taxonomy][] = session_tracks_1
