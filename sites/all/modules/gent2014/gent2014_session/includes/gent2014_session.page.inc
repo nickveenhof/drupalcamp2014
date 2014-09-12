@@ -31,6 +31,10 @@ function _gent2014_session_schedule_create_page($day, $favorite = FALSE) {
     'friday' => '2014-11-07',
     'saturday' => '2014-11-08'
   );
+  $room_mapping = array (
+    'Calibrate' => TRUE,
+    'EntityOne' => FALSE,
+  );
 
   if (empty($available_days[$day])) {
     return FALSE;
@@ -69,19 +73,18 @@ function _gent2014_session_schedule_create_page($day, $favorite = FALSE) {
         'class' => array('tldate'),
       );
 
-      $left = TRUE;
-
       foreach ($row as $nid) {
-        $class = '';
-        if ($left) {
-          $left = FALSE;
-        }
-        else {
-          $class = 'timeline-inverted';
-        }
 
     // Load entities
     $entity = node_load($nid->nid);
+        $class = '';
+
+    if ($entity->type == 'session') {
+      $room = _gent2014_session_get_room_name($nid->nid);
+        if ($room_mapping[$room]) {
+          $class = 'timeline-inverted';
+        }
+      }
 
     // Get teaser view of entities
     $node = entity_view('node', array($entity), 'teaser');
@@ -97,21 +100,39 @@ function _gent2014_session_schedule_create_page($day, $favorite = FALSE) {
     $return .= theme('item_list', array('items' => $items, 'attributes' => array('class' => array('timeline'))));
 
   return $return;
-
-    // return theme('html_tag', array(
-    //   'element' => array(
-    //     '#tag' => 'div',
-    //     // '#attributes' => array('id' => drupal_html_id('timeline')),
-    //     '#value' => $return,
-    //   ),
-    // ));
-
   }
   else {
     return FALSE;
   }
 }
 
+/**
+ * Helper function to retrieve the name of the room a session is scheduled in.
+ *
+ * @param  int    $nid
+ *
+ * @return String
+ */
+function _gent2014_session_get_room_name($nid) {
+  $sql = db_select('cod_event_room', 'room');
+  $sql->addField('room', 'name');
+  $sql->innerJoin('field_data_field_timeslot_room', 'tsroom', 'tsroom.field_timeslot_room_target_id = room.evtrid');
+  $sql->innerJoin('field_data_field_session_timeslot', 'slot', 'slot.field_session_timeslot_target_id = tsroom.entity_id');
+  $sql->innerJoin('node', 'n', 'slot.revision_id = n.vid');
+  $sql->condition('n.nid', $nid);
+
+  $name = $sql->execute()->fetchAssoc('name');
+
+  return $name['name'];
+}
+
+/**
+ * Helper function to retrieve timeslots on a day.
+ *
+ * @param  String $date
+ *
+ * @return QueryResult
+ */
 function _gent2014_session_page_get_timeslots($date) {
   $date = $date . '%';
   $query = db_select('cod_event_time', 'evt');
@@ -124,8 +145,6 @@ function _gent2014_session_page_get_timeslots($date) {
   $query->condition('evt_date.field_evttime_date_value', $date, 'LIKE');
 
   $query->orderBy('evt_date.field_evttime_date_value');
-
-  // dsm($date);
 
   return $query->execute()->fetchAll();
 }
