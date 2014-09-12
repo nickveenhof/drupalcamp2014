@@ -2012,6 +2012,15 @@ li.timeline-inverted .timeline-panel:after {
 .node-session.view-mode-full .group-footer {
   padding-top: 20px;
 }
+.page-taxonomy .node-session {
+  border: 1px solid #AAA;
+}
+.page-taxonomy .node-session .experience-level {
+  padding: 0;
+}
+.page-taxonomy .node-session .field-item {
+  padding: 0 5px;
+}
 @media screen and (max-width: 980px) {
   .page-node-community #content-content .view-cod-community-attendees .view-content .views-row,
   .node-type-page #content-content .view-cod-community-attendees .view-content .views-row,
