@@ -198,7 +198,7 @@ body.admin-menu {
 #admin-menu {
   position: fixed;
   top: 0;
-  left: -140px;
+  right: -140px;
   left: auto;
   width: 140px;
   height: 100%;
@@ -229,10 +229,10 @@ body.admin-menu {
   width: 100%;
 }
 #admin-menu ul#admin-menu-menu > li > ul {
-  margin: -28px 0 0 160px;
+  margin: -28px 0 0 -160px;
 }
 #admin-menu ul#admin-menu-menu > li > ul > li > ul {
-  margin: -28px 0 0 160px;
+  margin: -28px 0 0 -160px;
 }
 h1 {
   font-size: 40px;
