@@ -1825,6 +1825,10 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
   content: " ";
 }
 
+.schedule-item .timeline-panel:before, .schedule-item .timeline-panel:after {
+  display: none;
+}
+
 .item-list ul.timeline li.timeline-inverted {
   float: right;
 }
@@ -1908,7 +1912,7 @@ li.timeline-inverted .timeline-panel:after {
     float: none;
   }
   .timeline-panel:before, .timeline-panel:after, li.timeline-inverted .timeline-panel:before, li.timeline-inverted .timeline-panel:after {
-    left: -9999px;
+    display: none;
   }
 
   .ds-2col-stacked {

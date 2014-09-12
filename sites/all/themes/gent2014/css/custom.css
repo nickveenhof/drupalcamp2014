@@ -1960,6 +1960,10 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
   border-bottom: 14px solid transparent;
   content: " ";
 }
+.schedule-item .timeline-panel:before,
+.schedule-item .timeline-panel:after {
+  display: none;
+}
 .item-list ul.timeline li.timeline-inverted {
   float: right;
 }
@@ -2029,7 +2033,7 @@ li.timeline-inverted .timeline-panel:after {
   .timeline-panel:after,
   li.timeline-inverted .timeline-panel:before,
   li.timeline-inverted .timeline-panel:after {
-    left: -9999px;
+    display: none;
   }
   .ds-2col-stacked .group-left,
   .ds-2col-stacked .group-right {
