@@ -423,6 +423,49 @@ body {
       }
     }
   }
+  .closemenubutton {
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    position: fixed;
+    left: 219px;
+    top: 16px;
+    z-index: 99;
+    .transit;
+    svg path {
+      .transit;
+      fill: @seccolor;
+    }
+    svg#closemenubutton-closed {
+      display: none;
+    }
+    svg#closemenubutton-open {
+      display: block;
+    }
+    &:hover {
+      svg path {
+        fill: @basecolor;
+      }
+    }
+    &.open {
+      left: 55px;
+      svg path {
+        .transit;
+        fill: @seccolor;
+      }
+      svg#closemenubutton-closed {
+        display: block;
+      }
+      svg#closemenubutton-open {
+        display: none;
+      }
+      &:hover {
+        svg path {
+          fill: @basecolor;
+        }
+      }
+    } 
+  }
   #navbar {
     position: fixed;
     z-index: 35;
@@ -432,9 +475,9 @@ body {
     overflow: hidden;
     height: 100%;
     padding: 0;
-    background: #333;
+    background: rgba(0,0,0,0.7);
     .transit;
-    &:hover, &:focus, &:active {
+    &.open, &:focus, &:active {
       width: 204px;
     }
     #block-system-main-menu {
@@ -450,8 +493,9 @@ body {
           > a {
             font-size: 16px;
             color: rgba(255,255,255,0.7);
-            &:hover, &:focus, &:active, &.active {
-              color: rgba(255,255,255,1);
+            .transit;
+            &:hover, &:focus, &:active {
+              color: @seccolor;
             }
           }
           &.expanded {
@@ -479,21 +523,22 @@ body {
               }
             }
           }
-          &:first-child {
-            background: @basecolor;
-            padding: 6px 10px;
-            > a {
-              cursor: default;
-              &:before {
-                content: "\f0c9";
-                font-family: FontAwesome;
-                font-size: 22px;
-                margin-right: 14px;
-                color: rgba(255,255,255,0.7);
-              }
-            }
-          }
-          &:nth-child(2) > a {
+          // &:first-child {
+          //   background: @basecolor;
+          //   padding: 6px 10px;
+          //   position: relative;
+          //   > a {
+          //     cursor: default;
+          //     &:before {
+          //       content: "\f0c9";
+          //       font-family: FontAwesome;
+          //       font-size: 22px;
+          //       margin-right: 14px;
+          //       color: rgba(255,255,255,0.7);
+          //     }
+          //   }
+          // }
+          &:nth-child(1) > a {
             &:before {
               content: "\f015";
               font-family: FontAwesome;
@@ -502,13 +547,13 @@ body {
               .transit;
               color: rgba(255,255,255,0.7);
             }
-            &:hover, &:focus, &:active {
+            &:hover, &:focus, &:active, &.active {
               &:before {
                 color: @seccolor;
               }
             }
           }
-          &:nth-child(3) > a {
+          &:nth-child(2) > a {
             &:before {
               // content: "\f073";
               content: "\f1a9";
@@ -519,13 +564,13 @@ body {
               color: rgba(255,255,255,0.7);
               margin-top: -2px;
             }
-            &:hover, &:focus, &:active {
+            &:hover, &:focus, &:active, &.active {
               &:before {
                 color: @seccolor;
               }
             }
           }
-          &:nth-child(4) > a {
+          &:nth-child(3) > a {
             &:before {
               // content: "\f05a";
               // content: "\f007";
@@ -536,13 +581,13 @@ body {
               .transit;
               color: rgba(255,255,255,0.7);
             }
-            &:hover, &:focus, &:active {
+            &:hover, &:focus, &:active, &.active {
               &:before {
                 color: @seccolor;
               }
             }
           }
-          &:nth-child(5) > a {
+          &:nth-child(4) > a {
             &:before {
               content: "\f041";
               font-family: FontAwesome;
@@ -552,13 +597,13 @@ body {
               color: rgba(255,255,255,0.7);
               margin-left: 2px;
             }
-            &:hover, &:focus, &:active {
+            &:hover, &:focus, &:active, &.active {
               &:before {
                 color: @seccolor;
               }
             }
           }
-          &:nth-child(6) > a {
+          &:nth-child(5) > a {
             &:before {
               content: "\f0c0";
               font-family: FontAwesome;
@@ -568,13 +613,13 @@ body {
               .transit;
               color: rgba(255,255,255,0.7);
             }
-            &:hover, &:focus, &:active {
+            &:hover, &:focus, &:active, &.active {
               &:before {
                 color: @seccolor;
               }
             }
           }
-          &:nth-child(7) > a {
+          &:nth-child(6) > a {
             display: block;
             width: 204px;
             &:before {
@@ -585,13 +630,13 @@ body {
               .transit;
               color: rgba(255,255,255,0.7);
             }
-            &:hover, &:focus, &:active {
+            &:hover, &:focus, &:active, &.active {
               &:before {
                 color: @seccolor;
               }
             }
           }
-          &:nth-child(8) > a {
+          &:nth-child(7) > a {
             display: block;
             width: 204px;
             &:before {
@@ -602,7 +647,7 @@ body {
               .transit;
               color: rgba(255,255,255,0.7);
             }
-            &:hover, &:focus, &:active {
+            &:hover, &:focus, &:active, &.active {
               &:before {
                 color: @seccolor;
               }
@@ -626,7 +671,7 @@ body {
                 .transit;
                 color: rgba(255,255,255,0.7);
               }
-              &:hover, &:focus, &:active {
+              &:hover, &:focus, &:active, &.active {
                 &:before {
                   color: @seccolor;
                 }
@@ -636,9 +681,8 @@ body {
               width: 158px;
               padding: 8px 7px 8px 36px;
               border-radius: 0;
-              background: #222;
+              background: transparent;
               color: #fff;
-
               border: 0;
             }
             input.form-submit {
@@ -659,11 +703,12 @@ body {
               > a {
                 font-size: 14px;
                 font-style: italic;
-                padding: 5px 10px 7px 34px;
+                padding: 5px 10px 7px 40px;
                 display: block;
                 margin: 0;
-                &:hover, &:focus, &:active {
-                  color: rgba(255,255,255,1);
+                
+                &:hover, &:focus, &:active, &.active {
+                  color: @seccolor;
                 }
               }
             }
@@ -680,10 +725,14 @@ body {
     .transit;
     &.open {
       margin-left: 204px;
+      #content {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
     }
-    &:hover, &:focus, &:active {
-      margin-left: 40px;
-    }
+    // &:hover, &:focus, &:active {
+    //   margin-left: 40px;
+    // }
     #intro {
       background: transparent;
       text-align: center;
@@ -1787,6 +1836,8 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
     margin: 10px 2%;
     width: 45%;
   }
+
+
 
 }
 

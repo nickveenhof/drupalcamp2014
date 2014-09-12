@@ -573,6 +573,51 @@ body #bg ul li.slide.slide21 {
   background: url(../images/bg/dcg2014-21.jpg) no-repeat center;
   background-size: cover;
 }
+body .closemenubutton {
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  position: fixed;
+  left: 219px;
+  top: 16px;
+  z-index: 99;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+body .closemenubutton svg path {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  fill: #f26825;
+}
+body .closemenubutton svg#closemenubutton-closed {
+  display: none;
+}
+body .closemenubutton svg#closemenubutton-open {
+  display: block;
+}
+body .closemenubutton:hover svg path {
+  fill: #0491c6;
+}
+body .closemenubutton.open {
+  left: 55px;
+}
+body .closemenubutton.open svg path {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  fill: #f26825;
+}
+body .closemenubutton.open svg#closemenubutton-closed {
+  display: block;
+}
+body .closemenubutton.open svg#closemenubutton-open {
+  display: none;
+}
+body .closemenubutton.open:hover svg path {
+  fill: #0491c6;
+}
 body #navbar {
   position: fixed;
   z-index: 35;
@@ -582,12 +627,12 @@ body #navbar {
   overflow: hidden;
   height: 100%;
   padding: 0;
-  background: #333;
+  background: rgba(0, 0, 0, 0.7);
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-body #navbar:hover,
+body #navbar.open,
 body #navbar:focus,
 body #navbar:active {
   width: 204px;
@@ -606,12 +651,14 @@ body #navbar #block-system-main-menu > .content > ul.menu > li {
 body #navbar #block-system-main-menu > .content > ul.menu > li > a {
   font-size: 16px;
   color: rgba(255, 255, 255, 0.7);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li > a:hover,
 body #navbar #block-system-main-menu > .content > ul.menu > li > a:focus,
-body #navbar #block-system-main-menu > .content > ul.menu > li > a:active,
-body #navbar #block-system-main-menu > .content > ul.menu > li > a.active {
-  color: #ffffff;
+body #navbar #block-system-main-menu > .content > ul.menu > li > a:active {
+  color: #f26825;
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li.expanded {
   position: relative;
@@ -640,21 +687,7 @@ body #navbar #block-system-main-menu > .content > ul.menu > li.expanded.open {
 body #navbar #block-system-main-menu > .content > ul.menu > li.expanded.open a.active {
   color: #fff;
 }
-body #navbar #block-system-main-menu > .content > ul.menu > li:first-child {
-  background: #0491c6;
-  padding: 6px 10px;
-}
-body #navbar #block-system-main-menu > .content > ul.menu > li:first-child > a {
-  cursor: default;
-}
-body #navbar #block-system-main-menu > .content > ul.menu > li:first-child > a:before {
-  content: "\f0c9";
-  font-family: FontAwesome;
-  font-size: 22px;
-  margin-right: 14px;
-  color: rgba(255, 255, 255, 0.7);
-}
-body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(2) > a:before {
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(1) > a:before {
   content: "\f015";
   font-family: FontAwesome;
   font-size: 22px;
@@ -664,12 +697,13 @@ body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(2) > a:
   transition: all 0.2s ease-in-out;
   color: rgba(255, 255, 255, 0.7);
 }
-body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(2) > a:hover:before,
-body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(2) > a:focus:before,
-body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(2) > a:active:before {
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(1) > a:hover:before,
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(1) > a:focus:before,
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(1) > a:active:before,
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(1) > a.active:before {
   color: #f26825;
 }
-body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(3) > a:before {
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(2) > a:before {
   content: "\f1a9";
   font-family: FontAwesome;
   font-size: 22px;
@@ -680,12 +714,13 @@ body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(3) > a:
   color: rgba(255, 255, 255, 0.7);
   margin-top: -2px;
 }
-body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(3) > a:hover:before,
-body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(3) > a:focus:before,
-body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(3) > a:active:before {
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(2) > a:hover:before,
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(2) > a:focus:before,
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(2) > a:active:before,
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(2) > a.active:before {
   color: #f26825;
 }
-body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(4) > a:before {
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(3) > a:before {
   content: "\f005";
   font-family: FontAwesome;
   font-size: 22px;
@@ -695,12 +730,13 @@ body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(4) > a:
   transition: all 0.2s ease-in-out;
   color: rgba(255, 255, 255, 0.7);
 }
-body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(4) > a:hover:before,
-body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(4) > a:focus:before,
-body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(4) > a:active:before {
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(3) > a:hover:before,
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(3) > a:focus:before,
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(3) > a:active:before,
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(3) > a.active:before {
   color: #f26825;
 }
-body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(5) > a:before {
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(4) > a:before {
   content: "\f041";
   font-family: FontAwesome;
   font-size: 22px;
@@ -711,12 +747,13 @@ body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(5) > a:
   color: rgba(255, 255, 255, 0.7);
   margin-left: 2px;
 }
-body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(5) > a:hover:before,
-body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(5) > a:focus:before,
-body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(5) > a:active:before {
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(4) > a:hover:before,
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(4) > a:focus:before,
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(4) > a:active:before,
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(4) > a.active:before {
   color: #f26825;
 }
-body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(6) > a:before {
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(5) > a:before {
   content: "\f0c0";
   font-family: FontAwesome;
   font-size: 22px;
@@ -727,9 +764,30 @@ body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(6) > a:
   transition: all 0.2s ease-in-out;
   color: rgba(255, 255, 255, 0.7);
 }
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(5) > a:hover:before,
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(5) > a:focus:before,
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(5) > a:active:before,
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(5) > a.active:before {
+  color: #f26825;
+}
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(6) > a {
+  display: block;
+  width: 204px;
+}
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(6) > a:before {
+  content: "\f007";
+  font-family: FontAwesome;
+  font-size: 22px;
+  margin-right: 14px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: rgba(255, 255, 255, 0.7);
+}
 body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(6) > a:hover:before,
 body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(6) > a:focus:before,
-body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(6) > a:active:before {
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(6) > a:active:before,
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(6) > a.active:before {
   color: #f26825;
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(7) > a {
@@ -737,7 +795,7 @@ body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(7) > a 
   width: 204px;
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(7) > a:before {
-  content: "\f007";
+  content: "\f011";
   font-family: FontAwesome;
   font-size: 22px;
   margin-right: 14px;
@@ -748,26 +806,8 @@ body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(7) > a:
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(7) > a:hover:before,
 body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(7) > a:focus:before,
-body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(7) > a:active:before {
-  color: #f26825;
-}
-body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(8) > a {
-  display: block;
-  width: 204px;
-}
-body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(8) > a:before {
-  content: "\f011";
-  font-family: FontAwesome;
-  font-size: 22px;
-  margin-right: 14px;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  color: rgba(255, 255, 255, 0.7);
-}
-body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(8) > a:hover:before,
-body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(8) > a:focus:before,
-body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(8) > a:active:before {
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(7) > a:active:before,
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(7) > a.active:before {
   color: #f26825;
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li.searchform-mainmenu {
@@ -794,14 +834,15 @@ body #navbar #block-system-main-menu > .content > ul.menu > li.searchform-mainme
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li.searchform-mainmenu #search-block-form:hover:before,
 body #navbar #block-system-main-menu > .content > ul.menu > li.searchform-mainmenu #search-block-form:focus:before,
-body #navbar #block-system-main-menu > .content > ul.menu > li.searchform-mainmenu #search-block-form:active:before {
+body #navbar #block-system-main-menu > .content > ul.menu > li.searchform-mainmenu #search-block-form:active:before,
+body #navbar #block-system-main-menu > .content > ul.menu > li.searchform-mainmenu #search-block-form.active:before {
   color: #f26825;
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li.searchform-mainmenu input.form-text {
   width: 158px;
   padding: 8px 7px 8px 36px;
   border-radius: 0;
-  background: #222;
+  background: transparent;
   color: #fff;
   border: 0;
 }
@@ -824,14 +865,15 @@ body #navbar #block-system-main-menu > .content > ul.menu > li > ul > li {
 body #navbar #block-system-main-menu > .content > ul.menu > li > ul > li > a {
   font-size: 14px;
   font-style: italic;
-  padding: 5px 10px 7px 34px;
+  padding: 5px 10px 7px 40px;
   display: block;
   margin: 0;
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li > ul > li > a:hover,
 body #navbar #block-system-main-menu > .content > ul.menu > li > ul > li > a:focus,
-body #navbar #block-system-main-menu > .content > ul.menu > li > ul > li > a:active {
-  color: #ffffff;
+body #navbar #block-system-main-menu > .content > ul.menu > li > ul > li > a:active,
+body #navbar #block-system-main-menu > .content > ul.menu > li > ul > li > a.active {
+  color: #f26825;
 }
 body .maincontainer {
   margin-left: 40px;
@@ -845,10 +887,9 @@ body .maincontainer {
 body .maincontainer.open {
   margin-left: 204px;
 }
-body .maincontainer:hover,
-body .maincontainer:focus,
-body .maincontainer:active {
-  margin-left: 40px;
+body .maincontainer.open #content {
+  padding-left: 30px;
+  padding-right: 30px;
 }
 body .maincontainer #intro {
   background: transparent;
