@@ -1962,7 +1962,12 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
 }
 .node-session.node-teaser .field-name-og-vocabulary {
   color: #FFF;
-  padding: 5px;
+}
+.node-session.node-teaser .field-name-og-vocabulary .field-item {
+  padding: 0 5px;
+}
+.node-session.view-mode-full .group-footer {
+  padding-top: 20px;
 }
 @media screen and (max-width: 980px) {
   .page-node-community #content-content .view-cod-community-attendees .view-content .views-row,
@@ -1980,6 +1985,12 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
   .item-list ul.timeline li {
     width: 100%;
     float: none;
+  }
+  .ds-2col-stacked .group-left,
+  .ds-2col-stacked .group-right {
+    display: block;
+    float: none;
+    width: 100%;
   }
 }
 @media screen and (max-width: 700px) {
