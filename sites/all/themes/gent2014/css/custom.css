@@ -1774,6 +1774,7 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
 }
 .timeline {
   list-style: none;
+  overflow: hidden;
   padding: 20px 0 20px;
   position: relative;
 }
@@ -1794,13 +1795,10 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
   display: block;
   width: 100%;
   background: #0491c6;
-  border: 3px solid #0482b2;
-  color: #ededed;
+  color: #FFF;
   margin: 0 auto;
   padding: 3px 0;
-  font-weight: bold;
   text-align: center;
-  -webkit-box-shadow: 0 0 11px rgba(0, 0, 0, 0.35);
 }
 .item-list ul.timeline li {
   padding: 0;
@@ -1824,26 +1822,13 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
   width: 100%;
 }
 .timeline li .timeline-panel .field-name-session-room {
-  background: #CCC;
+  background: #e5e5e5;
   border-radius: 8px 8px 0 0;
   padding: 5px;
   text-align: center;
 }
 .timeline li .timeline-panel .node-schedule-item h2 {
   text-align: center;
-}
-/** timeline panels **/
-.timeline li .timeline-panel {
-  background: #fff;
-  border: 1px solid #d4d4d4;
-  padding: 20px;
-  position: relative;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px;
-  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
 }
 .timeline li {
   overflow: hidden;
@@ -1896,6 +1881,27 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
   border-right-width: 14px;
   left: -14px;
   right: auto;
+}
+.experience-level {
+  float: right;
+  padding: 5px;
+  height: 25px;
+  text-align: center;
+  text-indent: -9999px;
+  width: 45px;
+}
+.experience-level.experience-level-beginner {
+  background: url('../images/exp-beginner.png') no-repeat center center;
+}
+.experience-level.experience-level-intermediate {
+  background: url('../images/exp-intermediate.png') no-repeat center center;
+}
+.experience-level.experience-level-advanced {
+  background: url('../images/exp-advanced.png') no-repeat center center;
+}
+.node-session.node-teaser .field-name-og-vocabulary a {
+  color: #FFF;
+  padding: 5px;
 }
 @media screen and (max-width: 980px) {
   .page-node-community #content-content .view-cod-community-attendees .view-content .views-row,

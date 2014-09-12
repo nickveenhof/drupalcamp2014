@@ -221,7 +221,7 @@ h3 {
           margin: 20px 1% 0;
           min-height: 20px;
           padding: 0 2%;
-          
+
           h2 {
             text-align: center;
             margin-top: 15px;
@@ -669,7 +669,7 @@ body {
             }
           }
         }
-      } 
+      }
     }
   }
   .maincontainer {
@@ -865,17 +865,17 @@ body {
         z-index: 99;
         .transit;
         opacity: 0.6;
-        &.block-user-login {      
+        &.block-user-login {
           background: url(../images/icon-user.svg) no-repeat center;
           right: 60px;
           top: 15px;
         }
-        &.block-system-user-menu {      
+        &.block-system-user-menu {
           background: url(../images/icon-user.svg) no-repeat center;
           right: 60px;
           top: 15px;
         }
-        &.block-system-main-menu {      
+        &.block-system-main-menu {
           background: url(../images/icon-menu.svg) no-repeat center;
           left: 20px;
           top: 15px;
@@ -889,7 +889,7 @@ body {
             }
           }
         }
-        &.block-search-form {      
+        &.block-search-form {
           background: url(../images/icon-search.svg) no-repeat center;
           right: 20px;
           top: 15px;
@@ -1616,6 +1616,7 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
 
 .timeline {
   list-style: none;
+  overflow: hidden;
   padding: 20px 0 20px;
   position: relative;
 }
@@ -1623,7 +1624,7 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
 .timeline * {
   box-sizing: border-box;
 }
- 
+
 .timeline:before {
   top: 0;
   bottom: 0;
@@ -1639,15 +1640,14 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
   display: block;
   width: 100%;
   background: @basecolor;
-  border: 3px solid darken(@basecolor, 4%);
-  color: #ededed;
+  // border: 1px solid darken(@basecolor, 4%);
+  color: #FFF;
   margin: 0 auto;
   padding: 3px 0;
-  font-weight: bold;
+  // font-weight: bold;
   text-align: center;
-  -webkit-box-shadow: 0 0 11px rgba(0,0,0,0.35);
 }
- 
+
 .item-list ul.timeline li {
   padding: 0;
   margin: 0 0 25px 0;
@@ -1674,7 +1674,7 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
 }
 
 .timeline li .timeline-panel .field-name-session-room {
-  background: #CCC;
+  background: #e5e5e5;
   border-radius: 8px 8px 0 0;
   padding: 5px;
   text-align: center;
@@ -1682,21 +1682,6 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
 
 .timeline li .timeline-panel .node-schedule-item h2 {
   text-align: center;
-}
-
-
-/** timeline panels **/
-.timeline li .timeline-panel {
-  background: #fff;
-  border: 1px solid #d4d4d4;
-  padding: 20px;
-  position: relative;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px;
-  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
 }
 
 .timeline li {
@@ -1707,7 +1692,7 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
   clear: both;
   width: 100%;
 }
- 
+
 /** panel arrows **/
 .timeline li:before {
   position: absolute;
@@ -1720,7 +1705,7 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
   border-bottom: 15px solid transparent;
   content: " ";
 }
- 
+
 .timeline li:after {
   position: absolute;
   top: 27px;
@@ -1738,18 +1723,18 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
   display: none;
   border: 0;
 }
- 
+
 .item-list ul.timeline li.timeline-inverted {
   float: right;
 }
- 
+
 .timeline li.timeline-inverted:before {
   border-left-width: 0;
   border-right-width: 15px;
   left: -15px;
   right: auto;
 }
- 
+
 .timeline li.timeline-inverted:after {
   border-left-width: 0;
   border-right-width: 14px;
@@ -1757,13 +1742,41 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
   right: auto;
 }
 
-// TABLET 
+.experience-level {
+  float: right;
+  padding: 5px;
+  height: 25px;
+  text-align: center;
+  text-indent: -9999px;
+  width: 45px;
+
+  &.experience-level-beginner {
+    background: url('../images/exp-beginner.png') no-repeat center center;
+  }
+  &.experience-level-intermediate {
+    background: url('../images/exp-intermediate.png') no-repeat center center;
+  }
+  &.experience-level-advanced {
+    background: url('../images/exp-advanced.png') no-repeat center center;
+  }
+}
+
+.node-session.node-teaser {
+  .field-name-og-vocabulary {
+    a {
+      color: #FFF;
+    padding: 5px;
+    }
+  }
+}
+
+// TABLET
 
 @media screen and (max-width: 980px) {
 
-  .page-node-community #content-content .view-cod-community-attendees .view-content .views-row, 
-  .node-type-page #content-content .view-cod-community-attendees .view-content .views-row, 
-  .page-node-community #content-content .view-volunteers .view-content .views-row, 
+  .page-node-community #content-content .view-cod-community-attendees .view-content .views-row,
+  .node-type-page #content-content .view-cod-community-attendees .view-content .views-row,
+  .page-node-community #content-content .view-volunteers .view-content .views-row,
   .node-type-page #content-content .view-volunteers .view-content .views-row {
     width: 38%;
     margin-left: 5%;
@@ -1798,9 +1811,9 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
     width: 100%;
   }
 
-  .page-node-community #content-content .view-cod-community-attendees .view-content .views-row .field-name-ds-user-picture a, 
-  .node-type-page #content-content .view-cod-community-attendees .view-content .views-row .field-name-ds-user-picture a, 
-  .page-node-community #content-content .view-volunteers .view-content .views-row .field-name-ds-user-picture a, 
+  .page-node-community #content-content .view-cod-community-attendees .view-content .views-row .field-name-ds-user-picture a,
+  .node-type-page #content-content .view-cod-community-attendees .view-content .views-row .field-name-ds-user-picture a,
+  .page-node-community #content-content .view-volunteers .view-content .views-row .field-name-ds-user-picture a,
   .node-type-page #content-content .view-volunteers .view-content .views-row .field-name-ds-user-picture a {
     display: inline-block;
   }
@@ -1816,9 +1829,9 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
     }
   }
 
-  .page-node-community #content-content .view-cod-community-attendees .view-filters .views-exposed-widgets > div, 
-  .node-type-page #content-content .view-cod-community-attendees .view-filters .views-exposed-widgets > div, 
-  .page-node-community #content-content .view-volunteers .view-filters .views-exposed-widgets > div, 
+  .page-node-community #content-content .view-cod-community-attendees .view-filters .views-exposed-widgets > div,
+  .node-type-page #content-content .view-cod-community-attendees .view-filters .views-exposed-widgets > div,
+  .page-node-community #content-content .view-volunteers .view-filters .views-exposed-widgets > div,
   .node-type-page #content-content .view-volunteers .view-filters .views-exposed-widgets > div {
     width: 47%;
   }
@@ -1833,7 +1846,7 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
     padding: 0;
   }
 
-  .group-left, .group-right, #content-sidebar, #content-content.has-sidebar, 
+  .group-left, .group-right, #content-sidebar, #content-content.has-sidebar,
   .page-node-5 #content-content .field-name-body .dateboxcontainer .datebox {
     width: 100%;
     margin: 0 0 30px;
@@ -1846,9 +1859,9 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
     padding-right: 0;
   }
 
-  .page-node-community #content-content .view-cod-community-attendees .view-content .views-row, 
-  .node-type-page #content-content .view-cod-community-attendees .view-content .views-row, 
-  .page-node-community #content-content .view-volunteers .view-content .views-row, 
+  .page-node-community #content-content .view-cod-community-attendees .view-content .views-row,
+  .node-type-page #content-content .view-cod-community-attendees .view-content .views-row,
+  .page-node-community #content-content .view-volunteers .view-content .views-row,
   .node-type-page #content-content .view-volunteers .view-content .views-row,
   .page-user #content-content .user-profile .group-left,
   .page-user #content-content .user-profile .group-right {
@@ -1893,7 +1906,7 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
 
 @media screen and (max-height: 370px) {
 
-  
+
 
 }
 
