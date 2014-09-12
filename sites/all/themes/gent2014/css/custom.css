@@ -1828,7 +1828,7 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
   position: absolute;
   content: " ";
   width: 3px;
-  background-color: #888;
+  background-color: #AAA;
   left: 50%;
   margin-left: -1.5px;
 }
@@ -1883,7 +1883,8 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
 .item-list ul.timeline li.schedule-item .field-name-title h2,
 .timeline li .timeline-panel .node-schedule-item .field-name-title h2 {
   font-size: 22px;
-  margin-top: 0;
+  margin: 0;
+  padding: 0;
   width: 70%;
 }
 .item-list ul.timeline li.schedule-item .field-name-title h2 a,
@@ -1959,7 +1960,7 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
 .experience-level.experience-level-advanced {
   background: url('../images/exp-advanced.png') no-repeat center center;
 }
-.node-session.node-teaser .field-name-og-vocabulary a {
+.node-session.node-teaser .field-name-og-vocabulary {
   color: #FFF;
   padding: 5px;
 }
@@ -1975,6 +1976,10 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
   body .maincontainer #intro #intro-inner .region-intro #block-block-3 .front-sponsors > a {
     margin: 10px 2%;
     width: 45%;
+  }
+  .item-list ul.timeline li {
+    width: 100%;
+    float: none;
   }
 }
 @media screen and (max-width: 700px) {
@@ -2071,9 +2076,5 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
   }
   body .maincontainer #intro #intro-inner .region-intro #block-block-4 {
     margin-top: 40px;
-  }
-  .item-list ul.timeline li {
-    width: 100%;
-    float: none;
   }
 }

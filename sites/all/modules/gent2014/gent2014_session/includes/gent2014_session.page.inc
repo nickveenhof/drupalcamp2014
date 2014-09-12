@@ -65,7 +65,7 @@ function _gent2014_session_schedule_create_page($day, $favorite = FALSE) {
 
     foreach ($output as $timeslot => $row) {
       $items[] = array(
-        'data' => '<div class="tldate">' . date('D d-m-Y H:i', strtotime($timeslot)) . '</div>',
+        'data' => '<div class="tldate">' . strtoupper(date('D  d/m/Y - H:i', strtotime($timeslot))) . '</div>',
         'class' => array('tldate'),
       );
 
