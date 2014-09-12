@@ -13,8 +13,8 @@ function gent2014_session_schedule_default_page($day) {
     // Create message
     $output = theme('html_tag', array(
       'element' => array(
-        '#tag' => 'div',
-        '#value' => '<p>' . $text . '</p>',
+        '#tag'        => 'div',
+        '#value'      => '<p>' . $text . '</p>',
         '#attributes' => array('class' => drupal_html_class('conf-message')),
       )
     ));
@@ -28,10 +28,10 @@ function gent2014_session_schedule_default_page($day) {
  */
 function _gent2014_session_schedule_create_page($day, $favorite = FALSE) {
   $available_days = array(
-    'friday' => '2014-11-07',
+    'friday'   => '2014-11-07',
     'saturday' => '2014-11-08'
   );
-  $room_mapping = array (
+  $room_mapping   = array(
     'Calibrate' => TRUE,
     'EntityOne' => FALSE,
   );
@@ -46,7 +46,7 @@ function _gent2014_session_schedule_create_page($day, $favorite = FALSE) {
   $timezone = new DateTimeZone('Europe/Brussels');
 
   $output = array();
-  $dates = array();
+  $dates  = array();
 
   foreach ($timeslots as $timeslot) {
     $nids = _gent2014_session_page_get_nodes($timeslot, $favorite);
@@ -56,7 +56,7 @@ function _gent2014_session_schedule_create_page($day, $favorite = FALSE) {
     }
 
     $dateTime = new DateTime($timeslot->starttime, $timezone);
-    $offset = $timezone->getOffset($dateTime);
+    $offset   = $timezone->getOffset($dateTime);
 
     $output[$timeslot->starttime] = $nids;
   }
@@ -69,27 +69,27 @@ function _gent2014_session_schedule_create_page($day, $favorite = FALSE) {
 
     foreach ($output as $timeslot => $row) {
       $items[] = array(
-        'data' => '<div class="tldate">' . strtoupper(date('D  d/m/Y - H:i', strtotime($timeslot))) . '</div>',
+        'data'  => '<div class="tldate">' . strtoupper(date('D  d/m/Y - H:i', strtotime($timeslot))) . '</div>',
         'class' => array('tldate'),
       );
 
       foreach ($row as $nid) {
 
-    // Load entities
-    $entity = node_load($nid->nid);
-        $class = '';
+        // Load entities
+        $entity = node_load($nid->nid);
+        $class  = '';
 
-    if ($entity->type == 'session') {
-      $room = _gent2014_session_get_room_name($nid->nid);
-        if ($room_mapping[$room]) {
-          $class = 'timeline-inverted';
+        if ($entity->type == 'session') {
+          $room = _gent2014_session_get_room_name($nid->nid);
+          if ($room_mapping[$room]) {
+            $class = 'timeline-inverted';
+          }
         }
-      }
 
-    // Get teaser view of entities
-    $node = entity_view('node', array($entity), 'teaser');
+        // Get teaser view of entities
+        $node    = entity_view('node', array($entity), 'teaser');
         $items[] = array(
-          'data' => '<div class="tl-circ"></div><div class="timeline-panel">' . render($node) . '</div>',
+          'data'  => '<div class="tl-circ"></div><div class="timeline-panel">' . render($node) . '</div>',
           'class' => array($class ? $class : '', ($entity->type == 'schedule_item') ? 'schedule-item' : ''),
         );
       }
@@ -99,7 +99,7 @@ function _gent2014_session_schedule_create_page($day, $favorite = FALSE) {
 
     $return .= theme('item_list', array('items' => $items, 'attributes' => array('class' => array('timeline'))));
 
-  return $return;
+    return $return;
   }
   else {
     return FALSE;
@@ -109,7 +109,7 @@ function _gent2014_session_schedule_create_page($day, $favorite = FALSE) {
 /**
  * Helper function to retrieve the name of the room a session is scheduled in.
  *
- * @param  int    $nid
+ * @param  int $nid
  *
  * @return String
  */
@@ -134,7 +134,7 @@ function _gent2014_session_get_room_name($nid) {
  * @return QueryResult
  */
 function _gent2014_session_page_get_timeslots($date) {
-  $date = $date . '%';
+  $date  = $date . '%';
   $query = db_select('cod_event_time', 'evt');
 
   $query->addField('evt', 'evttid', 'entity_id');
@@ -169,18 +169,11 @@ function _gent2014_session_page_get_nodes($timeslot, $favorite) {
   $query->condition('node.status', 1);
   $query->where('((accepted.field_accepted_value = \'accepted\' AND node.type = \'session\') OR (node.type = \'schedule_item\'))');
 
-
-  $query->orderBy('field_timeslot_room_target_id', 'ASC');
-
-
   // $query->innerJoin('field_data_field_event_timeslots', 'timeslot', 'timeslot.entity_id = node.nid');
 
 
-
-
-
   // $query->innerJoin('field_data_field_slot_types_time_slot', 'time_slot', 'time_slot.entity_id = timeslot.field_session_timeslot_target_id');
-// var_dump($query->__toString());
+  // var_dump($query->__toString());
   // $query->innerJoin('field_data_field_slot_datetime', 'datetime', 'datetime.entity_id = time_slot.field_slot_types_time_slot_target_id');
   // $query->innerJoin('og_membership', 'og', 'og.etid = datetime.entity_id');
   // $query->innerJoin('field_data_field_accepted', 'accepted', 'accepted.entity_id = node.nid');
