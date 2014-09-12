@@ -1,0 +1,87 @@
+<?php
+/**
+ * @file
+ * Code for the Gent2014 - Session feature.
+ */
+
+include_once 'gent2014_session.features.inc';
+
+/**
+ * Implements hook_menu()
+ */
+function gent2014_session_menu() {
+  // Default menu callback
+  $items['schedule'] = array(
+    'title' => t('Schedule'),
+    'type' => MENU_NORMAL_ITEM,
+    'page callback' => 'gent2014_session_schedule_default_page',
+    'page arguments' => array("friday"), // switch to saturday once Friday is over
+    'access callback' => 'user_access',
+    'access arguments' => array('access content'),
+    'file' => 'includes/gent2014_session.page.inc',
+  );
+
+  // Saturday
+  $items['schedule/friday'] = array(
+    'title' => t('Schedule - Friday'),
+    'page callback' => 'gent2014_session_schedule_default_page',
+    'page arguments' => array("friday"),
+    'type' => MENU_DEFAULT_LOCAL_TASK,
+    'access callback' => 'user_access',
+    'access arguments' => array('access content'),
+    'file' => 'includes/gent2014_session.page.inc',
+  );
+
+  // Sunday
+  $items['schedule/saturday'] = array(
+    'title' => t('Schedule - Saturday'),
+    'type' => MENU_LOCAL_TASK,
+    'page callback' => 'gent2014_session_schedule_default_page',
+    'page arguments' => array("saturday"),
+    'access callback' => 'user_access',
+    'access arguments' => array('access content'),
+    'file' => 'includes/gent2014_session.page.inc',
+  );
+
+  // // Personalized menu
+  // $items['program/my_program'] = array(
+  //   'title' => t('My Program'),
+  //   'type' => MENU_NORMAL_ITEM,
+  //   'page callback' => 'leuven2013_program_my_page',
+  //   'page arguments' => array("$saturday"),
+  //   'access callback' => '_leuven_2013_program_access',
+  //   'file' => 'includes/gent2014_session.page.inc',
+  // );
+
+  // // Personalized menu - Saturday
+  // $items['program/my_program/saturday'] = array(
+  //   'title' => t('My Program - Saturday'),
+  //   'type' => MENU_DEFAULT_LOCAL_TASK,
+  //   'page callback' => 'leuven2013_program_my_page',
+  //   'page arguments' => array("$saturday"),
+  //   'access callback' => '_leuven_2013_program_access',
+  //   'file' => 'includes/gent2014_session.page.inc',
+  // );
+
+  // // Personalized menu - Sunday
+  // $items['program/my_program/sunday'] = array(
+  //   'title' => t('My Program - Sunday'),
+  //   'type' => MENU_LOCAL_TASK,
+  //   'page callback' => 'leuven2013_program_my_page',
+  //   'page arguments' => array("$sunday"),
+  //   'access callback' => '_leuven_2013_program_access',
+  //   'file' => 'includes/gent2014_session.page.inc',
+  // );
+
+  // // Create extra tab on session page.
+  // $items['program/sessions/propose'] = array(
+  //   'title' => t('Propose a session'),
+  //   'type' => MENU_LOCAL_TASK,
+  //   'weight' => 10,
+  //   'page callback' => 'drupal_goto',
+  //   'page arguments' => array('node/add/session'),
+  //   'access callback' => '_leuven_2013_program_access',
+  // );
+
+  return $items;
+}
