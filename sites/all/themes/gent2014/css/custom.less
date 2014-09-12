@@ -1726,6 +1726,51 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
 .item-list ul.timeline li.schedule-item,
 .timeline li .timeline-panel .node-schedule-item {
   width: 100%;
+  .field-name-title {
+    h2 {
+      font-size: 22px;
+      margin-top: 0;
+      width: 70%;
+      a {
+        color: #404040;
+      }
+    }
+    &.schedule_breakfast, &.schedule_welcome, &.schedule_coffee {
+      h2 {
+        width: 100%;
+        background: url(../images/icon-coffee.png) no-repeat center top;
+        padding-top: 65px;
+      }
+    }
+    &.schedule_lunch {
+      h2 {
+        width: 100%;
+        background: url(../images/icon-eat.png) no-repeat center top;
+        padding-top: 65px;
+      }
+    }
+    &.schedule_drinks {
+      h2 {
+        width: 100%;
+        background: url(../images/icon-drink.png) no-repeat center top;
+        padding-top: 65px;
+      }
+    }
+    &.schedule_bbq {
+      h2 {
+        width: 100%;
+        background: url(../images/icon-bbq.png) no-repeat center top;
+        padding-top: 65px;
+      }
+    }
+    &.schedule_closing {
+      h2 {
+        width: 100%;
+        background: url(../images/icon-closing.png) no-repeat center top;
+        padding-top: 65px;
+      }
+    }
+  }
 }
 
 .timeline li .timeline-panel .field-name-session-room {
@@ -1735,7 +1780,7 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
   text-align: center;
 }
 
-.timeline li .timeline-panel .node-schedule-item h2 {
+.timeline li .timeline-panel h2 {
   text-align: center;
 }
 

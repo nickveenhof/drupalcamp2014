@@ -28,7 +28,7 @@ function gent2014_session_schedule_default_page($day) {
  */
 function _gent2014_session_schedule_create_page($day, $favorite = FALSE) {
   $available_days = array(
-    'friday' => '2014-11-07', 
+    'friday' => '2014-11-07',
     'saturday' => '2014-11-08'
   );
 
@@ -91,7 +91,7 @@ $return = '';
         );
       }
 
-      
+
     }
 
     $return .= theme('item_list', array('items' => $items, 'attributes' => array('class' => array('timeline'))));
@@ -122,7 +122,7 @@ function _gent2014_session_page_get_timeslots($date) {
   $query->innerJoin('field_data_field_evttime_date', 'evt_date', 'evt_date.revision_id = evt.evttid');
 
   $query->condition('evt_date.field_evttime_date_value', $date, 'LIKE');
- 
+
   $query->orderBy('evt_date.field_evttime_date_value');
 
   // dsm($date);
@@ -144,11 +144,14 @@ function _gent2014_session_page_get_nodes($timeslot, $favorite) {
   $query->innerJoin('field_data_field_session_timeslot', 'session_slot', 'session_slot.entity_id = node.nid');
   $query->innerJoin('field_data_field_timeslot_time', 'timeslot_time', 'timeslot_time.revision_id = session_slot.field_session_timeslot_target_id');
   $query->leftJoin('field_data_field_accepted', 'accepted', 'accepted.entity_id = node.nid');
+  $query->leftJoin('field_data_field_timeslot_room', 'room', 'room.entity_id = timeslot_time.entity_id');
 
   $query->condition('timeslot_time.field_timeslot_time_target_id', $timeslot->entity_id);
 
   $query->where('((accepted.field_accepted_value = \'accepted\' AND node.type = \'session\') OR (node.type = \'schedule_item\'))');
- 
+
+  $query->orderBy('field_timeslot_room_target_id', 'ASC');
+
 
   // $query->innerJoin('field_data_field_event_timeslots', 'timeslot', 'timeslot.entity_id = node.nid');
 

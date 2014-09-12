@@ -24,6 +24,18 @@ function gent2014_preprocess_field(&$variables, $hook) {
       }
     }
   }
+  elseif ($variables['element']['#field_name'] == 'title' && $variables['element']['#bundle'] == 'schedule_item') {
+    $node = $variables['element']['#object'];
+    dsm($node);
+    $type = field_get_items('node', $node, 'field_schedule_item_type');
+
+    if (empty($type) || empty($type[0]['value'])) { return; }
+
+    $variables['classes_array'][] = 'schedule_item';
+    $variables['classes_array'][] = 'schedule_' . check_plain($type[0]['value']);
+  }
+
+
   // elseif ($element['#field_name'] == 'field_session_track') {
   //   foreach ($variables['items'] as $delta => $item) {
   //     if (empty($item['#options']['entity'])) {

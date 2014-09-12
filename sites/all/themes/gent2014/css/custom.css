@@ -1869,13 +1869,57 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
 .timeline li .timeline-panel .node-schedule-item {
   width: 100%;
 }
+.item-list ul.timeline li.schedule-item .field-name-title h2,
+.timeline li .timeline-panel .node-schedule-item .field-name-title h2 {
+  font-size: 22px;
+  margin-top: 0;
+  width: 70%;
+}
+.item-list ul.timeline li.schedule-item .field-name-title h2 a,
+.timeline li .timeline-panel .node-schedule-item .field-name-title h2 a {
+  color: #404040;
+}
+.item-list ul.timeline li.schedule-item .field-name-title.schedule_breakfast h2,
+.timeline li .timeline-panel .node-schedule-item .field-name-title.schedule_breakfast h2,
+.item-list ul.timeline li.schedule-item .field-name-title.schedule_welcome h2,
+.timeline li .timeline-panel .node-schedule-item .field-name-title.schedule_welcome h2,
+.item-list ul.timeline li.schedule-item .field-name-title.schedule_coffee h2,
+.timeline li .timeline-panel .node-schedule-item .field-name-title.schedule_coffee h2 {
+  width: 100%;
+  background: url(../images/icon-coffee.png) no-repeat center top;
+  padding-top: 65px;
+}
+.item-list ul.timeline li.schedule-item .field-name-title.schedule_lunch h2,
+.timeline li .timeline-panel .node-schedule-item .field-name-title.schedule_lunch h2 {
+  width: 100%;
+  background: url(../images/icon-eat.png) no-repeat center top;
+  padding-top: 65px;
+}
+.item-list ul.timeline li.schedule-item .field-name-title.schedule_drinks h2,
+.timeline li .timeline-panel .node-schedule-item .field-name-title.schedule_drinks h2 {
+  width: 100%;
+  background: url(../images/icon-drink.png) no-repeat center top;
+  padding-top: 65px;
+}
+.item-list ul.timeline li.schedule-item .field-name-title.schedule_bbq h2,
+.timeline li .timeline-panel .node-schedule-item .field-name-title.schedule_bbq h2 {
+  width: 100%;
+  background: url(../images/icon-bbq.png) no-repeat center top;
+  padding-top: 65px;
+}
+.item-list ul.timeline li.schedule-item .field-name-title.schedule_closing h2,
+.timeline li .timeline-panel .node-schedule-item .field-name-title.schedule_closing h2 {
+  width: 100%;
+  background: url(../images/icon-closing.png) no-repeat center top;
+  padding-top: 65px;
+}
 .timeline li .timeline-panel .field-name-session-room {
   background: #e5e5e5;
   border-radius: 8px 8px 0 0;
   padding: 5px;
   text-align: center;
 }
-.timeline li .timeline-panel .node-schedule-item h2 {
+.timeline li .timeline-panel h2 {
   text-align: center;
 }
 .timeline li {
