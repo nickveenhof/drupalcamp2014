@@ -464,7 +464,7 @@ body {
           fill: @basecolor;
         }
       }
-    } 
+    }
   }
   #navbar {
     position: fixed;
@@ -706,7 +706,7 @@ body {
                 padding: 5px 10px 7px 40px;
                 display: block;
                 margin: 0;
-                
+
                 &:hover, &:focus, &:active, &.active {
                   color: @seccolor;
                 }
@@ -1680,7 +1680,7 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
   position: absolute;
   content: " ";
   width: 3px;
-  background-color: @basecolor;
+  background-color: #888;
   left: 50%;
   margin-left: -1.5px;
 }
@@ -1688,7 +1688,7 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
 .tldate {
   display: block;
   width: 100%;
-  background: @basecolor;
+  background: #000;
   // border: 1px solid darken(@basecolor, 4%);
   color: #FFF;
   margin: 0 auto;
@@ -1715,6 +1715,12 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
   border-radius: 8px;
   padding: 0;
   width: 100%;
+  > .node > div {
+    padding: 5px;
+    &.field-name-session-room, &.field-name-og-vocabulary {
+      padding: 0;
+    }
+  }
 }
 
 .item-list ul.timeline li.schedule-item,
