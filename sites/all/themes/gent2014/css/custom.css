@@ -1875,7 +1875,7 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
   float: right;
   font-size: 85%;
   font-style: italic;
-  margin-top: -30px;
+  margin: -30px 5px 0 0;
 }
 .item-list ul.timeline li.schedule-item,
 .timeline li .timeline-panel .node-schedule-item {

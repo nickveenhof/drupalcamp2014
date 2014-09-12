@@ -26,7 +26,6 @@ function gent2014_preprocess_field(&$variables, $hook) {
   }
   elseif ($variables['element']['#field_name'] == 'title' && $variables['element']['#bundle'] == 'schedule_item') {
     $node = $variables['element']['#object'];
-    dsm($node);
     $type = field_get_items('node', $node, 'field_schedule_item_type');
 
     if (empty($type) || empty($type[0]['value'])) { return; }
