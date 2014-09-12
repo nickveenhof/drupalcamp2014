@@ -1703,6 +1703,12 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
   position: relative;
   width: 46%;
   float: left;
+
+  ul.contextual-links li {
+    float: none;
+    margin: 0;
+    width: 100%;
+  }
 }
 
 .timeline h2 {
@@ -1717,9 +1723,15 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
   width: 100%;
   > .node > div {
     padding: 5px;
-    &.field-name-session-room, &.field-name-og-vocabulary {
+    &.field-name-session-room, &.field-name-og-vocabulary, &.contextual-links-wrapper {
       padding: 0;
     }
+  }
+  .field-name-field-speakers {
+    float: right;
+    font-size: 85%;
+    font-style: italic;
+    margin-top: -30px;
   }
 }
 

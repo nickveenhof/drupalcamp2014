@@ -1848,6 +1848,11 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
   width: 46%;
   float: left;
 }
+.item-list ul.timeline li ul.contextual-links li {
+  float: none;
+  margin: 0;
+  width: 100%;
+}
 .timeline h2 {
   border: none;
 }
@@ -1862,8 +1867,15 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
   padding: 5px;
 }
 .timeline li .timeline-panel > .node > div.field-name-session-room,
-.timeline li .timeline-panel > .node > div.field-name-og-vocabulary {
+.timeline li .timeline-panel > .node > div.field-name-og-vocabulary,
+.timeline li .timeline-panel > .node > div.contextual-links-wrapper {
   padding: 0;
+}
+.timeline li .timeline-panel .field-name-field-speakers {
+  float: right;
+  font-size: 85%;
+  font-style: italic;
+  margin-top: -30px;
 }
 .item-list ul.timeline li.schedule-item,
 .timeline li .timeline-panel .node-schedule-item {
