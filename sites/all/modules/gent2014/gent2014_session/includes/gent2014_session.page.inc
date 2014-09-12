@@ -85,6 +85,7 @@ $return = '';
 
     // Get teaser view of entities
     $node = entity_view('node', array($entity), 'teaser');
+    dsm($entity);
         $items[] = array(
           'data' => '<div class="tl-circ"></div><div class="timeline-panel">' . render($node) . '</div>',
           'class' => array($class ? $class : '', ($entity->type == 'schedule_item') ? 'schedule-item' : ''),
