@@ -2003,10 +2003,11 @@ li.timeline-inverted .timeline-panel:after {
 .node-session.node-teaser .field-name-field-speakers .field-item + .field-item:before {
   content: ', ';
 }
-.node-session.node-teaser .field-name-og-vocabulary {
-  color: #FFF;
-}
 .node-session.node-teaser .field-name-og-vocabulary .field-item {
+  padding: 0;
+}
+.node-session.node-teaser .field-name-og-vocabulary .field-item a {
+  color: #FFF;
   padding: 0 5px;
 }
 .node-session.view-mode-full .group-footer {
@@ -2014,6 +2015,7 @@ li.timeline-inverted .timeline-panel:after {
 }
 .page-taxonomy .node-session {
   border: 1px solid #AAA;
+  margin-bottom: 20px;
 }
 .page-taxonomy .node-session .experience-level {
   padding: 0;
