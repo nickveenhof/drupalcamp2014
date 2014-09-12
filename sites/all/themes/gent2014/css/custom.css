@@ -887,6 +887,10 @@ body .maincontainer {
 body .maincontainer.open {
   margin-left: 204px;
 }
+body .maincontainer.open #content {
+  padding-left: 30px;
+  padding-right: 30px;
+}
 body .maincontainer #intro {
   background: transparent;
   text-align: center;
