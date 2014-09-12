@@ -1933,15 +1933,47 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
 .timeline li .timeline-panel h2 {
   text-align: center;
 }
-.timeline li {
-  overflow: hidden;
-}
 .item-list ul.timeline li.tldate {
   clear: both;
   width: 100%;
 }
+/** panel arrows **/
+.timeline-panel:before {
+  position: absolute;
+  top: 59px;
+  right: -14px;
+  display: inline-block;
+  border-top: 15px solid transparent;
+  border-left: 15px solid #AAA;
+  border-right: 0 solid #AAA;
+  border-bottom: 15px solid transparent;
+  content: " ";
+}
+.timeline-panel:after {
+  position: absolute;
+  top: 60px;
+  right: -13px;
+  display: inline-block;
+  border-top: 14px solid transparent;
+  border-left: 14px solid #fff;
+  border-right: 0 solid #fff;
+  border-bottom: 14px solid transparent;
+  content: " ";
+}
 .item-list ul.timeline li.timeline-inverted {
   float: right;
+}
+li.timeline-inverted .timeline-panel:before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -14px;
+  right: auto;
+}
+li.timeline-inverted .timeline-panel:after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -13px;
+  right: auto;
 }
 .experience-level {
   float: right;
@@ -1950,15 +1982,22 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
   text-align: center;
   text-indent: -9999px;
   width: 45px;
+  margin-right: 5px;
 }
 .experience-level.experience-level-beginner {
-  background: url('../images/exp-beginner.png') no-repeat center center;
+  background: url('../images/exp-beginner.png') no-repeat center right;
 }
 .experience-level.experience-level-intermediate {
-  background: url('../images/exp-intermediate.png') no-repeat center center;
+  background: url('../images/exp-intermediate.png') no-repeat center right;
 }
 .experience-level.experience-level-advanced {
-  background: url('../images/exp-advanced.png') no-repeat center center;
+  background: url('../images/exp-advanced.png') no-repeat center right;
+}
+.node-session.node-teaser .field-name-field-speakers .field-item {
+  display: inline;
+}
+.node-session.node-teaser .field-name-field-speakers .field-item + .field-item:before {
+  content: ', ';
 }
 .node-session.node-teaser .field-name-og-vocabulary {
   color: #FFF;
@@ -1985,6 +2024,12 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
   .item-list ul.timeline li {
     width: 100%;
     float: none;
+  }
+  .timeline-panel:before,
+  .timeline-panel:after,
+  li.timeline-inverted .timeline-panel:before,
+  li.timeline-inverted .timeline-panel:after {
+    left: -9999px;
   }
   .ds-2col-stacked .group-left,
   .ds-2col-stacked .group-right {

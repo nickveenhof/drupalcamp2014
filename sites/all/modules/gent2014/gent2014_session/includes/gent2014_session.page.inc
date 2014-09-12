@@ -147,8 +147,9 @@ function _gent2014_session_page_get_nodes($timeslot, $favorite) {
   $query->leftJoin('field_data_field_timeslot_room', 'room', 'room.entity_id = timeslot_time.entity_id');
 
   $query->condition('timeslot_time.field_timeslot_time_target_id', $timeslot->entity_id);
-
+  $query->condition('node.status', 1);
   $query->where('((accepted.field_accepted_value = \'accepted\' AND node.type = \'session\') OR (node.type = \'schedule_item\'))');
+
 
   $query->orderBy('field_timeslot_room_target_id', 'ASC');
 
