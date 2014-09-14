@@ -632,9 +632,7 @@ body #navbar {
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-body #navbar.open,
-body #navbar:focus,
-body #navbar:active {
+body #navbar.open {
   width: 204px;
 }
 body #navbar #block-system-main-menu > .content > ul.menu {
