@@ -12,35 +12,35 @@ include_once 'gent2014_session.features.inc';
 function gent2014_session_menu() {
   // Default menu callback
   $items['schedule'] = array(
-    'title' => t('Schedule'),
-    'type' => MENU_NORMAL_ITEM,
-    'page callback' => 'gent2014_session_schedule_default_page',
-    'page arguments' => array("friday"), // switch to saturday once Friday is over
-    'access callback' => 'user_access',
+    'title'            => t('Schedule'),
+    'type'             => MENU_NORMAL_ITEM,
+    'page callback'    => 'gent2014_session_schedule_default_page',
+    'page arguments'   => array("friday"), // switch to saturday once Friday is over
+    'access callback'  => 'user_access',
     'access arguments' => array('access content'),
-    'file' => 'includes/gent2014_session.page.inc',
+    'file'             => 'includes/gent2014_session.page.inc',
   );
 
   // Saturday
   $items['schedule/friday'] = array(
-    'title' => t('Schedule - Friday'),
-    'page callback' => 'gent2014_session_schedule_default_page',
-    'page arguments' => array("friday"),
-    'type' => MENU_DEFAULT_LOCAL_TASK,
-    'access callback' => 'user_access',
+    'title'            => t('Schedule - Friday'),
+    'page callback'    => 'gent2014_session_schedule_default_page',
+    'page arguments'   => array("friday"),
+    'type'             => MENU_DEFAULT_LOCAL_TASK,
+    'access callback'  => 'user_access',
     'access arguments' => array('access content'),
-    'file' => 'includes/gent2014_session.page.inc',
+    'file'             => 'includes/gent2014_session.page.inc',
   );
 
   // Sunday
   $items['schedule/saturday'] = array(
-    'title' => t('Schedule - Saturday'),
-    'type' => MENU_LOCAL_TASK,
-    'page callback' => 'gent2014_session_schedule_default_page',
-    'page arguments' => array("saturday"),
-    'access callback' => 'user_access',
+    'title'            => t('Schedule - Saturday'),
+    'type'             => MENU_LOCAL_TASK,
+    'page callback'    => 'gent2014_session_schedule_default_page',
+    'page arguments'   => array("saturday"),
+    'access callback'  => 'user_access',
     'access arguments' => array('access content'),
-    'file' => 'includes/gent2014_session.page.inc',
+    'file'             => 'includes/gent2014_session.page.inc',
   );
 
   // // Personalized menu

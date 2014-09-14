@@ -1,16 +1,36 @@
 <?php
-function inpro_breadcrumb($variables) {
-  $breadcrumb = $variables['breadcrumb'];
-  if (!empty($breadcrumb)) {
-    // Adding the title of the current page to the breadcrumb.
-    $breadcrumb[] = drupal_get_title();
-    
-    // Provide a navigational heading to give context for breadcrumb links to
-    // screen-reader users. Make the heading invisible with .element-invisible.
-    $output = '<h2 class="element-invisible">' . t('You are here') . '</h2>';
 
-    $output .= '<div class="breadcrumb">' . implode(' <span class="beforetitle">»</span> ', $breadcrumb) . '</div>';
-    return $output;
+/**
+ * Implements template_preprocess_field().
+ *
+ * @param  array $variables [description]
+ * @param  string $hook      [description]
+ */
+function gent2014_preprocess_field(&$variables, $hook) {
+  if ($variables['element']['#field_name'] == 'field_experience' && $variables['element']['#view_mode'] == 'teaser') {
+    $variables['classes_array'][] = 'experience-level';
+    foreach ($variables['element']['#items'] as $item) {
+      $variables['classes_array'][] = 'experience-level-' . $item['value'];
+    }
+  }
+  elseif ($variables['element']['#field_name'] == 'og_vocabulary' && $variables['element']['#bundle'] == 'session' && $variables['element']['#view_mode'] == 'teaser') {
+    foreach ($variables['element']['#items'] as $key => $item) {
+      if (!empty($item['entity'])) {
+        $colors = field_get_items('taxonomy_term', $item['entity'], 'field_track_color');
+        if (!empty($colors) && !empty($colors[0]['rgb'])) {
+          $rgb = $colors[0]['rgb'];
+          $variables['item_attributes_array'][$key]['style'] = 'background: ' . $rgb;
+        }
+      }
+    }
+  }
+  elseif ($variables['element']['#field_name'] == 'title' && $variables['element']['#bundle'] == 'schedule_item') {
+    $node = $variables['element']['#object'];
+    $type = field_get_items('node', $node, 'field_schedule_item_type');
+
+    if (empty($type) || empty($type[0]['value'])) { return; }
+
+    $variables['classes_array'][] = 'schedule_item';
+    $variables['classes_array'][] = 'schedule_' . check_plain($type[0]['value']);
   }
 }
-?>
