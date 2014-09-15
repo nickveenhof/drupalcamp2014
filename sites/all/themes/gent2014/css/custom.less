@@ -1867,10 +1867,24 @@ li.timeline-inverted .timeline-panel:after {
   }
 }
 
-.node-session.node-teaser {
+.view-mode-taxonomy_page_overview {
+  .experience-level-beginner {
+    background: url('../images/exp-beginner-blue.png') no-repeat center right;
+  }
+  .experience-level-intermediate {
+    background: url('../images/exp-intermediate-blue.png') no-repeat center right;
+  }
+  .experience-level-advanced {
+    background: url('../images/exp-advanced-blue.png') no-repeat center right;
+  }
+}
+
+.node-session.node-teaser, .node-session.view-mode-taxonomy_page_overview {
   .field-name-field-speakers {
+    padding-left: 5px;
     .field-item {
       display: inline;
+      padding: 0;
       &+.field-item:before {
         content: ', ';
       }
@@ -1892,14 +1906,27 @@ li.timeline-inverted .timeline-panel:after {
   }
 }
 
+.page-taxonomy .node-session.view-mode-taxonomy_page_overview {
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  .field-name-session-room {
+    float: right;
+
+  }
+}
+
 .page-taxonomy .node-session {
   border: 1px solid #AAA;
   margin-bottom: 20px;
+  padding-bottom: 20px;
   .experience-level {
     padding: 0;
   }
   .field-item {
     padding: 0 5px;
+    .field-item {
+      padding: 0;
+    }
   }
 }
 

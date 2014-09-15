@@ -1995,31 +1995,60 @@ li.timeline-inverted .timeline-panel:after {
 .experience-level.experience-level-advanced {
   background: url('../images/exp-advanced.png') no-repeat center right;
 }
-.node-session.node-teaser .field-name-field-speakers .field-item {
+.view-mode-taxonomy_page_overview .experience-level-beginner {
+  background: url('../images/exp-beginner-blue.png') no-repeat center right;
+}
+.view-mode-taxonomy_page_overview .experience-level-intermediate {
+  background: url('../images/exp-intermediate-blue.png') no-repeat center right;
+}
+.view-mode-taxonomy_page_overview .experience-level-advanced {
+  background: url('../images/exp-advanced-blue.png') no-repeat center right;
+}
+.node-session.node-teaser .field-name-field-speakers,
+.node-session.view-mode-taxonomy_page_overview .field-name-field-speakers {
+  padding-left: 5px;
+}
+.node-session.node-teaser .field-name-field-speakers .field-item,
+.node-session.view-mode-taxonomy_page_overview .field-name-field-speakers .field-item {
   display: inline;
-}
-.node-session.node-teaser .field-name-field-speakers .field-item + .field-item:before {
-  content: ', ';
-}
-.node-session.node-teaser .field-name-og-vocabulary .field-item {
   padding: 0;
 }
-.node-session.node-teaser .field-name-og-vocabulary .field-item a {
+.node-session.node-teaser .field-name-field-speakers .field-item + .field-item:before,
+.node-session.view-mode-taxonomy_page_overview .field-name-field-speakers .field-item + .field-item:before {
+  content: ', ';
+}
+.node-session.node-teaser .field-name-og-vocabulary .field-item,
+.node-session.view-mode-taxonomy_page_overview .field-name-og-vocabulary .field-item {
+  padding: 0;
+}
+.node-session.node-teaser .field-name-og-vocabulary .field-item a,
+.node-session.view-mode-taxonomy_page_overview .field-name-og-vocabulary .field-item a {
   color: #FFF;
   padding: 0 5px;
 }
 .node-session.view-mode-full .group-footer {
   padding-top: 20px;
 }
+.page-taxonomy .node-session.view-mode-taxonomy_page_overview {
+  border: 0;
+  border-bottom: 1px solid #ccc;
+}
+.page-taxonomy .node-session.view-mode-taxonomy_page_overview .field-name-session-room {
+  float: right;
+}
 .page-taxonomy .node-session {
   border: 1px solid #AAA;
   margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 .page-taxonomy .node-session .experience-level {
   padding: 0;
 }
 .page-taxonomy .node-session .field-item {
   padding: 0 5px;
+}
+.page-taxonomy .node-session .field-item .field-item {
+  padding: 0;
 }
 @media screen and (max-width: 980px) {
   .page-node-community #content-content .view-cod-community-attendees .view-content .views-row,

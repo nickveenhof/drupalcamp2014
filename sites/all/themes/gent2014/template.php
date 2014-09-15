@@ -7,7 +7,7 @@
  * @param  string $hook      [description]
  */
 function gent2014_preprocess_field(&$variables, $hook) {
-  if ($variables['element']['#field_name'] == 'field_experience' && $variables['element']['#view_mode'] == 'teaser') {
+  if ($variables['element']['#field_name'] == 'field_experience' && ($variables['element']['#view_mode'] == 'teaser' || $variables['element']['#view_mode'] == 'taxonomy_page_overview')) {
     $variables['classes_array'][] = 'experience-level';
     foreach ($variables['element']['#items'] as $item) {
       $variables['classes_array'][] = 'experience-level-' . $item['value'];
