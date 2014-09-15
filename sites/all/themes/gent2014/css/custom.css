@@ -2026,6 +2026,10 @@ li.timeline-inverted .timeline-panel:after {
   color: #FFF;
   padding: 0 5px;
 }
+.node-session.node-teaser .field-name-field-timeslot-time,
+.node-session.view-mode-taxonomy_page_overview .field-name-field-timeslot-time {
+  float: left;
+}
 .node-session.view-mode-full .group-footer {
   padding-top: 20px;
 }
