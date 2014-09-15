@@ -2054,6 +2054,18 @@ li.timeline-inverted .timeline-panel:after {
 .page-taxonomy .node-session .field-item .field-item {
   padding: 0;
 }
+.form-actions .form-submit {
+  margin-right: 5px;
+}
+.comment-wrapper .comment-form {
+  margin-top: 35px;
+}
+.comment-wrapper .submitted {
+  margin: 10px 0;
+}
+.permalink {
+  display: none;
+}
 @media screen and (max-width: 980px) {
   .page-node-community #content-content .view-cod-community-attendees .view-content .views-row,
   .node-type-page #content-content .view-cod-community-attendees .view-content .views-row,
