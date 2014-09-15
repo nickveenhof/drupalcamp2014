@@ -1,7 +1,0 @@
-<?php
-/**
- * Submit callback for user_register form.
- */
-function drupalcamp_user_register_submit($form, &$form_state) {
-
-}
