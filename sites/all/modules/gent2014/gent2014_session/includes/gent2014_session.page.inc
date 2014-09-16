@@ -2,6 +2,11 @@
 
 /**
  * Default Program page (without flags).
+ *
+ * @param String $day
+ *   String indication of which event-day (friday or saturday).
+ *
+ * @return String
  */
 function gent2014_session_schedule_default_page($day) {
   drupal_set_title('Schedule');
@@ -25,14 +30,25 @@ function gent2014_session_schedule_default_page($day) {
 
 /**
  * Create program/schedule page.
+ *
+ * @param String $day
+ *   String indication of which event-day (friday or saturday).
+ * @param bool   $favorite
+ *   Boolean indicating if we are showing the general schedule, or a personalized.
+ *
+ * @return bool|string
  */
 function _gent2014_session_schedule_create_page($day, $favorite = FALSE) {
   // @TODO: Create a DrupalCamp dashboard or something.
+
+  // Timeslots. Hardcoded. Punch me if you see me.
   $available_days = array(
     'friday'   => '2014-11-07',
     'saturday' => '2014-11-08'
   );
 
+  // Even worse. Rooms by their human-readable name. Used to display the schedule.
+  // Set to FALSE = display on the left side of the timeline, TRUE = on the right side.
   $room_mapping = array(
     'Calibrate' => TRUE,
     'EntityOne' => FALSE,
@@ -65,7 +81,7 @@ function _gent2014_session_schedule_create_page($day, $favorite = FALSE) {
   if (!empty($output)) {
     $items = array();
 
-    foreach ($output as $timeslot => $row) {
+    foreach ($output as $row) {
       $items[] = array(
         'data'  => '<div class="tldate">' . strtoupper(date('D  d/m/Y - H:i', strtotime($row['starttime']))) . ' - ' . strtoupper(date('H:i', strtotime($row['endtime']))) . '</div>',
         'class' => array('tldate'),
@@ -73,7 +89,7 @@ function _gent2014_session_schedule_create_page($day, $favorite = FALSE) {
 
       foreach ($row['nids'] as $nid) {
 
-        // Load entities
+        // Load entities.
         $entity = node_load($nid->nid);
         $class  = '';
 
@@ -84,7 +100,7 @@ function _gent2014_session_schedule_create_page($day, $favorite = FALSE) {
           }
         }
 
-        // Get teaser view of entities
+        // Get teaser view of entities.
         $node    = entity_view('node', array($entity), 'teaser');
         $items[] = array(
           'data'  => '<div class="timeline-panel">' . render($node) . '</div>',
@@ -107,7 +123,7 @@ function _gent2014_session_schedule_create_page($day, $favorite = FALSE) {
  *
  * @param  int $nid
  *
- * @return String
+ * @return string
  */
 function _gent2014_session_get_room_name($nid) {
   $sql = db_select('cod_event_room', 'room');
@@ -125,7 +141,7 @@ function _gent2014_session_get_room_name($nid) {
 /**
  * Helper function to retrieve timeslots on a day.
  *
- * @param  String $date
+ * @param  string $date
  *
  * @return QueryResult
  */
