@@ -1673,6 +1673,7 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
 }
 .page-node-sponsors #content-content .view-cod-sponsors .view-content .sponsor {
   display: inline-block;
+  max-width: 45%;
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
