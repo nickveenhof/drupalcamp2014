@@ -953,6 +953,7 @@ body .maincontainer #intro #intro-inner .region-intro .block .intro-cta ul > li 
   border-radius: 4px;
   padding: 10px 20px;
   margin: 0 10px;
+  cursor: default;
   background: transparent;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
