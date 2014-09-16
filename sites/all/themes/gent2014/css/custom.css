@@ -736,15 +736,15 @@ body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(3) > a.
   color: #f26825;
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(4) > a:before {
-  content: "\f041";
+  content: "\f0c0";
   font-family: FontAwesome;
   font-size: 22px;
-  margin-right: 15px;
+  margin-right: 11px;
+  margin-left: -2px;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   color: rgba(255, 255, 255, 0.7);
-  margin-left: 2px;
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(4) > a:hover:before,
 body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(4) > a:focus:before,
@@ -752,12 +752,15 @@ body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(4) > a:
 body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(4) > a.active:before {
   color: #f26825;
 }
+body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(5) > a {
+  display: block;
+  width: 204px;
+}
 body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(5) > a:before {
-  content: "\f0c0";
+  content: "\f007";
   font-family: FontAwesome;
   font-size: 22px;
-  margin-right: 11px;
-  margin-left: -2px;
+  margin-right: 14px;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -774,7 +777,7 @@ body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(6) > a 
   width: 204px;
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(6) > a:before {
-  content: "\f007";
+  content: "\f011";
   font-family: FontAwesome;
   font-size: 22px;
   margin-right: 14px;
@@ -787,26 +790,6 @@ body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(6) > a:
 body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(6) > a:focus:before,
 body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(6) > a:active:before,
 body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(6) > a.active:before {
-  color: #f26825;
-}
-body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(7) > a {
-  display: block;
-  width: 204px;
-}
-body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(7) > a:before {
-  content: "\f011";
-  font-family: FontAwesome;
-  font-size: 22px;
-  margin-right: 14px;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  color: rgba(255, 255, 255, 0.7);
-}
-body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(7) > a:hover:before,
-body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(7) > a:focus:before,
-body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(7) > a:active:before,
-body #navbar #block-system-main-menu > .content > ul.menu > li:nth-child(7) > a.active:before {
   color: #f26825;
 }
 body #navbar #block-system-main-menu > .content > ul.menu > li.searchform-mainmenu {
