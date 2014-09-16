@@ -1,4 +1,5 @@
 @import "html5reset.css";
+
 @import "regions.css";
 * {
   margin: 0;
@@ -1694,8 +1695,17 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
   text-align: center;
   margin-top: 50px;
 }
+.dropbutton {
+  width: 47px;
+  height: 53px;
+  position: absolute;
+  left: 156px;
+  top: 0;
+  z-index: 9;
+  cursor: pointer;
+}
 .node-type-sponsor #content-content .group-left {
-  width: 65%;
+  width: 63%;
   margin-bottom: 20px;
 }
 .node-type-sponsor #content-content .group-right {
@@ -2191,4 +2201,7 @@ li.timeline-inverted .timeline-panel:after {
   body .maincontainer #intro #intro-inner .region-intro #block-block-4 {
     margin-top: 40px;
   }
+}
+@media screen and (max-height: 370px) {
+  
 }
