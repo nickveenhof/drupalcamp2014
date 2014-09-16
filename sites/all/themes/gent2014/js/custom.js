@@ -83,7 +83,7 @@
 
       $('<a href="#" class="closemenubutton open"><svg version="1.1" id="closemenubutton-closed" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22px" height="22px" viewBox="0 0 22 22" enable-background="new 0 0 22 22" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" d="M11,22c6.075,0,11-4.924,11-11c0-6.075-4.925-11-11-11S0,4.926,0,11C0,17.076,4.925,22,11,22z M8.594,7.562l1.375-1.375L14.781,11l-4.812,4.812l-1.375-1.375L12.031,11L8.594,7.562z"/></svg><svg version="1.1" id="closemenubutton-open" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22px" height="22px" viewBox="0 0 22 22" enable-background="new 0 0 22 22" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" d="M11,0C4.925,0,0,4.924,0,11c0,6.075,4.925,11,11,11s11-4.926,11-11C22,4.924,17.075,0,11,0z M13.406,14.438l-1.375,1.375L7.219,11l4.812-4.812l1.375,1.375L9.969,11L13.406,14.438z"/></svg></a>').prependTo('#intro');
       var windowwidth = $(window).width();
-      if (windowwidth > 960) {
+      if (windowwidth > 1160) {
         $('#navbar').addClass('open');
         $('.maincontainer').addClass('open');
         $('.closemenubutton').removeClass('open');

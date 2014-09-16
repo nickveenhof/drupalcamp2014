@@ -2075,6 +2075,11 @@ li.timeline-inverted .timeline-panel:after {
 .permalink {
   display: none;
 }
+#node-1 .field-name-field-dates {
+  font-size: 24px;
+  color: #f26825;
+  margin: 0 0 20px;
+}
 @media screen and (max-width: 980px) {
   .page-node-community #content-content .view-cod-community-attendees .view-content .views-row,
   .node-type-page #content-content .view-cod-community-attendees .view-content .views-row,
