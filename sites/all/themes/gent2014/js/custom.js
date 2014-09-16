@@ -132,6 +132,8 @@
         $('.tabs').hide();
       }
 
+      $('body #navbar #block-system-main-menu > .content > ul.menu > li.searchform-mainmenu input.form-text').attr('placeholder','Search...');
+
 
     }
   };
