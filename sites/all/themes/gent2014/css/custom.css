@@ -1689,7 +1689,7 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
   max-width: 278px;
 }
 .page-node-sponsors #content-content .view-cod-sponsors.view-id-cod_sponsors.view-display-id-attachment_2 .sponsor {
-  max-width: 128px;
+  max-width: 118px;
 }
 .node-type-sponsor #content-content .group-left {
   width: 65%;
@@ -2187,5 +2187,13 @@ li.timeline-inverted .timeline-panel:after {
   }
   body .maincontainer #intro #intro-inner .region-intro #block-block-4 {
     margin-top: 40px;
+  }
+  .page-node-sponsors #content-content .view-cod-sponsors.view-id-cod_sponsors.view-display-id-attachment_1 .sponsor {
+    max-width: 75%;
+    width: 75%;
+  }
+  .page-node-sponsors #content-content .view-cod-sponsors.view-id-cod_sponsors.view-display-id-attachment_2 .sponsor {
+    max-width: 65%;
+    width: 65%;
   }
 }
