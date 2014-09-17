@@ -1343,6 +1343,8 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
 }
 .page-user #content-content .user-profile .group-left > .field-name-ds-user-picture {
   float: left;
+  width: 100%;
+  max-width: 100%;
 }
 .page-user #content-content .user-profile .group-left > .field-name-ds-user-picture a {
   display: block;
