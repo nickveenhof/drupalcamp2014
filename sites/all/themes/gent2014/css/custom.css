@@ -2187,15 +2187,15 @@ li.timeline-inverted .timeline-panel:after {
   body .maincontainer #intro #intro-inner .region-intro #block-block-4 {
     margin-top: 40px;
   }
-  .page-node-sponsors #content-content .view-cod-sponsors .sponsor {
-    max-width: 100%;
-    width: 100%;
+  .page-node-sponsors #content-content .view-cod-sponsors .view-content .sponsor {
+    max-width: 90%;
+    width: 90%;
   }
-  .page-node-sponsors #content-content .view-cod-sponsors.view-id-cod_sponsors.view-display-id-attachment_1 .sponsor {
+  .page-node-sponsors #content-content .view-cod-sponsors .view-content.view-id-cod_sponsors.view-display-id-attachment_1 .sponsor {
     max-width: 75%;
     width: 75%;
   }
-  .page-node-sponsors #content-content .view-cod-sponsors.view-id-cod_sponsors.view-display-id-attachment_2 .sponsor {
+  .page-node-sponsors #content-content .view-cod-sponsors .view-content.view-id-cod_sponsors.view-display-id-attachment_2 .sponsor {
     max-width: 65%;
     width: 65%;
   }
