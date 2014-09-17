@@ -12,6 +12,7 @@ dependencies[] = og_ui
 dependencies[] = options
 dependencies[] = reg_with_pic
 dependencies[] = strongarm
+features[context][] = gent2014_community_anonymous
 features[context][] = gent2014_frontpage_anonymous
 features[context][] = gent2014_frontpage_loggedin
 features[ctools][] = context:context:3
