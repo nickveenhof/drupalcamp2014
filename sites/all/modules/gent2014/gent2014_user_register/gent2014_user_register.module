@@ -26,3 +26,44 @@ function gent2014_user_register_form_alter(&$form, &$form_state, $form_id) {
 	}
 	$form['og_user_node']['#access'] = FALSE;
 }
+
+/**
+ * Implements hook_block_info().
+ */
+function gent2014_user_register_block_info() {
+  // This example comes from node.module.
+  /*
+   *$blocks['syndicate'] = array(
+   *  'info' => t('Syndicate'),
+   *  'cache' => DRUPAL_NO_CACHE
+   *);
+   */
+  $blocks['community_register_link'] = array(
+    'info' => t('Join the community link'),
+    'cache' => DRUPAL_CACHE_GLOBAL
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function gent2014_user_register_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+    case 'community_register_link':
+      $block['subject'] = '';
+      $block['content'] = theme('html_tag', array(
+      'element' => array(
+        '#tag'        => 'p',
+        '#value'      => l(t('Register'), 'user/register'),
+        '#attributes' => array('class' => drupal_html_class('cta-button')),
+      )
+    ));
+    break;
+  }
+
+  return $block;
+}

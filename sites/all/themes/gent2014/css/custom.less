@@ -1386,6 +1386,26 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
       }
     }
   }
+  .cta-button {
+    float: right;
+    a {
+      .cta;
+      color: #FFF;
+      font-size: 100%;
+      &:hover {
+        background: @basecolor;
+        color: #FFF;
+      }
+    }
+    &:after {
+      content: '';
+      margin-bottom: 25px;
+      display: block;
+    }
+  }
+  #block-gent2014-user-register-community-register-link + #block-system-main {
+    clear: both;
+  }
 }
 
 // user page

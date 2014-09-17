@@ -1555,6 +1555,49 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
   font-style: italic;
   color: #888;
 }
+.page-node-community .cta-button,
+.node-type-page .cta-button {
+  float: right;
+}
+.page-node-community .cta-button a,
+.node-type-page .cta-button a {
+  text-transform: uppercase;
+  color: #fff;
+  margin: 10px 0 5px;
+  font-size: 30px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 300;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  border-radius: 4px;
+  padding: 0 40px;
+  background: #0491c6;
+  display: inline-block;
+  text-align: center;
+  color: #FFF;
+  font-size: 100%;
+}
+.page-node-community .cta-button a:hover,
+.node-type-page .cta-button a:hover {
+  background: #f26825;
+  color: #fff;
+}
+.page-node-community .cta-button a:hover,
+.node-type-page .cta-button a:hover {
+  background: #0491c6;
+  color: #FFF;
+}
+.page-node-community .cta-button:after,
+.node-type-page .cta-button:after {
+  content: '';
+  margin-bottom: 25px;
+  display: block;
+}
+.page-node-community #block-gent2014-user-register-community-register-link + #block-system-main,
+.node-type-page #block-gent2014-user-register-community-register-link + #block-system-main {
+  clear: both;
+}
 .page-user .region-content form#user-login {
   min-height: 20px;
   padding: 19px;

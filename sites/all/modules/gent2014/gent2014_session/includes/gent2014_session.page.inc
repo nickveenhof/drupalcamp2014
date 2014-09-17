@@ -33,12 +33,10 @@ function gent2014_session_schedule_default_page($day) {
  *
  * @param String $day
  *   String indication of which event-day (friday or saturday).
- * @param bool   $favorite
- *   Boolean indicating if we are showing the general schedule, or a personalized.
  *
  * @return bool|string
  */
-function _gent2014_session_schedule_create_page($day, $favorite = FALSE) {
+function _gent2014_session_schedule_create_page($day) {
   // @TODO: Create a DrupalCamp dashboard or something.
 
   // Timeslots. Hardcoded. Punch me if you see me.
@@ -64,7 +62,7 @@ function _gent2014_session_schedule_create_page($day, $favorite = FALSE) {
   $output = array();
 
   foreach ($timeslots as $timeslot) {
-    $nids = _gent2014_session_page_get_nodes($timeslot, $favorite);
+    $nids = _gent2014_session_page_get_nodes($timeslot);
 
     if (empty($nids)) {
       continue;
@@ -165,7 +163,7 @@ function _gent2014_session_page_get_timeslots($date) {
 /**
  * Get all sessions for a specific day.
  */
-function _gent2014_session_page_get_nodes($timeslot, $favorite) {
+function _gent2014_session_page_get_nodes($timeslot) {
   global $user;
 
   // Get all session of the given day
@@ -181,14 +179,6 @@ function _gent2014_session_page_get_nodes($timeslot, $favorite) {
   $query->condition('timeslot_time.field_timeslot_time_target_id', $timeslot->entity_id);
   $query->condition('node.status', 1);
   $query->where('((accepted.field_accepted_value = \'accepted\' AND node.type = \'session\') OR (node.type = \'schedule_item\'))');
-
-  // // If we only want bookmarked session.
-  // if ($favorite) {
-  //   $query->innerJoin('flag_content', 'flag_content', 'flag_content.content_id = node.nid');
-  //   $query->innerJoin('flags', 'flags', 'flags.fid = flag_content.fid');
-  //   $query->condition('flags.name', 'session_schedule');
-  //   $query->condition('flag_content.uid', $user->uid);
-  // }
 
   return $query->execute()->fetchAllAssoc('nid');
 }
