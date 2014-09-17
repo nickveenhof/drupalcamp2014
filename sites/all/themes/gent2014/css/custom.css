@@ -1670,11 +1670,11 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
   text-align: center;
   margin-top: 50px;
 }
-.page-node-sponsors #content-content .view-cod-sponsors.view-id-cod_sponsors.view-display-id-attachment_1 .sponsor,
-.page-node-sponsors #content-content .view-cod-sponsors.view-id-cod_sponsors.view-display-id-attachment_3 .sponsor {
+.page-node-sponsors #content-content .view-cod-sponsors.view-id-cod_sponsors.view-display-id-attachment_1 .sponsor {
   max-width: 278px;
 }
-.page-node-sponsors #content-content .view-cod-sponsors.view-id-cod_sponsors.view-display-id-attachment_2 .sponsor {
+.page-node-sponsors #content-content .view-cod-sponsors.view-id-cod_sponsors.view-display-id-attachment_2 .sponsor,
+.page-node-sponsors #content-content .view-cod-sponsors.view-id-cod_sponsors.view-display-id-attachment_3 .sponsor {
   max-width: 118px;
 }
 .dropbutton {
@@ -2192,12 +2192,12 @@ li.timeline-inverted .timeline-panel:after {
     max-width: 90%;
     width: 90%;
   }
-  .page-node-sponsors #content-content .view-cod-sponsors .view-content.view-id-cod_sponsors.view-display-id-attachment_1 .sponsor,
-  .page-node-sponsors #content-content .view-cod-sponsors .view-content.view-id-cod_sponsors.view-display-id-attachment_3 .sponsor {
+  .page-node-sponsors #content-content .view-cod-sponsors .view-content.view-id-cod_sponsors.view-display-id-attachment_1 .sponsor {
     max-width: 75%;
     width: 75%;
   }
-  .page-node-sponsors #content-content .view-cod-sponsors .view-content.view-id-cod_sponsors.view-display-id-attachment_2 .sponsor {
+  .page-node-sponsors #content-content .view-cod-sponsors .view-content.view-id-cod_sponsors.view-display-id-attachment_2 .sponsor,
+  .page-node-sponsors #content-content .view-cod-sponsors .view-content.view-id-cod_sponsors.view-display-id-attachment_3 .sponsor {
     max-width: 65%;
     width: 65%;
   }
