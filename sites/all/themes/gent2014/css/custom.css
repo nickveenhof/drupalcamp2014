@@ -1400,6 +1400,13 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
 .page-user #content-content .user-profile .group-right .group-user-info .field-label {
   color: #888;
 }
+.page-user #content-content .user-profile .group-right .field-name-field-profile-days .field-item {
+  display: inline;
+  padding: 0;
+}
+.page-user #content-content .user-profile .group-right .field-name-field-profile-days .field-item + .field-item:before {
+  content: ' & ';
+}
 .page-node-community #content-content .tabs,
 .node-type-page #content-content .tabs {
   display: none;

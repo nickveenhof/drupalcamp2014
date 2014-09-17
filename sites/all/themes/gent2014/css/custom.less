@@ -1279,6 +1279,15 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
             color: #888;
           }
         }
+        .field-name-field-profile-days {
+          .field-item {
+            display: inline;
+            padding: 0;
+            &+.field-item:before {
+              content: ' & ';
+            }
+          }
+        }
       }
     }
   }
