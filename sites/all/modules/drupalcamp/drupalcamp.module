@@ -1,0 +1,13 @@
+<?php
+/**
+ * @file
+ * General drupalcamp fixes
+ */
+
+/**
+ * Implements hook_menu_alter().
+ */
+function drupalcamp_menu_alter(&$items) {
+  $items['user/register']['title'] = 'Register';
+  $items['user/register']['weight'] = 20;
+}

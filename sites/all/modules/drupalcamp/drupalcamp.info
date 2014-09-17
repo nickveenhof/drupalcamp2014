@@ -1,0 +1,4 @@
+name = DrupalCamp General stuff
+description = Provides a base set of functionality for drupalcamps in general.
+core = 7.x
+package = DrupalCamp
