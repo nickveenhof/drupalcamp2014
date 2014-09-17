@@ -11,7 +11,6 @@ function drupalcamp_menu_alter(&$items) {
   $items['user/register']['title'] = 'Register';
   $items['user/register']['weight'] = 20;
   $items['user/%user/tickets']['access callback'] = FALSE;
-  $items['user/%user/sessions']['access callback'] = FALSE;
   $items['user/%user/edit']['title'] = t('Edit Your Details');
 }
 
