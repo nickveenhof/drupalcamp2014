@@ -1820,6 +1820,20 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
 .node-type-sponsor.page-node-45 .field-name-field-sponsor-logo {
   margin-top: -24px;
 }
+.field-name-field-sponsor-body {
+  text-align: left;
+}
+.field-name-field-sponsor-body ul {
+  margin-left: 50px;
+}
+.field-name-field-sponsor-body h2,
+.field-name-field-sponsor-body h3,
+.field-name-field-sponsor-body h4,
+.field-name-field-sponsor-body h5,
+.field-name-field-sponsor-body h6 {
+  margin: 15px 0 10px 0;
+  text-align: left;
+}
 #user-register-form > div > .form-wrapper {
   text-align: center;
   margin: 0 0 30px;
