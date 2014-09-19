@@ -2134,9 +2134,6 @@ li.timeline-inverted .timeline-panel:after {
 .page-user-sessions ol {
   border-left: 0;
 }
-.page-user-sessions ol li:before {
-  line-height: 2;
-}
 .page-user-sessions h3.field-content {
   text-align: left;
 }
