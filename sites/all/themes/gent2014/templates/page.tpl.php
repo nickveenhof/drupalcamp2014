@@ -85,7 +85,6 @@
     <li class="slide slide15"></li>
     <li class="slide slide16"></li>
     <li class="slide slide17"></li>
-    <li class="slide slide18"></li>
     <li class="slide slide19"></li>
     <li class="slide slide20"></li>
     <li class="slide slide21"></li>
