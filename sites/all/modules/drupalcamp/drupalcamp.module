@@ -12,4 +12,54 @@ function drupalcamp_menu_alter(&$items) {
   $items['user/register']['weight'] = 20;
   $items['user/%user/tickets']['access callback'] = FALSE;
   $items['user/%user/edit']['title'] = t('Edit Your Details');
+  $items['user/%/sessions']['access callback'] = '_drupalcamp_user_sessions_access';
+}
+
+/**
+ *Custom access callback to hide user/sessions tab if user has no sessions.
+ *
+ * @return boolean
+ */
+function _drupalcamp_user_sessions_access() {
+  $uid = arg(1);
+  global $user;
+
+  if (!is_numeric($uid) || ($user->uid != $uid) && !user_access('administer content')) {
+    return FALSE;
+  }
+
+  // Check if user has sessions.
+  $sql = db_select('node', 'n');
+
+  $sql->addField('n', 'nid');
+  $sql->innerJoin('field_data_field_speakers', 's', 'n.nid = s.entity_id');
+  $sql->condition('n.type', 'session', '=');
+  $sql->condition('s.field_speakers_target_id', $user->uid, '=');
+
+  $res = $sql->execute();
+
+  $num = $res->rowCount();
+
+  if ($num > 0) {
+    return TRUE;
+  }
+
+  return FALSE;
+}
+
+/**
+ * Implements hook_module_implements_alter().
+ */
+function drupalcamp_module_implements_alter(&$implementations, $hook) {
+  // When the implementations of hook_menu_alter are called, we need our module
+  // to be called after views, so let's remove it from the implementations then
+  // add it to the end.
+  dsm($hook);
+  if ($hook == 'menu_alter') {
+    if (isset($implementations['drupalcamp'])) {
+      $my_implementation = $implementations['drupalcamp'];
+      unset($implementations['drupalcamp']);
+      $implementations['drupalcamp'] = $my_implementation;
+    }
+  }
 }

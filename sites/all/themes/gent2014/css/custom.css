@@ -2129,6 +2129,22 @@ li.timeline-inverted .timeline-panel:after {
   color: #f26825;
   margin: 0 0 20px;
 }
+.page-user-sessions ol {
+  border-left: 0;
+}
+.page-user-sessions ol li:before {
+  line-height: 2;
+}
+.page-user-sessions h3.field-content {
+  text-align: left;
+}
+.page-user-sessions .field-name-field-track-color {
+  display: inline-block;
+  margin-right: 15px;
+}
+.page-user-sessions .field-name-title {
+  display: inline-block;
+}
 @media screen and (max-width: 980px) {
   .page-node-community #content-content .view-cod-community-attendees .view-content .views-row,
   .node-type-page #content-content .view-cod-community-attendees .view-content .views-row,
