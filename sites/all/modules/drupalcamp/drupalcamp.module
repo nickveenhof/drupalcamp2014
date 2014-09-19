@@ -34,7 +34,7 @@ function _drupalcamp_user_sessions_access() {
   $sql->addField('n', 'nid');
   $sql->innerJoin('field_data_field_speakers', 's', 'n.nid = s.entity_id');
   $sql->condition('n.type', 'session', '=');
-  $sql->condition('s.field_speakers_target_id', $user->uid, '=');
+  $sql->condition('s.field_speakers_target_id', $uid, '=');
 
   $res = $sql->execute();
 
