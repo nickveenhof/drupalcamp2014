@@ -1,5 +1,4 @@
 @import "html5reset.css";
-
 @import "regions.css";
 * {
   margin: 0;
@@ -1344,6 +1343,8 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
 }
 .page-user #content-content .user-profile .group-left > .field-name-ds-user-picture {
   float: left;
+  width: 100%;
+  max-width: 100%;
 }
 .page-user #content-content .user-profile .group-left > .field-name-ds-user-picture a {
   display: block;
@@ -1398,6 +1399,13 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
 }
 .page-user #content-content .user-profile .group-right .group-user-info .field-label {
   color: #888;
+}
+.page-user #content-content .user-profile .group-right .field-name-field-profile-days .field-item {
+  display: inline;
+  padding: 0;
+}
+.page-user #content-content .user-profile .group-right .field-name-field-profile-days .field-item + .field-item:before {
+  content: ' & ';
 }
 .page-node-community #content-content .tabs,
 .node-type-page #content-content .tabs {
@@ -1556,6 +1564,49 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
   font-style: italic;
   color: #888;
 }
+.page-node-community .cta-button,
+.node-type-page .cta-button {
+  float: right;
+}
+.page-node-community .cta-button a,
+.node-type-page .cta-button a {
+  text-transform: uppercase;
+  color: #fff;
+  margin: 10px 0 5px;
+  font-size: 30px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 300;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  border-radius: 4px;
+  padding: 0 40px;
+  background: #0491c6;
+  display: inline-block;
+  text-align: center;
+  color: #FFF;
+  font-size: 100%;
+}
+.page-node-community .cta-button a:hover,
+.node-type-page .cta-button a:hover {
+  background: #f26825;
+  color: #fff;
+}
+.page-node-community .cta-button a:hover,
+.node-type-page .cta-button a:hover {
+  background: #0491c6;
+  color: #FFF;
+}
+.page-node-community .cta-button:after,
+.node-type-page .cta-button:after {
+  content: '';
+  margin-bottom: 25px;
+  display: block;
+}
+.page-node-community #block-gent2014-user-register-community-register-link + #block-system-main,
+.node-type-page #block-gent2014-user-register-community-register-link + #block-system-main {
+  clear: both;
+}
 .page-user .region-content form#user-login {
   min-height: 20px;
   padding: 19px;
@@ -1674,7 +1725,8 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
 .page-node-sponsors #content-content .view-cod-sponsors.view-id-cod_sponsors.view-display-id-attachment_1 .sponsor {
   max-width: 278px;
 }
-.page-node-sponsors #content-content .view-cod-sponsors.view-id-cod_sponsors.view-display-id-attachment_2 .sponsor {
+.page-node-sponsors #content-content .view-cod-sponsors.view-id-cod_sponsors.view-display-id-attachment_2 .sponsor,
+.page-node-sponsors #content-content .view-cod-sponsors.view-id-cod_sponsors.view-display-id-attachment_3 .sponsor {
   max-width: 118px;
 }
 .dropbutton {
@@ -1767,6 +1819,20 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
 }
 .node-type-sponsor.page-node-45 .field-name-field-sponsor-logo {
   margin-top: -24px;
+}
+.field-name-field-sponsor-body {
+  text-align: left;
+}
+.field-name-field-sponsor-body ul {
+  margin-left: 50px;
+}
+.field-name-field-sponsor-body h2,
+.field-name-field-sponsor-body h3,
+.field-name-field-sponsor-body h4,
+.field-name-field-sponsor-body h5,
+.field-name-field-sponsor-body h6 {
+  margin: 15px 0 10px 0;
+  text-align: left;
 }
 #user-register-form > div > .form-wrapper {
   text-align: center;
@@ -2063,6 +2129,22 @@ li.timeline-inverted .timeline-panel:after {
   color: #f26825;
   margin: 0 0 20px;
 }
+.page-user-sessions ol {
+  border-left: 0;
+}
+.page-user-sessions ol li:before {
+  line-height: 2;
+}
+.page-user-sessions h3.field-content {
+  text-align: left;
+}
+.page-user-sessions .field-name-field-track-color {
+  display: inline-block;
+  margin-right: 15px;
+}
+.page-user-sessions .field-name-title {
+  display: inline-block;
+}
 @media screen and (max-width: 980px) {
   .page-node-community #content-content .view-cod-community-attendees .view-content .views-row,
   .node-type-page #content-content .view-cod-community-attendees .view-content .views-row,
@@ -2188,15 +2270,17 @@ li.timeline-inverted .timeline-panel:after {
   body .maincontainer #intro #intro-inner .region-intro #block-block-4 {
     margin-top: 40px;
   }
-  .page-node-sponsors #content-content .view-cod-sponsors.view-id-cod_sponsors.view-display-id-attachment_1 .sponsor {
+  .page-node-sponsors #content-content .view-cod-sponsors .view-content .sponsor {
+    max-width: 90%;
+    width: 90%;
+  }
+  .page-node-sponsors #content-content .view-cod-sponsors .view-content.view-id-cod_sponsors.view-display-id-attachment_1 .sponsor {
     max-width: 75%;
     width: 75%;
   }
-  .page-node-sponsors #content-content .view-cod-sponsors.view-id-cod_sponsors.view-display-id-attachment_2 .sponsor {
+  .page-node-sponsors #content-content .view-cod-sponsors .view-content.view-id-cod_sponsors.view-display-id-attachment_2 .sponsor,
+  .page-node-sponsors #content-content .view-cod-sponsors .view-content.view-id-cod_sponsors.view-display-id-attachment_3 .sponsor {
     max-width: 65%;
     width: 65%;
   }
-}
-@media screen and (max-height: 370px) {
-  
 }
