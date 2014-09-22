@@ -24,9 +24,15 @@ function gent2014_user_register_form_alter(&$form, &$form_state, $form_id) {
 	if ($form_id !== 'user_register_form' && $form_id !== 'user_profile_form') {
 		return;
 	}
-  drupal_set_title(t('Register'));
 	$form['og_user_node']['#access'] = FALSE;
-  $form['actions']['submit']['#value'] = t('Register for DrupalCamp');
+  if (arg(2) === 'edit') {
+    drupal_set_title(t('Edit your profile'));
+    $form['actions']['submit']['#value'] = t('Edit your profile');
+  }
+  else {
+    drupal_set_title(t('Register'));
+    $form['actions']['submit']['#value'] = t('Register for DrupalCamp');
+  }
 }
 
 /**
