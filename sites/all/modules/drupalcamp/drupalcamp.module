@@ -17,6 +17,22 @@ function drupalcamp_menu_alter(&$items) {
 }
 
 /**
+ * Implements hook_module_implements_alter().
+ */
+function drupalcamp_module_implements_alter(&$implementations, $hook) {
+  // When the implementations of hook_menu_alter are called, we need our module
+  // to be called after views, so let's remove it from the implementations then
+  // add it to the end.
+  if ($hook == 'menu_alter') {
+    if (isset($implementations['drupalcamp'])) {
+      $my_implementation = $implementations['drupalcamp'];
+      unset($implementations['drupalcamp']);
+      $implementations['drupalcamp'] = $my_implementation;
+    }
+  }
+}
+
+/**
  * Custom access callback to hide user/sessions tab if user has no sessions.
  *
  * @return boolean
@@ -48,21 +64,6 @@ function _drupalcamp_user_sessions_access() {
   return FALSE;
 }
 
-/**
- * Implements hook_module_implements_alter().
- */
-function drupalcamp_module_implements_alter(&$implementations, $hook) {
-  // When the implementations of hook_menu_alter are called, we need our module
-  // to be called after views, so let's remove it from the implementations then
-  // add it to the end.
-  if ($hook == 'menu_alter') {
-    if (isset($implementations['drupalcamp'])) {
-      $my_implementation = $implementations['drupalcamp'];
-      unset($implementations['drupalcamp']);
-      $implementations['drupalcamp'] = $my_implementation;
-    }
-  }
-}
 
 /**
  * Implements hook_menu().
