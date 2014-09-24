@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * General drupalcamp fixes
@@ -16,7 +17,7 @@ function drupalcamp_menu_alter(&$items) {
 }
 
 /**
- *Custom access callback to hide user/sessions tab if user has no sessions.
+ * Custom access callback to hide user/sessions tab if user has no sessions.
  *
  * @return boolean
  */
@@ -61,4 +62,139 @@ function drupalcamp_module_implements_alter(&$implementations, $hook) {
       $implementations['drupalcamp'] = $my_implementation;
     }
   }
+}
+
+/**
+ * Implements hook_menu().
+ */
+function drupalcamp_menu() {
+  $items['mailchimp-signup'] = array(
+    'title' => 'Sign up for our newsletter',
+    'description' => 'Mailchimp newsletter sign up form',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('drupalcamp_mailchimp_signup_form'),
+    'access arguments' => array('access content'),
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function drupalcamp_block_info() {
+
+  $blocks['mailchimp_signup_full'] = array(
+    'info' => t('Mailchimp full signup form'),
+    'cache' => DRUPAL_CACHE_GLOBAL,
+  );
+
+  $blocks['mailchimp_signup_compact'] = array(
+    'info' => t('Mailchimp compact signup form'),
+    'cache' => DRUPAL_CACHE_GLOBAL,
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function drupalcamp_block_view($delta = '') {
+  $blocks = array();
+  switch ($delta) {
+    case 'mailchimp_signup_full':
+      $blocks['subject'] = t('Sign up for our newsletter');
+      $blocks['content'] = drupal_get_form('drupalcamp_mailchimp_signup_form', 'full');
+      break;
+
+    case 'mailchimp_signup_compact':
+      $blocks['subject'] = t('Sign up for our newsletter');
+      $blocks['content'] = drupal_get_form('drupalcamp_mailchimp_signup_form', 'compact');
+      break;
+  }
+
+  return $blocks;
+}
+
+/**
+ * Returns mailchimpsign up form.
+ */
+function drupalcamp_mailchimp_signup_form($form, &$form_state, $mode = 'full') {
+  $form = array();
+
+  $form['#action'] = '//drupalcamp.us6.list-manage.com/subscribe/post?u=385fb6c8552983dc742af7470&amp;id=1babfa229c';
+  $form['#attributes'] = array(
+    'id' => 'mc-embedded-subscribe-form',
+    'class' => 'validate',
+  );
+
+  $form['EMAIL'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Email address'),
+    '#attributes' => array(
+      'id' => 'mce-EMAIL',
+    ),
+    '#required' => TRUE,
+  );
+
+  if ($mode == 'full') {
+    $form['FNAME'] = array(
+      '#type' => 'textfield',
+      '#title' => t('First name'),
+      '#attributes' => array(
+        'id' => 'mce-FNAME',
+      )
+    );
+
+    $form['LNAME'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Last name'),
+      '#attributes' => array(
+        'id' => 'mce-LNAME',
+      )
+    );
+
+    $form['MMERGE3'] = array(
+      '#type' => 'select',
+      '#options' => array('nl' => t('Dutch'), 'en' => t('English'), 'fr' => t('French')),
+      '#title' => t('Language'),
+      '#attributes' => array(
+        'id' => 'mce-MMERGE3',
+      ),
+    );
+  }
+
+  $form['mc-response'] = array(
+    '#markup' => '<div id="mce-responses" class="clear"><div class="response" id="mce-error-response" style="display:none"></div><div class="response" id="mce-success-response" style="display:none"></div></div>',
+  );
+
+  $form['b_385fb6c8552983dc742af7470_1babfa229c'] = array(
+    '#type' => 'textfield',
+    '#prefix' => '<div style="position: absolute; left: -5000px;">',
+    '#suffix' => '</div>',
+    '#attributes' => array(
+      'tabindex' => -1,
+    ),
+  );
+
+  $form['subscribe'] = array(
+    '#type' => 'submit',
+    '#value' => t('Sign up'),
+    '#attributes' => array(
+//      'class' => 'buttons',
+      'id' => 'mc-embedded-subscribe',
+    ),
+  );
+
+  $form['#attached']['js'] = array(
+    '//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js' => array(
+      'type' => 'external',
+    ),
+  );
+  $js = "(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='MMERGE3';ftypes[3]='text';}(jQuery));var $mcj = jQuery.noConflict(true);";
+
+  $form['#attached']['js'][] = array('data' => $js, 'type' => 'inline');
+
+  return $form;
 }
