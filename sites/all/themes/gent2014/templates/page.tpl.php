@@ -74,7 +74,6 @@
     <li class="slide slide04"></li>
     <li class="slide slide05"></li>
     <li class="slide slide06"></li>
-    <li class="slide slide07"></li>
     <li class="slide slide08"></li>
     <li class="slide slide09"></li>
     <li class="slide slide10"></li>
