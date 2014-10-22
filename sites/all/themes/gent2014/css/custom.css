@@ -1842,14 +1842,13 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
   text-align: left;
 }
 #user-register-form > div > .form-wrapper {
-  text-align: center;
   margin: 0 0 30px;
 }
 #user-register-form > div > .form-wrapper label {
   color: #444;
 }
 #user-register-form > div > .form-wrapper .description {
-  color: #aaa;
+  color: #555;
 }
 #user-register-form > div > .form-wrapper input.form-text {
   text-align: center;
