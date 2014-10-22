@@ -74,7 +74,7 @@ div.messages {
 label {
   font-size: 12px;
   text-transform: uppercase;
-  color: #bbb;
+  color: #333;
   font-weight: 400;
 }
 input.form-text {
@@ -239,6 +239,7 @@ h1 {
   font-size: 40px;
   font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 300;
+  text-transform: uppercase;
   text-align: center;
   width: 100%;
   text-transform: uppercase;
@@ -297,6 +298,7 @@ h3 {
   font-size: 24px;
   font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 300;
+  text-transform: uppercase;
   text-align: center;
   width: 100%;
   text-transform: uppercase;
@@ -366,6 +368,7 @@ ol > li:before {
   display: inline-block;
   vertical-align: top;
   width: 26%;
+  min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
   background-color: #fff;
@@ -398,6 +401,7 @@ iframe {
   text-transform: uppercase;
   color: #fff;
   margin: 10px 0 5px;
+  display: inline-block;
   font-size: 30px;
   font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 300;
@@ -1575,6 +1579,7 @@ body.not-logged-in #navbar #block-system-main-menu > .content > ul.menu > li:nth
   text-transform: uppercase;
   color: #fff;
   margin: 10px 0 5px;
+  display: inline-block;
   font-size: 30px;
   font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 300;
