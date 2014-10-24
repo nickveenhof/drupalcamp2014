@@ -2079,7 +2079,7 @@ li.timeline-inverted .timeline-panel:after {
 }
 .node-session.node-teaser .field-name-field-speakers .field-item + .field-item:before,
 .node-session.view-mode-taxonomy_page_overview .field-name-field-speakers .field-item + .field-item:before {
-  content: ', ';
+  content: ',  ';
 }
 .node-session.node-teaser .field-name-og-vocabulary .field-item,
 .node-session.view-mode-taxonomy_page_overview .field-name-og-vocabulary .field-item {
