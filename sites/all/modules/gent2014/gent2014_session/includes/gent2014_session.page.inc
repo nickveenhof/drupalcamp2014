@@ -95,7 +95,7 @@ function _gent2014_session_schedule_create_page($day) {
 
     foreach ($output as $row) {
       $items[] = array(
-        'data'  => '<div class="tldate">' . strtoupper(date('D  d/m/Y - H:i', strtotime($row['starttime']))) . ' - ' . strtoupper(date('H:i', strtotime($row['endtime']))) . '</div>',
+        'data'  => '<div class="tldate">' . strtoupper(format_date(strtotime($row['starttime']), 'custom', 'D  d/m/Y - H:i')) . ' - ' . strtoupper(format_date(strtotime($row['endtime']), 'custom', 'H:i')) . '</div>',
         'class' => array('tldate'),
       );
 
