@@ -7,3 +7,5 @@ sites/*/private
 sites/default/*
 .htaccess.local
 /nbproject/private/
+.DS_Store*
+.idea

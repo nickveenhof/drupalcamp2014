@@ -7,10 +7,10 @@
 include_once 'gent2014_session.features.inc';
 
 /**
- * Implements hook_menu()
+ * Implements hook_menu().
  */
 function gent2014_session_menu() {
-  // Default menu callback
+  // Default menu callback (change to Saturday after day 1).
   $items['schedule'] = array(
     'title'            => t('Schedule'),
     'type'             => MENU_NORMAL_ITEM,
@@ -21,7 +21,6 @@ function gent2014_session_menu() {
     'file'             => 'includes/gent2014_session.page.inc',
   );
 
-  // Saturday
   $items['schedule/friday'] = array(
     'title'            => t('Schedule - Friday'),
     'page callback'    => 'gent2014_session_schedule_default_page',
@@ -32,7 +31,6 @@ function gent2014_session_menu() {
     'file'             => 'includes/gent2014_session.page.inc',
   );
 
-  // Sunday
   $items['schedule/saturday'] = array(
     'title'            => t('Schedule - Saturday'),
     'type'             => MENU_LOCAL_TASK,

@@ -40,6 +40,20 @@ function _gent2014_session_schedule_create_page($day) {
   // @TODO: Create a DrupalCamp dashboard or something.
 
   // Timeslots. Hardcoded. Punch me if you see me.
+  /**
+                __________                  __,___/  ",",
+         ___.--"          "\'.         ____/  l   \    ",'-,
+  ------f"               // \\\        \  (l\ \    \     \ \",
+        |                    |||       /   u       |      \ \ \
+        |                    |||     _ )          /       | |  \
+    ----L_-XXX-.             .|'    / U          <        | |  |
+                "\   -<_____///     \           6 )       | |  |
+                  \___)     -"       '.       -.<"       / /   |
+                                      |'.___  |       _._."   /
+                                      |     ./     _."."   _."
+                                     /      |"----"     _."
+                                  jjs       \
+   */
   $available_days = array(
     'friday'   => '2014-11-07',
     'saturday' => '2014-11-08'
@@ -56,7 +70,7 @@ function _gent2014_session_schedule_create_page($day) {
     return FALSE;
   }
 
-  // Get nids of all sessions.
+  // Retrieve all timeslots for a given day.
   $timeslots = _gent2014_session_page_get_timeslots($available_days[$day]);
 
   $output = array();
@@ -81,7 +95,7 @@ function _gent2014_session_schedule_create_page($day) {
 
     foreach ($output as $row) {
       $items[] = array(
-        'data'  => '<div class="tldate">' . strtoupper(date('D  d/m/Y - H:i', strtotime($row['starttime']))) . ' - ' . strtoupper(date('H:i', strtotime($row['endtime']))) . '</div>',
+        'data'  => '<div class="tldate">' . strtoupper(format_date(strtotime($row['starttime']), 'custom', 'D  d/m/Y - H:i')) . ' - ' . strtoupper(format_date(strtotime($row['endtime']), 'custom', 'H:i')) . '</div>',
         'class' => array('tldate'),
       );
 
@@ -162,10 +176,10 @@ function _gent2014_session_page_get_timeslots($date) {
 
 /**
  * Get all sessions for a specific day.
+ *
+ * @param string $timeslot
  */
 function _gent2014_session_page_get_nodes($timeslot) {
-  global $user;
-
   // Get all session of the given day
   $query = db_select('node', 'node')->distinct();
 
