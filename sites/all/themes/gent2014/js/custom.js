@@ -134,6 +134,13 @@
 
       $('body #navbar #block-system-main-menu > .content > ul.menu > li.searchform-mainmenu input.form-text').attr('placeholder','Search...');
 
+      // fix for schedule
+      $('.page-schedule #block-system-main > div > div > ul > li').each(function(){
+        if ($(this).find('.field-name-session-room .field-item').html() === '  Calibrate Club') {
+          $(this).addClass('timeline-inverted');
+        }
+      });
+
 
     }
   };
