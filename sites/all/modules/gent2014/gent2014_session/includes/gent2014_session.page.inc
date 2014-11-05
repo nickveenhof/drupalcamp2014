@@ -62,8 +62,8 @@ function _gent2014_session_schedule_create_page($day) {
   // Even worse. Rooms by their human-readable name. Used to display the schedule.
   // Set to FALSE = display on the left side of the timeline, TRUE = on the right side.
   $room_mapping = array(
-    'Calibrate' => TRUE,
-    'EntityOne' => FALSE,
+    'Calibrate Club' => TRUE,
+    'EntityOne Lodge' => FALSE,
   );
 
   if (empty($available_days[$day])) {
